@@ -1,0 +1,24 @@
+<section>
+  <div class="chevrons">
+    <a class="chevron down" title="Go to top of page"></a>
+    <a class="chevron up" title="Go to bottom of page"></a>
+  </div>
+
+  <% @days.each do |day| %>
+    <article class="day">
+      <h2>
+        {{portugueseTitle}} ({{englishTitle}})
+      </h2>
+      <img src="{{imageUrl}}"/>
+      <div class="quotes">
+        <blockquote class="santi">
+          {{{santi}}}
+        </blockquote>
+
+        <blockquote class="neil">
+          {{{neil}}}
+        </blockquote>
+      </div>
+    </article>
+  <% end %>
+</section>

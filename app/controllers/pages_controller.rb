@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
-    render text: "Hey"
+    @days = [1,2,3]
   end
+
 end
