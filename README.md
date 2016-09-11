@@ -14,3 +14,7 @@
 ## Running
 
     $ rails s
+
+## Managing database
+
+    $ rake db:schema:load db:seed

@@ -7,16 +7,16 @@
   <% @days.each do |day| %>
     <article class="day">
       <h2>
-        {{portugueseTitle}} ({{englishTitle}})
+        <%= day.portuguese_title %> (<%=day.english_title%>)
       </h2>
-      <img src="{{imageUrl}}"/>
+      <%= image_tag day.image_url %>
       <div class="quotes">
         <blockquote class="santi">
-          {{{santi}}}
+          <%= raw day.santi_quote %>
         </blockquote>
 
         <blockquote class="neil">
-          {{{neil}}}
+          <%= raw day.neil_quote %>
         </blockquote>
       </div>
     </article>

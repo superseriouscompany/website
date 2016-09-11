@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @days = [1,2,3]
+    @days = Day.all
   end
 
 end
