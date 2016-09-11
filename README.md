@@ -29,3 +29,4 @@ Add new entries to `seeds.rb` and then run:
 * turbolinks google analytics integration
 * image_tag and asset-path helpers
 * erb
+* remove jquery js- stuff

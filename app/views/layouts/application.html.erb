@@ -29,15 +29,18 @@
 </head>
 <body>
   <header>
+    <%= image_tag "hamburger.jpg", class: "hamburger js-hamburger" %>
     <h1>
       <a href="/">
         <%= image_tag "logo.jpg", alt: "Super Serious Company" %>
       </a>
     </h1>
-    <a href="/" class="top left item">Major Progress!</a>
-    <a href="/ideas" class="bottom left item">Good Ideas!</a>
-    <a href="/wheredeyatdoe" class="top right item">Epic Location!</a>
-    <a href="/philosophy" class="bottom right item">Absolute Madness!</a>
+    <div class="menu">
+      <a href="/" class="top left item">Major Progress!</a>
+      <a href="/ideas" class="bottom left item">Good Ideas!</a>
+      <a href="/wheredeyatdoe" class="top right item">Epic Location!</a>
+      <a href="/philosophy" class="bottom right item">Absolute Madness!</a>
+    </div>
   </header>
 
   <%= yield %>
@@ -46,5 +49,7 @@
     <%= image_tag "santiHero.jpg", class: "santi hero" %>
     <%= image_tag "neilHero.jpg", class: "neil hero" %>
   </footer>
+
+  <div class="nightshade"></div>
 </body>
 </html>
