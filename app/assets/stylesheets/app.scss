@@ -12,15 +12,17 @@ h1 img { width: 141px; }
 section { border-top: 1px solid #DBDBDC; font-size: 12px; }
 section.context { line-height: 15px; color: #838386; padding: 0 60px; }
 .hero { display: none; }
-header { position:relative; z-index: 2; background-color: white; height: $headerHeight; }
-header .hamburger { position:absolute; left: 18px; top: 18px; width: 29px; height: 20px; cursor: pointer; }
-header .menu { display: none; position: absolute; top: $headerHeight + 9px; left: 9px; width: 66%; background-color: white; border-radius: 10px; }
-header .item { display: block; text-align: center; text-decoration: none; color: #07070D; padding: 2em; text-transform: uppercase; border-top: 1px solid #DBDBDC; }
-header .item:first-child { border-top: 0; }
 .padded { padding: 0 1em;}
 .nightshade { opacity: 0.8; background-color: black; position: fixed; left: 0; top: 0; bottom: 0; right: 0; display: none; }
 body.hamburgerOpen .nightshade { display: block; }
 body.hamburgerOpen .menu { display: block; }
+
+/* Header */
+header { position:relative; z-index: 2; background-color: white; height: $headerHeight; }
+header .hamburger { position:absolute; left: 18px; top: 18px; width: 29px; height: 20px; cursor: pointer; }
+header .menu { display: none; position: absolute; top: $headerHeight + 9px; left: 9px; width: 66%; background-color: white; border-radius: 10px; padding: 3px 0; }
+header .item { display: block; text-align: center; text-decoration: none; color: #07070D; padding: 16px 0; text-transform: uppercase; border-top: 1px solid #DBDBDC; }
+header .item:first-child { border-top: 0; }
 
 /* Post */
 .day h2 { color: #94796E; font-size: 24px; text-align: center;}
@@ -42,8 +44,8 @@ body.hamburgerOpen .menu { display: block; }
   header .left  { left: 48px; }
   header .right { right: 44px; }
   header .bottom { bottom: 32px; }
-  .day blockquote { margin: 0 auto; max-width: 550px; padding-top: 42px; background: url(asset-path('neilIcon.png')) no-repeat left top; }
-  .day blockquote.santi { background-image: url(asset-path('santiIcon.png')); }
+  .day blockquote { margin: 0 auto; max-width: 550px; padding-top: 42px; background: url(asset-path('santiIcon.png')) no-repeat left top; background-size: auto; }
+  .day blockquote.neil { background-image: url(asset-path('neilIcon.png')); background-size: auto; }
   blockquote p:first-child { margin-top: 0; }
   .hero      { position: fixed; bottom: 0; left: 0; width: 20%; display: inline; }
   .hero.neil { left: auto; right: 0; }
