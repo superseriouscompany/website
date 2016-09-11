@@ -20,6 +20,8 @@
 
 ## Managing database
 
+Add new entries to `seeds.rb` and then run:
+
     $ rake db:schema:load db:seed
 
 ### Rails-specific stuff to change if we migrate off

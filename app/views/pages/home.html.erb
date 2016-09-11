@@ -1,25 +1,13 @@
-<h2>Cache Stats</h2>
+<section class="context padded">
+  <p>
+    Plot: Homeless guy and his boss quit jobs and randomly move to Portugal.
+  </p>
+  <p>
+    Here's what happened today:
+  </p>
+</section>
 
-<table>
-  <tr>
-    <th>Metric</th>
-    <th>Value</th>
-  </tr>
-  <tr>
-    <td>Cache hits:</td>
-    <td><%= @stats['get_hits'] %></td>
-  </tr>
-  <tr>
-    <td>Cache misses:</td>
-    <td><%= @stats['get_misses'] %></td>
-  </tr>
-  <tr>
-    <td>Cache flushes:</td>
-    <td><%= @stats['cmd_flush'] %></td>
-  </tr>
-</table>
-
-<section>
+<section class="story">
   <div class="chevrons">
     <a class="chevron down" title="Go to top of page"></a>
     <a class="chevron up" title="Go to bottom of page"></a>
@@ -27,16 +15,16 @@
 
   <% @days.each do |day| %>
     <article class="day">
-      <h2>
+      <h2 class="padded">
         <%= day.portuguese_title %> (<%=day.english_title%>)
       </h2>
       <%= image_tag day.image_url %>
       <div class="quotes">
-        <blockquote class="santi">
+        <blockquote class="santi padded">
           <%= raw day.santi_quote %>
         </blockquote>
 
-        <blockquote class="neil">
+        <blockquote class="neil padded">
           <%= raw day.neil_quote %>
         </blockquote>
       </div>
