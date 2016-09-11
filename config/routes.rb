@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  #   get 'products/:id' => 'catalog#view'
+  get '/:action', controller: 'pages'
 end

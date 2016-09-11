@@ -26,7 +26,8 @@ section .chevron.down { background-image: url(asset-path('chevronDown.png')); }
 
 @media only screen and (min-width: 769px) {
   h1 { padding: 34px 0 38px; }
-  section { margin: $headerHeight auto 0; }
+  body { padding-top: $headerHeight; }
+  section { margin: 0 auto; }
   header  { position: fixed; width: 100%; background-color: white; top: 0; height: $headerHeight; }
   header .item  { position: absolute; text-decoration: none; color: #07070D; font-size: 30px; }
   header .top   { top: 38px; }

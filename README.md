@@ -18,3 +18,9 @@
 ## Managing database
 
     $ rake db:schema:load db:seed
+
+### Rails-specific stuff to change if we migrate off
+
+* turbolinks google analytics integration
+* image_tag and asset-path helpers
+* erb
