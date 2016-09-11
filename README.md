@@ -3,12 +3,15 @@
 ## Requirements
 
 1. rvm
+1. http://postgresapp.com/
+1. memcached
 1. ruby 2.1.2
 1. rails 4.2.0
-1. http://postgresapp.com/
 
 ## Installation
-
+    $ brew install memcached
+    $ rvm install 2.1.2
+    $ rvm use 2.1.2
     $ bundle install
 
 ## Running
