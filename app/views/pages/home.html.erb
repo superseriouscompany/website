@@ -13,7 +13,8 @@
     <a class="chevron up" title="Go to bottom of page"></a>
   </div>
 
-  <% @days.each do |day| %>
+  <% day = @day %>
+  <% cache day do %>
     <article class="day">
       <h2 class="padded">
         <%= day.portuguese_title %> (<%=day.english_title%>)
@@ -30,4 +31,6 @@
       </div>
     </article>
   <% end %>
+
+  <h2>FIXME: LINKS TO MORE CONTENT</h2>
 </section>

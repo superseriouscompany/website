@@ -6,7 +6,18 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-days = Day.create([
+project = Project.create({
+  name: "Super Serious Website",
+  description: """
+    Our first project is our shameless, self-absorbed website.
+    It’s here mostly to show people back home that we’re doing something and to post future projects, favorable pics of ourselves, etc.
+    You’re already here, so don’t click it, but here it is:
+  """,
+  link: "http://superseriouscompany.com",
+  slug: "this-website"
+})
+
+days = project.days.create([
   {
     image_url: 'comic1.jpg',
     portuguese_title: 'Dia Um',

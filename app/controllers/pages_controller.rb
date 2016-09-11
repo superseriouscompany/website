@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def home
-    @days = Day.all_cached
+    @day = Day.last
   end
 end
