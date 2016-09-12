@@ -42,12 +42,15 @@ header .item:first-child { border-top: 0; }
 
 /* Quotes on homepage, project page and philosophy page*/
 .quotes  { background: white; }
-.quotes blockquote { color: #94796E; line-height: 20px; margin: 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left top; background-size: 38px 45px; padding-left: 38px+15px; padding-right: 15px; }
+.quotes blockquote { color: #94796E; line-height: 20px; margin: 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left top; background-size: 38px 45px; padding-left: 38px+15px; padding-right: 15px; font-size: 14px; }
 .quotes blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; }
 .quotes blockquote .chatBubble { display: none; }
 
 /* Philosophy Page */
 .philosophy blockquote { border-bottom: $greyLine; padding-top: 15px; padding-bottom: 15px; }
+
+/* Ideas Page */
+.ideas .submission { background: url(asset-path('ideaBg.jpg')) no-repeat; background-size: cover; height: 239px; }
 
 @media only screen and (min-width: 769px) {
   /* Page Layout */
