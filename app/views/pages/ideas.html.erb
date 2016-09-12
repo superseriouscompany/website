@@ -7,11 +7,24 @@
 <section class="ideas">
   <form class="submission js-submission-form" method="POST" action="/thoughts">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
-    <div class="inputContainer">
-      <input type="text" name="body" class="js-body js-detect-filled" placeholder="Share your thoughts..." />
-      <button></button>
-      <input type="text" name="thinker" class="js-thinker active step2" placeholder="Your Name (optional and trollable)" />
-    </div>
+
+    <% if true || flash[:success].present? %>
+      <div class="success dialog">
+        <%= image_tag "check.jpg" %>
+        Obrigado!
+      </div>
+    <% elsif flash[:error].present? %>
+      <div class="failure dialog">
+        Annnd everything's broken
+        <a href="/ideas">Retry</a>
+      </div>
+    <% else %>
+      <div class="inputContainer">
+        <input type="text" name="body" class="js-body js-detect-filled" placeholder="Share your thoughts..." />
+        <button></button>
+        <input type="text" name="thinker" class="js-thinker active step2" placeholder="Your Name (optional and trollable)" />
+      </div>
+    <% end %>
   </form>
 
   <div class="idea">Something around matching people up based on music.</div>
