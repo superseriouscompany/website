@@ -1,3 +1,13 @@
+/*
+  All stylesheets have quirks. These are the quirks of this one:
+
+  * mobile is the main target. media queries are used for special desktop rules.
+  * rules are kept to one line, which favors overall structure readability over changing a single rule (use cmd+f).
+  * the goal is to keep the design minimal and stick to this file, but logical sections are broken out in case we need to extract into multiple files.
+  * we're not using SMACSS or any other framework. the idea is to keep the design simple enough that this one file remains readable.
+
+  */
+
 $headerHeight: 58px;
 $desktopHeaderHeight: 145px;
 $greyLine: 1px solid #DBDBDC;
@@ -8,15 +18,15 @@ body { font-family: 'Questrial', Helvetica, sans-serif; visibility: visible; }
 a    { cursor: pointer; }
 
 /* Page Layout */
-h1 { text-align: center; margin: 0; padding-top: 11px; }
-h1 img { width: 141px; }
-section { border-top: $greyLine; font-size: 12px; }
+h1              { text-align: center; margin: 0; padding-top: 11px; }
+h1 img          { width: 141px; }
+section         { border-top: $greyLine; font-size: 12px; }
 section.context { line-height: 15px; color: #838386; padding: 0 60px; }
-.hero { display: none; }
-.padded { padding: 0 1em;}
-.nightshade { opacity: 0.8; background-color: black; position: fixed; left: 0; top: 0; bottom: 0; right: 0; display: none; }
+.hero           { display: none; }
+.padded         { padding: 0 1em;}
+.nightshade     { opacity: 0.8; background-color: black; position: fixed; left: 0; top: 0; bottom: 0; right: 0; display: none; }
 body.hamburgerOpen .nightshade { display: block; }
-body.hamburgerOpen .menu { display: block; }
+body.hamburgerOpen .menu       { display: block; }
 
 /* Header */
 header { position:relative; z-index: 2; background-color: white; height: $headerHeight; }
@@ -25,16 +35,22 @@ header .menu { display: none; position: absolute; top: $headerHeight + 9px; left
 header .item { display: block; text-align: center; text-decoration: none; color: #07070D; padding: 16px 0; text-transform: uppercase; border-top: $greyLine; }
 header .item:first-child { border-top: 0; }
 
-/* Post */
+/* Post on homepage or project page */
 .day { border-top: $greyLine; &:first-child { border-top: 0; } }
 .day h2 { color: #94796E; font-size: 24px; text-align: center;}
 .day img.comic { width: 100%; }
-.day .quotes  { background: white; }
-.day blockquote { color: #94796E; line-height: 20px; margin: 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left top; background-size: 38px 45px; padding-left: 38px+15px; padding-right: 15px; }
-.day blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; }
-.day blockquote .chatBubble { display: none; }
+
+/* Quotes on homepage, project page and philosophy page*/
+.quotes  { background: white; }
+.quotes blockquote { color: #94796E; line-height: 20px; margin: 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left top; background-size: 38px 45px; padding-left: 38px+15px; padding-right: 15px; }
+.quotes blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; }
+.quotes blockquote .chatBubble { display: none; }
+
+/* Philosophy Page */
+.philosophy blockquote { border-top: $greyLine; &:first-child { border-top: 0; } }
 
 @media only screen and (min-width: 769px) {
+  /* Page Layout */
   h1 { padding: 25px 0 35px; }
   h1 img { width: 332px; }
   body { padding-top: $desktopHeaderHeight; }
@@ -49,11 +65,13 @@ header .item:first-child { border-top: 0; }
   header .left  { left: 45px; }
   header .right { right: 45px; }
   header .bottom { bottom: 47px; }
-  .day blockquote { margin: 0 auto; max-width: 520px; padding: 0 9px; background: none; border: 4px solid #C69785; border-width: 0 0 0 4px; position: relative; }
-  .day blockquote.neil { background: none; border-width: 0 4px 0 0; text-align: right; }
-  .day blockquote .chatBubble { display: inline; width: 11px; position: absolute; left: -15px; top: 50%; margin-top: -7.5px; z-index: 2; }
-  .day blockquote.neil .chatBubble { left: auto; right: -15px; transform: scaleX(-1); }
-  .day blockquote p:first-child { margin-top: 0; }
   .hero      { position: fixed; bottom: 0; left: 0; width: 20%; display: inline; }
   .hero.neil { left: auto; right: 0; }
+
+  /* Quotes */
+  .quotes blockquote { margin: 0 auto; max-width: 520px; padding: 0 9px; background: none; border: 4px solid #C69785; border-width: 0 0 0 4px; position: relative; }
+  .quotes blockquote.neil { background: none; border-width: 0 4px 0 0; text-align: right; }
+  .quotes blockquote .chatBubble { display: inline; width: 11px; position: absolute; left: -15px; top: 50%; margin-top: -7.5px; z-index: 2; }
+  .quotes blockquote.neil .chatBubble { left: auto; right: -15px; transform: scaleX(-1); }
+  .quotes blockquote p:first-child { margin-top: 0; }
 }
