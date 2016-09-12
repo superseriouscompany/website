@@ -8,7 +8,7 @@
   <form class="submission js-submission-form" method="POST" action="/thoughts">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
 
-    <% if true || flash[:success].present? %>
+    <% if flash[:success].present? %>
       <div class="success dialog">
         <%= image_tag "check.jpg" %>
         Obrigado!
@@ -16,7 +16,7 @@
     <% elsif flash[:error].present? %>
       <div class="failure dialog">
         Annnd everything's broken
-        <a href="/ideas">Retry</a>
+        <a href="/ideas">Goddamnit.</a>
       </div>
     <% else %>
       <div class="inputContainer">
