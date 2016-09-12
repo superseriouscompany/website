@@ -47,7 +47,7 @@ header .item:first-child { border-top: 0; }
 .quotes blockquote .chatBubble { display: none; }
 
 /* Philosophy Page */
-.philosophy blockquote { border-top: $greyLine; &:first-child { border-top: 0; } }
+.philosophy blockquote { border-bottom: $greyLine; padding-top: 15px; padding-bottom: 15px; }
 
 @media only screen and (min-width: 769px) {
   /* Page Layout */
