@@ -26,28 +26,33 @@ header .item:first-child { border-top: 0; }
 
 /* Post */
 .day h2 { color: #94796E; font-size: 24px; text-align: center;}
-.day img { width: 100%; }
+.day img.comic { width: 100%; }
 .day .quotes  { background: white; }
 .day blockquote { color: #94796E; line-height: 20px; margin: 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left top; background-size: 38px 45px; padding-left: 38px+15px; padding-right: 15px; }
 .day blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; }
+.day blockquote .chatBubble { display: none; }
 
 @media only screen and (min-width: 769px) {
   h1 { padding: 25px 0 35px; }
   h1 img { width: 332px; }
   body { padding-top: $desktopHeaderHeight; }
   section { margin: 0 auto; max-width: 622px; border: 0; }
-  section.context { font-size: 22px; max-width: none; border: 1px solid #DBDBDC; border-width: 1px 0 1px 0; line-height: initial; }
+  section.context { font-size: 22px; max-width: none; border: 1px solid #DBDBDC; border-width: 1px 0 1px 0; line-height: initial; padding: 30px; text-align: center; }
+  section.context p { margin: 15px 0 0; }
+  section.context p:first-child { margin-top: 0; }
   header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; }
   header .hamburger { display: none; }
   header .menu { position: static; width: auto; background-color: transparent; border-radius: 0; display: block; }
   header .item  { position: absolute; font-size: 24px; display: block; padding: 0; border-top: 0; color: #838386; text-transform: none; }
-  header .top   { top: 22px; }
+  header .top   { top: 37px; }
   header .left  { left: 45px; }
   header .right { right: 45px; }
-  header .bottom { bottom: 31px; }
-  .day blockquote { margin: 0 auto; max-width: 550px; padding-top: 42px; background: url(asset-path('santiIcon.png')) no-repeat left top; background-size: auto; }
-  .day blockquote.neil { background-image: url(asset-path('neilIcon.png')); background-size: auto; }
-  blockquote p:first-child { margin-top: 0; }
+  header .bottom { bottom: 47px; }
+  .day blockquote { margin: 0 auto; max-width: 520px; padding: 0 9px; background: none; border: 4px solid #C69785; border-width: 0 0 0 4px; position: relative; }
+  .day blockquote.neil { background: none; border-width: 0 4px 0 0; text-align: right; }
+  .day blockquote .chatBubble { display: inline; width: 11px; position: absolute; left: -15px; top: 50%; margin-top: -7.5px; z-index: 2; }
+  .day blockquote.neil .chatBubble { left: auto; right: -15px; transform: scaleX(-1); }
+  .day blockquote p:first-child { margin-top: 0; }
   .hero      { position: fixed; bottom: 0; left: 0; width: 20%; display: inline; }
   .hero.neil { left: auto; right: 0; }
 }
