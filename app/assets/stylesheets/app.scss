@@ -21,8 +21,8 @@ a    { cursor: pointer; }
 h1              { text-align: center; margin: 0; padding-top: 11px; line-height: 18px; font-size: 18px; }
 h1.singleLine   { padding-top: 19px; }
 h1 img          { width: 141px; }
-section         { border-top: $greyLine; font-size: 14px; }
-section.context { line-height: 15px; color: #838386; padding: 0 60px; }
+section         { border-top: $greyLine; font-size: 16px; }
+section.context { line-height: 15px; color: #838386; padding: 0 20px; text-align: center}
 .hero           { display: none; }
 .nightshade     { opacity: 0.8; background-color: black; position: fixed; left: 0; top: 0; bottom: 0; right: 0; display: none; }
 body.hamburgerOpen .nightshade { display: block; }
@@ -45,7 +45,7 @@ header.withHeading .logoLink { display: none; }
 
 /* Quotes on homepage, project page and philosophy page*/
 .quotes  { background: white; }
-.quotes blockquote { color: #94796E; line-height: 20px; margin: 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left top; background-size: 38px 45px; padding-left: 38px+15px; padding-right: 15px; font-size: 14px; }
+.quotes blockquote { color: #94796E; line-height: 20px; margin: 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 38px 45px; padding-left: 38px+15px; padding-right: 15px; font-size: 16px; }
 .quotes blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; }
 .quotes blockquote .chatBubble { display: none; }
 
@@ -56,7 +56,7 @@ header.withHeading .logoLink { display: none; }
 .ideas .submission { background: url(asset-path('ideaBg.jpg')) no-repeat; background-size: cover; height: 239px; position: relative; }
 .ideas .inputContainer { position:absolute; bottom: 22px; right: 22px; left: 22px; }
 .ideas input[type=text] { width: 100%; padding: 15px 50px 15px 12px; font-size: 16px; border: 0; box-shadow: none; }
-.ideas button { width: 27px; height: 27px; background: url(asset-path('submitCircle.jpg')) left top; background-size: 100%; border: 0; cursor: pointer; position: absolute; top: 13px; right: 12px; }
+.ideas button { width: 27px; height: 32px; background: url(asset-path('submitCircle.jpg')) left top; background-size: 100%; border: 0; cursor: pointer; position: absolute; top: 8px; right: 11px; }
 .ideas .submittable button { background-position: left bottom; }
 .ideas .step2 { display: none; }
 .ideas input[type=submit] { visibility: hidden; }
