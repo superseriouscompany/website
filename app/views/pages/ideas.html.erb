@@ -1,8 +1,17 @@
+<section class="context">
+  <p>
+    Friends have been giving us really good ideas and feedback <33
+  </p>
+</section>
+
 <section class="ideas">
-  <form class="submission" method="POST" action="/thoughts">
+  <form class="submission js-submission-form" method="POST" action="/thoughts">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
-    <input name="body" placeholder="Share your thoughts..." />
-    <input type="submit" value="send" />
+    <div class="inputContainer">
+      <input type="text" name="body" class="js-detect-filled" placeholder="Share your thoughts..." />
+      <button></button>
+      <input type="text" name="thinker" class="active step2" placeholder="" />
+    </div>
   </form>
 
   <div class="idea">Something around matching people up based on music.</div>

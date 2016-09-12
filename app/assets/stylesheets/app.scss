@@ -6,7 +6,7 @@
   * the goal is to keep the design minimal and stick to this file, but logical sections are broken out in case we need to extract into multiple files.
   * we're not using SMACSS or any other framework. the idea is to keep the design simple enough that this one file remains readable.
 
-  */
+*/
 
 $headerHeight: 58px;
 $desktopHeaderHeight: 145px;
@@ -20,7 +20,7 @@ a    { cursor: pointer; }
 /* Page Layout */
 h1              { text-align: center; margin: 0; padding-top: 11px; }
 h1 img          { width: 141px; }
-section         { border-top: $greyLine; font-size: 12px; }
+section         { border-top: $greyLine; font-size: 14px; }
 section.context { line-height: 15px; color: #838386; padding: 0 60px; }
 .hero           { display: none; }
 .padded         { padding: 0 1em;}
@@ -50,7 +50,14 @@ header .item:first-child { border-top: 0; }
 .philosophy blockquote { border-bottom: $greyLine; padding-top: 15px; padding-bottom: 15px; }
 
 /* Ideas Page */
-.ideas .submission { background: url(asset-path('ideaBg.jpg')) no-repeat; background-size: cover; height: 239px; }
+.ideas .submission { background: url(asset-path('ideaBg.jpg')) no-repeat; background-size: cover; height: 239px; position: relative; }
+.ideas .inputContainer { position:absolute; bottom: 22px; right: 22px; left: 22px; }
+.ideas input[type=text] { width: 100%; padding: 15px 50px 15px 12px; font-size: 16px; border: 0; box-shadow: none; }
+.ideas button { width: 27px; height: 27px; background: url(asset-path('submitCircle.jpg')) left top; background-size: 100%; border: 0; cursor: pointer; position: absolute; top: 13px; right: 12px; }
+.ideas .submittable button { background-position: left bottom; }
+.ideas .step2 { display: none; }
+.ideas input[type=submit] { visibility: hidden; }
+.ideas .idea { padding: 15px 27px; border-bottom: $greyLine; color: #838386; }
 
 @media only screen and (min-width: 769px) {
   /* Page Layout */
