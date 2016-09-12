@@ -1,7 +1,8 @@
 class ThoughtsController < ApplicationController
   def create
     thought = Thought.new({
-      body: params[:body]
+      body: params[:body],
+      thinker: params[:thinker]
     })
 
     if thought.save
