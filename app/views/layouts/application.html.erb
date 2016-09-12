@@ -31,15 +31,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="<% if @page_heading %>withHeading<%end%>">
+  <header class="<%= 'withHeading' if @page_heading %>">
     <% if @page_heading %>
       <a href="/" class="smallLogoLink">
         <%= image_tag "smallLogo.jpg", class: "smallLogo", alt: "Super Serious Company" %>
       </a>
     <% end %>
-    <h1>
+    <h1 class="<%= 'singleLine' if @page_heading && !@page_heading.match(/br \//) %>">
       <% if @page_heading %>
-        <span class="pageHeading"><%= @page_heading %></span>
+        <span class="pageHeading">
+          <%= raw @page_heading %>
+        </span>
       <% end %>
       <a class="logoLink" href="/">
         <%= image_tag "logo.jpg", alt: "Super Serious Company" %>

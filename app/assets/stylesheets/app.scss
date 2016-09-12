@@ -18,7 +18,8 @@ body { font-family: 'Questrial', Helvetica, sans-serif; visibility: visible; }
 a    { cursor: pointer; }
 
 /* Page Layout */
-h1              { text-align: center; margin: 0; padding-top: 11px; }
+h1              { text-align: center; margin: 0; padding-top: 11px; line-height: 18px; font-size: 18px; }
+h1.singleLine   { padding-top: 19px; }
 h1 img          { width: 141px; }
 section         { border-top: $greyLine; font-size: 14px; }
 section.context { line-height: 15px; color: #838386; padding: 0 60px; }
@@ -65,6 +66,11 @@ header.withHeading .logoLink { display: none; }
 .ideas .success img { width: 50px; display: block; margin: 0 auto 9px; }
 .ideas .failure { color: #D17059; width: 226px; height: 139px; padding: 28px 34px;}
 .ideas .failure a { position: absolute; bottom: 0; right: 0; left: 0; background-color: #D17059; color: #fff; text-decoration: center; padding: 11px 0 14px; border-radius: 0 0 8px 8px; text-decoration: none; }
+
+/* Our House Page */
+.house { font-size: 16px; color: #838386; }
+.house img { width: 100%; }
+.house p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-right: 100px; } }
 
 @media only screen and (min-width: 769px) {
   /* Page Layout */
