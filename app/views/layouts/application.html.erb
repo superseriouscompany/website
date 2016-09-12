@@ -31,13 +31,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-    <%= image_tag "hamburger.jpg", class: "hamburger js-hamburger" %>
+  <header class="<% if @page_heading %>withHeading<%end%>">
+    <% if @page_heading %>
+      <a href="/" class="smallLogoLink">
+        <%= image_tag "smallLogo.jpg", class: "smallLogo", alt: "Super Serious Company" %>
+      </a>
+    <% end %>
     <h1>
-      <a href="/">
+      <% if @page_heading %>
+        <span class="pageHeading"><%= @page_heading %></span>
+      <% end %>
+      <a class="logoLink" href="/">
         <%= image_tag "logo.jpg", alt: "Super Serious Company" %>
       </a>
     </h1>
+    <%= image_tag "hamburger.jpg", class: "hamburger js-hamburger" %>
     <div class="menu">
       <a href="/projects/this-website" class="top left item">Projects</a>
       <a href="/ideas" class="bottom left item">Ideas</a>
