@@ -83,5 +83,20 @@ days = project.days.create([
         Creating feels good. Santi casually told me he sat in a church pew and realized he “needed chicks.” Two kiwis, three eggs and nine shrimp remain.
       </p>
     """
+  },
+  {
+    image_url: 'comic4.jpg',
+    portuguese_title: 'Dia Quatro',
+    english_title: 'Day Four',
+    santi_quote: """
+      <p>
+        Okay so Neil ate most of my food today ಠ_ಠ He's back to beasting. Website should all be done by tomorrow – and, if it is, Neil says we get to have a little candlelit business dinner to celebrate.
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        I nearly shit my pants today because of the shared bathroom. The website copy makes me laugh. I am out of food.
+      </p>
+    """
   }
 ])
