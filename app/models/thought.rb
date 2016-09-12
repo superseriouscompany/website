@@ -1,6 +1,8 @@
 class Thought < ActiveRecord::Base
   after_create :notify_slack
 
+  validates :body, presence: true
+
   def notify_slack
     payload = {
       username: thinker || "Randy Rando",
