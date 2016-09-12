@@ -28,6 +28,8 @@ gem 'thin'
 gem 'dalli'
 gem 'memcachier'
 
+gem 'httpclient'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
