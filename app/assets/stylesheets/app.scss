@@ -23,7 +23,6 @@ h1 img          { width: 141px; }
 section         { border-top: $greyLine; font-size: 14px; }
 section.context { line-height: 15px; color: #838386; padding: 0 60px; }
 .hero           { display: none; }
-.padded         { padding: 0 1em;}
 .nightshade     { opacity: 0.8; background-color: black; position: fixed; left: 0; top: 0; bottom: 0; right: 0; display: none; }
 body.hamburgerOpen .nightshade { display: block; }
 body.hamburgerOpen .menu       { display: block; }
@@ -35,6 +34,7 @@ header .smallLogo { position: absolute; left: 15px; top: 12px; width: 58px; }
 header .menu { display: none; position: absolute; top: $headerHeight + 9px; right: 9px; width: 66%; background-color: white; border-radius: 10px; padding: 3px 0; }
 header .item { display: block; text-align: center; text-decoration: none; color: #07070D; padding: 16px 0; text-transform: uppercase; border-top: $greyLine; }
 header .item:first-child { border-top: 0; }
+header .item.active { color: #C69785; }
 header.withHeading .logoLink { display: none; }
 
 /* Post on homepage or project page */
@@ -81,7 +81,7 @@ header.withHeading .logoLink { display: none; }
   header .hamburger { display: none; }
   header .menu { position: static; width: auto; background-color: transparent; border-radius: 0; display: block; }
   header .item  { position: absolute; font-size: 24px; display: block; padding: 0; border-top: 0; color: #838386; text-transform: none; }
-  header .item.active { color: #C69785; border: 1px solid #C69785; border-width: 0 0 0 4px; }
+  header .item.active { border: 1px solid #C69785; border-width: 0 0 0 4px; }
   header .top   { top: 37px; }
   header .left  { left: 0px; padding-left: 45px; }
   header .right { right: 0px; padding-right: 45px; }

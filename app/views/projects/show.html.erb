@@ -1,4 +1,4 @@
-<section class="context padded">
+<section class="context">
   <h2><%= @project.name %></h2>
   <%= @project.description %>
   <div class="link">
@@ -11,7 +11,7 @@
     <article class="day">
       <h2><%= day.portuguese_title %> (<%= day.english_title %>)</h2>
       <%= image_tag day.image_url, class: "comic" %>
-      <div class="quotes padded">
+      <div class="quotes">
         <blockquote class="santi">
           <%= raw day.santi_quote %>
           <%= image_tag "chatBubble.jpg", class: "chatBubble" %>
