@@ -1,5 +1,6 @@
 $headerHeight: 58px;
 $desktopHeaderHeight: 145px;
+$greyLine: 1px solid #DBDBDC;
 
 /* Globals */
 *    { box-sizing: border-box; }
@@ -9,7 +10,7 @@ a    { cursor: pointer; }
 /* Page Layout */
 h1 { text-align: center; margin: 0; padding-top: 11px; }
 h1 img { width: 141px; }
-section { border-top: 1px solid #DBDBDC; font-size: 12px; }
+section { border-top: $greyLine; font-size: 12px; }
 section.context { line-height: 15px; color: #838386; padding: 0 60px; }
 .hero { display: none; }
 .padded { padding: 0 1em;}
@@ -21,7 +22,7 @@ body.hamburgerOpen .menu { display: block; }
 header { position:relative; z-index: 2; background-color: white; height: $headerHeight; }
 header .hamburger { position:absolute; left: 18px; top: 18px; width: 29px; height: 20px; cursor: pointer; }
 header .menu { display: none; position: absolute; top: $headerHeight + 9px; left: 9px; width: 66%; background-color: white; border-radius: 10px; padding: 3px 0; }
-header .item { display: block; text-align: center; text-decoration: none; color: #07070D; padding: 16px 0; text-transform: uppercase; border-top: 1px solid #DBDBDC; }
+header .item { display: block; text-align: center; text-decoration: none; color: #07070D; padding: 16px 0; text-transform: uppercase; border-top: $greyLine; }
 header .item:first-child { border-top: 0; }
 
 /* Post */
@@ -37,10 +38,10 @@ header .item:first-child { border-top: 0; }
   h1 img { width: 332px; }
   body { padding-top: $desktopHeaderHeight; }
   section { margin: 0 auto; max-width: 622px; border: 0; }
-  section.context { font-size: 22px; max-width: none; border: 1px solid #DBDBDC; border-width: 1px 0 1px 0; line-height: initial; padding: 30px; text-align: center; }
+  section.context { font-size: 22px; max-width: none; border: $greyLine; border-width: 0 0 1px 0; line-height: initial; padding: 30px; text-align: center; }
   section.context p { margin: 15px 0 0; }
   section.context p:first-child { margin-top: 0; }
-  header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; }
+  header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; border-bottom: $greyLine; }
   header .hamburger { display: none; }
   header .menu { position: static; width: auto; background-color: transparent; border-radius: 0; display: block; }
   header .item  { position: absolute; font-size: 24px; display: block; padding: 0; border-top: 0; color: #838386; text-transform: none; }
