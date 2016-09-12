@@ -95,7 +95,7 @@ days = project.days.create([
     """,
     neil_quote: """
       <p>
-        I nearly shit my pants today because of the shared bathroom.<br />The website copy makes me laugh.<br />I am out of food.
+        I nearly shit my pants today because of the shared bathroom. The website copy makes me laugh. I am out of food.
       </p>
     """
   }

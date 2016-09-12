@@ -26,6 +26,7 @@ header .item { display: block; text-align: center; text-decoration: none; color:
 header .item:first-child { border-top: 0; }
 
 /* Post */
+.day { border-top: $greyLine; &:first-child { border-top: 0; } }
 .day h2 { color: #94796E; font-size: 24px; text-align: center;}
 .day img.comic { width: 100%; }
 .day .quotes  { background: white; }
@@ -39,8 +40,7 @@ header .item:first-child { border-top: 0; }
   body { padding-top: $desktopHeaderHeight; }
   section { margin: 0 auto; max-width: 622px; border: 0; }
   section.context { font-size: 22px; max-width: none; border: $greyLine; border-width: 0 0 1px 0; line-height: initial; padding: 30px; text-align: center; }
-  section.context p { margin: 15px 0 0; }
-  section.context p:first-child { margin-top: 0; }
+  section.context p { margin: 15px 0 0; &:first-child { margin-top: 0; } }
   header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; border-bottom: $greyLine; }
   header .hamburger { display: none; }
   header .menu { position: static; width: auto; background-color: transparent; border-radius: 0; display: block; }
