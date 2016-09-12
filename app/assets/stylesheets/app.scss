@@ -70,12 +70,17 @@ header.withHeading .logoLink { display: none; }
   section.context { font-size: 22px; max-width: none; border: $greyLine; border-width: 0 0 1px 0; line-height: initial; padding: 30px; text-align: center; }
   section.context p { margin: 15px 0 0; &:first-child { margin-top: 0; } }
   header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; border-bottom: $greyLine; }
+  header.withHeading .logoLink { display: inline; }
+  header.withHeading .smallLogoLink { display: none; }
+  header.withHeading .pageHeading { display: none; }
   header .hamburger { display: none; }
   header .menu { position: static; width: auto; background-color: transparent; border-radius: 0; display: block; }
   header .item  { position: absolute; font-size: 24px; display: block; padding: 0; border-top: 0; color: #838386; text-transform: none; }
+  header .item.active { color: #C69785; border: 1px solid #C69785; border-width: 0 0 0 4px; }
   header .top   { top: 37px; }
-  header .left  { left: 45px; }
-  header .right { right: 45px; }
+  header .left  { left: 0px; padding-left: 45px; }
+  header .right { right: 0px; padding-right: 45px; }
+  header .right.active { border-width: 0 4px 0 0; }
   header .bottom { bottom: 47px; }
   .hero      { position: fixed; bottom: 0; left: 0; width: 20%; display: inline; }
   .hero.neil { left: auto; right: 0; }
