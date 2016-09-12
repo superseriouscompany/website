@@ -1,6 +1,7 @@
 <section class="ideas">
-  <form class="submission" method="POST">
-    <input placeholder="Share your thoughts..." />
+  <form class="submission" method="POST" action="/thoughts">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
+    <input name="body" placeholder="Share your thoughts..." />
     <input type="submit" value="send" />
   </form>
 
