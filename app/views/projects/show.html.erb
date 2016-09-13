@@ -11,15 +11,27 @@
       <h2><%= day.portuguese_title %> (<%= day.english_title %>)</h2>
       <%= image_tag day.image_url, class: "comic" %>
       <div class="quotes">
-        <blockquote class="santi">
-          <%= raw day.santi_quote %>
-          <%= image_tag "chatBubble.jpg", class: "chatBubble" %>
-        </blockquote>
+        <% if day.order == "neil" %>
+          <blockquote class="neil">
+            <%= raw day.neil_quote %>
+            <%= image_tag "chatBubble.jpg", class: "chatBubble" %>
+          </blockquote>
 
-        <blockquote class="neil">
-          <%= raw day.neil_quote %>
-          <%= image_tag "chatBubble.jpg", class: "chatBubble" %>
-        </blockquote>
+          <blockquote class="santi">
+            <%= raw day.santi_quote %>
+            <%= image_tag "chatBubble.jpg", class: "chatBubble" %>
+          </blockquote>
+        <% else %>
+          <blockquote class="santi">
+            <%= raw day.santi_quote %>
+            <%= image_tag "chatBubble.jpg", class: "chatBubble" %>
+          </blockquote>
+
+          <blockquote class="neil">
+            <%= raw day.neil_quote %>
+            <%= image_tag "chatBubble.jpg", class: "chatBubble" %>
+          </blockquote>
+        <% end %>
       </div>
     </article>
   <% end %>

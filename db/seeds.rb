@@ -67,7 +67,8 @@ days = project.days.create([
       <p>
         Regardless, I’m gonna wake up tomorrow and start working and not stop til I feel effective again. Also Santi’s website design looks dope.
       </p>
-    """
+    """,
+    order: "neil"
   },
   {
     image_url: 'comic3.jpg',
@@ -82,7 +83,8 @@ days = project.days.create([
       <p>
         Creating feels good. Santi casually told me he sat in a church pew and realized he “needed chicks.” Two kiwis, three eggs and nine shrimp remain.
       </p>
-    """
+    """,
+    order: "neil"
   },
   {
     image_url: 'comic4.jpg',
@@ -97,6 +99,7 @@ days = project.days.create([
       <p>
         I nearly shit my pants today because of the shared bathroom. The website copy makes me laugh. I am out of food.
       </p>
-    """
+    """,
+    order: "neil"
   }
 ])
