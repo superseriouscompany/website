@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 project = Project.create({
-  name: "Super Serious Website",
+  name: "This Website",
   description: """
     Our first project is our shameless, self-absorbed website.
     It’s here mostly to show people back home that we’re doing something and to post future projects, favorable pics of ourselves, etc.
