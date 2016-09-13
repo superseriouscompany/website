@@ -129,7 +129,7 @@ body.pages-home .readMore { a, a:visited, a:active { color: $linkColor; } }
 
 /* Ideas Page */
 .ideas .submission { background: url(asset-path('ideaBg.jpg')) no-repeat; background-size: cover; height: 239px; position: relative; }
-.ideas .inputContainer { position:absolute; bottom: 28px; right: 71px; left: 71px; }
+.ideas .inputContainer { position:absolute; bottom: 28px; right: 22px; left: 22px; }
 .ideas input[type=text] { width: 100%; padding: 15px 50px 15px 12px; font-size: 16px; border: 0; box-shadow: none; }
 .ideas button { width: 27px; height: 27px; background: url(asset-path('submitCircle.jpg')) left top; background-size: 100%; border: 0; cursor: pointer; position: absolute; top: 11px; right: 11px; padding: 0; }
 .ideas .submittable button { background-position: left bottom; }
@@ -145,6 +145,7 @@ body.pages-home .readMore { a, a:visited, a:active { color: $linkColor; } }
     .ideas { padding-bottom: 2em; }
     .ideas .submission { height: 319px; margin: 1.35em 0 2em; border-radius: 28px; }
     .ideas .idea:first-of-type { border-top-width: 1px; }
+    .ideas .inputContainer { left: 71px; right: 71px; }
   }
 
 
