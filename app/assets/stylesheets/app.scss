@@ -56,13 +56,13 @@ header.withHeading .logoLink { display: none; }
 
 /* Ideas Page */
 .ideas .submission { background: url(asset-path('ideaBg.jpg')) no-repeat; background-size: cover; height: 239px; position: relative; }
-.ideas .inputContainer { position:absolute; bottom: 22px; right: 22px; left: 22px; }
+.ideas .inputContainer { position:absolute; bottom: 28px; right: 71px; left: 71px; }
 .ideas input[type=text] { width: 100%; padding: 15px 50px 15px 12px; font-size: 16px; border: 0; box-shadow: none; }
-.ideas button { width: 27px; height: 32px; background: url(asset-path('submitCircle.jpg')) left top; background-size: 100%; border: 0; cursor: pointer; position: absolute; top: 8px; right: 11px; }
+.ideas button { width: 27px; height: 27px; background: url(asset-path('submitCircle.jpg')) left top; background-size: 100%; border: 0; cursor: pointer; position: absolute; top: 11px; right: 11px; padding: 0; }
 .ideas .submittable button { background-position: left bottom; }
 .ideas .step2 { display: none; }
 .ideas input[type=submit] { visibility: hidden; }
-.ideas .idea { padding: 15px 27px; border-bottom: $greyLine; color: #838386; }
+.ideas .idea { padding: 15px 27px; border: $greyLine; border-width: 0 0 1px 0; color: #838386; }
 .ideas .dialog { border-radius: 8px; background-color: white; text-align: center; position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; font-size: 18px; }
 .ideas .success { color: #98D159; padding: 22px 32px; width: 144px; height: 119px; }
 .ideas .success img { width: 50px; display: block; margin: 0 auto 9px; }
@@ -75,8 +75,8 @@ section.house img { width: 100%; }
 section.house p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-right: 100px; } }
 
 /* Projects Page */
-body.projects .context { text-align: left; padding: 1em 2em 0; line-height: 20px; }
-body.projects .link { text-align: center; margin: 1em 0 1.3em; }
+body.projects .context { text-align: left; padding: 0 2em; line-height: 20px; }
+body.projects .link { text-align: center; margin: 1em 0 1.3em; color: #40746E; }
 
 @media only screen and (min-width: 769px) {
   /* Global */
@@ -87,9 +87,9 @@ body.projects .link { text-align: center; margin: 1em 0 1.3em; }
   h1 img { width: 134px; }
   h1.singleLine   { padding-top: 14px; }
   body { padding-top: $desktopHeaderHeight; }
-  section { margin: 0 auto; max-width: 622px; border: 0; font-size: 18px; }
-  section.context { font-size: 18px; max-width: none; border: $greyLine; border-width: 0 0 1px 0; line-height: initial; padding: 20px; text-align: center; }
-  section.context p { margin: 15px 0 0; &:first-child { margin-top: 0; } }
+  section { margin: 0 auto; max-width: 500px; border: 0; font-size: 18px; }
+  section.context { font-size: 18px; max-width: none; border: $greyLine; border-width: 0 0 1px 0; line-height: initial; text-align: center; padding-bottom: 15px; }
+  section.context p { margin: 15px auto 0; max-width: 803px; }
   header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; border-bottom: $greyLine; text-align: center; }
   header.withHeading .logoLink { display: inline; }
   header.withHeading .smallLogoLink { display: none; }
@@ -107,10 +107,17 @@ body.projects .link { text-align: center; margin: 1em 0 1.3em; }
 
   .day img.comic { border: 0; }
 
+  .ideas { padding-bottom: 2em; }
+  .ideas .submission { height: 319px; margin: 1.35em 0 2em; border-radius: 28px; }
+  .ideas .idea:first-of-type { border-top-width: 1px; }
+
+
   /* Quotes */
-  .quotes blockquote { margin: 0 auto; max-width: 520px; padding: 0 9px; background: none; border: 4px solid $accentBrown; border-width: 0 0 0 4px; position: relative; font-size: 18px; }
+  .quotes blockquote { margin: 0 auto; max-width: 520px; padding: 0 0.8em; background: none; border: 4px solid $accentBrown; border-width: 0 0 0 4px; position: relative; font-size: 18px; }
   .quotes blockquote.neil { background: none; border-width: 0 4px 0 0; text-align: right; }
   .quotes blockquote .chatBubble { display: inline; width: 11px; position: absolute; left: -15px; top: 50%; margin-top: -7.5px; z-index: 2; }
   .quotes blockquote.neil .chatBubble { left: auto; right: -15px; transform: scaleX(-1); }
   .quotes blockquote p:first-child { margin-top: 0; }
+
+  body.projects .context { text-align: center; }
 }
