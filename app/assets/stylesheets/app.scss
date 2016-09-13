@@ -22,7 +22,7 @@ a    { cursor: pointer; }
 h1              { text-align: center; margin: 0; padding-top: 11px; line-height: 18px; font-size: 18px; }
 h1.singleLine   { padding-top: 19px; }
 h1 img          { width: 141px; }
-section         { border-top: $greyLine; font-size: 16px; }
+section         { border-top: $greyLine; font-size: 16px; line-height: 20px; }
 section.context { line-height: 15px; color: #838386; padding: 0 20px; text-align: center}
 .hero           { display: none; }
 .nightshade     { opacity: 0.8; background-color: black; position: fixed; left: 0; top: 0; bottom: 0; right: 0; display: none; }
@@ -70,15 +70,18 @@ header.withHeading .logoLink { display: none; }
 .ideas .failure a { position: absolute; bottom: 0; right: 0; left: 0; background-color: #D17059; color: #fff; text-decoration: center; padding: 11px 0 14px; border-radius: 0 0 8px 8px; text-decoration: none; }
 
 /* Our House Page */
-.house { font-size: 16px; color: #838386; }
-.house img { width: 100%; }
-.house p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-right: 100px; } }
+section.house { font-size: 16px; color: #838386; }
+section.house img { width: 100%; }
+section.house p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-right: 100px; } }
 
 /* Projects Page */
 body.projects .context { text-align: left; padding: 1em 2em 0; line-height: 20px; }
 body.projects .link { text-align: center; margin: 1em 0 1.3em; }
 
 @media only screen and (min-width: 769px) {
+  /* Global */
+  .mobile-only { display: none; }
+
   /* Page Layout */
   h1 { padding: 14px 0 14px; }
   h1 img { width: 134px; }
