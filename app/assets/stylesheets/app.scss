@@ -75,7 +75,7 @@ header.withHeading .logoLink { display: none; }
 .house p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-right: 100px; } }
 
 /* Projects Page */
-body.projects .context { text-align: left; padding: 1em 2em 0; }
+body.projects .context { text-align: left; padding: 1em 2em 0; line-height: 20px; }
 body.projects .link { text-align: center; margin: 1em 0 1.3em; }
 
 @media only screen and (min-width: 769px) {
