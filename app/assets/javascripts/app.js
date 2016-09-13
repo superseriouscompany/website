@@ -4,9 +4,16 @@ $(document).on('turbolinks:load', function() {
 
 $(document).on('submit', '.js-submission-form', function() {
   var form = $(this);
-  if( form.find('.js-body').is(':visible') ) {
-    form.find('.js-body, .js-thinker').toggle();
-    form.find('.js-thinker').focus();
+  var $body = form.find('.js-body');
+  var $thinker = form.find('.js-thinker');
+
+  if( !$body.val() ) {
+    return false;
+  }
+
+  if( $body.is(':visible') ) {
+    $body.hide();
+    $thinker.show().focus();
     return false;
   }
 })
