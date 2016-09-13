@@ -9,30 +9,7 @@
   <% @project.days.each do |day| %>
     <article class="day">
       <h2><%= day.portuguese_title %></h2>
-      <%= image_tag day.image_url, class: "comic" %>
-      <div class="quotes">
-        <% if day.order == "neil" %>
-          <blockquote class="neil">
-            <%= raw day.neil_quote %>
-            <%= image_tag "chatBubble.jpg", class: "chatBubble" %>
-          </blockquote>
-
-          <blockquote class="santi">
-            <%= raw day.santi_quote %>
-            <%= image_tag "chatBubble.jpg", class: "chatBubble" %>
-          </blockquote>
-        <% else %>
-          <blockquote class="santi">
-            <%= raw day.santi_quote %>
-            <%= image_tag "chatBubble.jpg", class: "chatBubble" %>
-          </blockquote>
-
-          <blockquote class="neil">
-            <%= raw day.neil_quote %>
-            <%= image_tag "chatBubble.jpg", class: "chatBubble" %>
-          </blockquote>
-        <% end %>
-      </div>
+      <%= render day %>
     </article>
   <% end %>
 </section>

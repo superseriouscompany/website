@@ -11,18 +11,7 @@
   <% day = @day %>
   <% cache day do %>
     <article class="day">
-      <%= image_tag day.image_url, class: "comic" %>
-      <div class="quotes">
-        <blockquote class="santi">
-          <%= raw day.santi_quote %>
-          <%= image_tag "chatBubble.jpg", class: "chatBubble" %>
-        </blockquote>
-
-        <blockquote class="neil">
-          <%= raw day.neil_quote %>
-          <%= image_tag "chatBubble.jpg", class: "chatBubble" %>
-        </blockquote>
-      </div>
+      <%= render day %>
     </article>
   <% end %>
 </section>
