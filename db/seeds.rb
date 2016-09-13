@@ -101,5 +101,21 @@ days = project.days.create([
       </p>
     """,
     order: "neil"
+  },
+  {
+    image_url: 'comic5.jpg',
+    portuguese_title: 'Dia Cinco',
+    english_title: 'Day Five',
+    santi_quote: """
+      <p>
+        Daddy's tired.
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        We worked on the website for 14 hours today. Our host told Santi that sometimes it rains here and he looked really scared and he hasn’t been the same since. I ate a zucchini today and it was so filling. Last night I had a dream about bread.
+      </p>
+    """,
+    order: "neil"
   }
 ])
