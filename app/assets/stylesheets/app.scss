@@ -105,6 +105,9 @@ section.social p { color: #838386; text-align: center; margin-top: 0; }
 section.social .icons { display: flex; width: 262px; margin: 0 auto; }
 section.social a { display: inline-block; width: 33%; text-align: center; }
 section.social img { width: 65px; }
+  @include desktop {
+    section.social { margin-top: 81px; }
+  }
 
 /* Homepage */
 body.pages-home .day { padding-bottom: 0; }
