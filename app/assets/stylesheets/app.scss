@@ -13,6 +13,9 @@ $greyLine: 1px solid #DBDBDC;
 $accentBrown: #C69785;
 
 @mixin absCenter() { position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; }
+@mixin desktop() {
+  @media only screen and (min-width: 769px) { @content }
+}
 
 /* Globals */
 *    { box-sizing: border-box; }
@@ -80,7 +83,7 @@ section.house p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-
 body.projects .context { text-align: left; padding: 0 2em; line-height: 20px; }
 body.projects .link { text-align: center; margin: 1em 0 1.3em; color: #40746E; }
 
-@media only screen and (min-width: 769px) {
+@include desktop {
   /* Global */
   .mobile-only { display: none; }
   .desktop-only { display: block; &img, &span, &a { display: inline} }
