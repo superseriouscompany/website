@@ -17,6 +17,7 @@ $accentBrown: #C69785;
 *    { box-sizing: border-box; }
 body { font-family: 'Questrial', Helvetica, sans-serif; visibility: visible; padding-top: $headerHeight; }
 a    { cursor: pointer; }
+.desktop-only { display: none; }
 
 /* Page Layout */
 h1              { text-align: center; margin: 0; padding-top: 11px; line-height: 18px; font-size: 18px; }
@@ -30,7 +31,7 @@ body.hamburgerOpen .nightshade { display: block; }
 body.hamburgerOpen .menu       { display: block; }
 
 /* Header */
-header { position: fixed; top: 0; width: 100%; z-index: 2; background-color: white; height: $headerHeight; border-bottom: $greyLine; }
+header { position: fixed; top: 0; width: 100%; z-index: 10; background-color: white; height: $headerHeight; border-bottom: $greyLine; }
 header .hamburger { position:absolute; right: 18px; top: 18px; width: 29px; height: 20px; cursor: pointer; }
 header .smallLogo { position: absolute; left: 15px; top: 12px; width: 58px; }
 header .menu { display: none; position: absolute; top: $headerHeight + 9px; right: 9px; width: 66%; background-color: white; border-radius: 10px; padding: 3px 0; }
@@ -81,15 +82,16 @@ body.projects .link { text-align: center; margin: 1em 0 1.3em; color: #40746E; }
 @media only screen and (min-width: 769px) {
   /* Global */
   .mobile-only { display: none; }
+  .desktop-only { display: block; &img, &span, &a { display: inline} }
 
   /* Page Layout */
-  h1 { padding: 14px 0 14px; display: inline-block; position: relative; z-index: 2;}
+  h1 { padding: 14px 0 14px; display: inline-block; position: relative; z-index: 11;}
   h1 img { width: 134px; }
   h1.singleLine   { padding-top: 14px; }
   body { padding-top: $desktopHeaderHeight; }
   section { margin: 0 auto; max-width: 500px; border: 0; font-size: 18px; }
   section.context { font-size: 18px; max-width: none; border: $greyLine; border-width: 0 0 1px 0; line-height: initial; text-align: center; padding-bottom: 15px; }
-  section.context p { margin: 15px auto 0; max-width: 803px; }
+  section.context p { margin: 15px auto 0; max-width: 600px; }
   header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; border-bottom: $greyLine; text-align: center; }
   header.withHeading .logoLink { display: inline; }
   header.withHeading .smallLogoLink { display: none; }
@@ -102,15 +104,16 @@ body.projects .link { text-align: center; margin: 1em 0 1.3em; color: #40746E; }
   header .left  { left: 0px; position: static; float: left; }
   header .right { right: 0px; position: static; float: right; }
   header .bottom { bottom: 47px; }
-  .hero      { position: fixed; bottom: 0; left: 0; width: 20%; display: inline; }
+  .hero      { position: fixed; bottom: 0; left: 0; width: 15%; display: inline; }
   .hero.neil { left: auto; right: 0; }
 
+  .day { padding-top: 1em; }
   .day img.comic { border: 0; }
+  .day h2 { text-align: left; font-size: 16px; }
 
   .ideas { padding-bottom: 2em; }
   .ideas .submission { height: 319px; margin: 1.35em 0 2em; border-radius: 28px; }
   .ideas .idea:first-of-type { border-top-width: 1px; }
-
 
   /* Quotes */
   .quotes blockquote { margin: 0 auto; max-width: 520px; padding: 0 0.8em; background: none; border: 4px solid $accentBrown; border-width: 0 0 0 4px; position: relative; font-size: 18px; }
@@ -119,5 +122,9 @@ body.projects .link { text-align: center; margin: 1em 0 1.3em; color: #40746E; }
   .quotes blockquote.neil .chatBubble { left: auto; right: -15px; transform: scaleX(-1); }
   .quotes blockquote p:first-child { margin-top: 0; }
 
+  section.house img { margin-top: 1.5em; }
+
   body.projects .context { text-align: center; }
+
+  section.philosophy { margin-top: 1.5em; }
 }

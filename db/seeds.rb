@@ -9,7 +9,7 @@
 project = Project.create({
   name: "This Website",
   description: """
-    Our first project is our shameless, self-absorbed website.
+    Our first project is this shameless, self-absorbed website.
     It’s here mostly to show people back home that we’re doing something and to post future projects, favorable pics of ourselves, etc.
     You’re already here, so don’t click it, but here it is:
   """,
