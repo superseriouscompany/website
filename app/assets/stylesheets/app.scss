@@ -83,14 +83,14 @@ body.projects .link { text-align: center; margin: 1em 0 1.3em; }
   .mobile-only { display: none; }
 
   /* Page Layout */
-  h1 { padding: 14px 0 14px; }
+  h1 { padding: 14px 0 14px; display: inline-block; position: relative; z-index: 2;}
   h1 img { width: 134px; }
   h1.singleLine   { padding-top: 14px; }
   body { padding-top: $desktopHeaderHeight; }
   section { margin: 0 auto; max-width: 622px; border: 0; font-size: 18px; }
   section.context { font-size: 18px; max-width: none; border: $greyLine; border-width: 0 0 1px 0; line-height: initial; padding: 20px; text-align: center; }
   section.context p { margin: 15px 0 0; &:first-child { margin-top: 0; } }
-  header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; border-bottom: $greyLine; }
+  header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; border-bottom: $greyLine; text-align: center; }
   header.withHeading .logoLink { display: inline; }
   header.withHeading .smallLogoLink { display: none; }
   header.withHeading .pageHeading { display: none; }
