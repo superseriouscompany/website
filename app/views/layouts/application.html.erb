@@ -30,7 +30,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= "#{controller_name} #{action_name}" %>">
   <header class="<%= 'withHeading' if @page_heading %>">
     <% if @page_heading %>
       <a href="/" class="smallLogoLink">
@@ -51,8 +51,9 @@
     <div class="menu">
       <a href="/projects/this-website" class="top left item <%= 'active' if controller_name == 'projects'%>">Projects</a>
       <a href="/ideas" class="bottom left item <%= 'active' if action_name == 'ideas' %>">Ideas</a>
-      <a href="/house" class="top right item <%= 'active' if action_name == 'house' %>">Our House</a>
+      <!-- FIXME: switch on both -->
       <a href="/philosophy" class="bottom right item <%= 'active' if action_name == 'philosophy' %>">Nobody Cares</a>
+      <a href="/house" class="top right item <%= 'active' if action_name == 'house' %>">Our House</a>
     </div>
   </header>
 

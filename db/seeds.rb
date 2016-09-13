@@ -13,7 +13,7 @@ project = Project.create({
     It’s here mostly to show people back home that we’re doing something and to post future projects, favorable pics of ourselves, etc.
     You’re already here, so don’t click it, but here it is:
   """,
-  link: "http://superseriouscompany.com",
+  link: "www.superseriouscompany.com",
   slug: "this-website"
 })
 
@@ -43,7 +43,7 @@ days = project.days.create([
     """
   },
   {
-    image_url: 'https://cldup.com/3GxrSJdh1L.jpg',
+    image_url: 'comic2.jpg',
     portuguese_title: 'Dia Dois',
     english_title: 'Day Two',
     santi_quote: """
@@ -70,7 +70,7 @@ days = project.days.create([
     """
   },
   {
-    image_url: 'https://cldup.com/TBSEjM-dw2.jpg',
+    image_url: 'comic3.jpg',
     portuguese_title: 'Dia Três',
     english_title: 'Day Three',
     santi_quote: """
