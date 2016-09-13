@@ -5,12 +5,13 @@
   * rules are kept to one line, which favors overall structure readability over changing a single rule (use cmd+f).
   * the goal is to keep the design minimal and stick to this file, but logical sections are broken out in case we need to extract into multiple files.
   * we're not using SMACSS or any other framework. the idea is to keep the design simple enough that this one file remains readable.
-
+  * rules go in order of specificity: globals, reusable components, page specific
 */
 $headerHeight: 58px;
 $desktopHeaderHeight: 60px;
 $greyLine: 1px solid #DBDBDC;
 $accentBrown: #C69785;
+$linkColor: #40746E;
 
 @mixin absCenter() { position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; }
 @mixin desktop() {
@@ -21,11 +22,11 @@ $accentBrown: #C69785;
 *    { box-sizing: border-box; }
 body { font-family: 'Questrial', Helvetica, sans-serif; visibility: visible; padding-top: $headerHeight; }
 a    { cursor: pointer; }
-.desktop-only { display: none; }
+.desktop-only { display: none !important; }
   @include desktop {
     body { padding-top: $desktopHeaderHeight; }
-    .mobile-only { display: none; }
-    .desktop-only { display: block; &img, &span, &a { display: inline} }
+    .mobile-only { display: none !important; }
+    .desktop-only { display: block !important; &img, &span, &a { display: inline !important} }
   }
 
 /* Page Layout */
@@ -98,6 +99,18 @@ header.withHeading .logoLink { display: none; }
     .quotes blockquote p:first-child { margin-top: 0; }
   }
 
+/* Social section on homepage */
+section.social { padding: 21px 0 35px; }
+section.social p { color: #838386; text-align: center; margin-top: 0; }
+section.social .icons { display: flex; width: 262px; margin: 0 auto; }
+section.social a { display: inline-block; width: 33%; text-align: center; }
+section.social img { width: 65px; }
+
+/* Homepage */
+body.pages-home .day { padding-bottom: 0; }
+body.pages-home .readMore { text-align: center; margin: 2em 0; }
+body.pages-home .readMore { a, a:visited, a:active { color: $linkColor; } }
+
 /* Philosophy Page */
 .philosophy blockquote { border-bottom: $greyLine; padding-top: 15px; padding-bottom: 15px; }
   @include desktop {
@@ -135,8 +148,9 @@ section.house p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-
   }
 
 /* Projects Page */
-body.projects .context { text-align: left; padding: 0 2em; line-height: 20px; }
-body.projects .link { text-align: center; margin: 1em 0 1.3em; color: #40746E; }
+body.projects-show .context { text-align: left; padding: 0 2em; line-height: 20px; }
+body.projects-show .link { text-align: center; margin: 1em 0 1.3em; }
+body.projects-show .link { a, a:active, a:visited { color: $linkColor; } }
   @include desktop {
-    body.projects .context { text-align: center; }
+    body.projects-show .context { text-align: center; }
   }
