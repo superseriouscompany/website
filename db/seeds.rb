@@ -13,7 +13,7 @@ project = Project.create({
     It’s here mostly to show people back home that we’re doing something and to post future projects, favorable pics of ourselves, etc.
     You’re already here, so don’t click it, but here it is:
   """,
-  link: "www.superseriouscompany.com",
+  link: "superseriouscompany.com",
   slug: "this-website"
 })
 
