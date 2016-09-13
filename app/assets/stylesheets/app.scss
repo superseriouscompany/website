@@ -100,6 +100,9 @@ header.withHeading .logoLink { display: none; }
 
 /* Philosophy Page */
 .philosophy blockquote { border-bottom: $greyLine; padding-top: 15px; padding-bottom: 15px; }
+  @include desktop {
+    section.philosophy { margin-top: 1.5em; }
+  }
 
 /* Ideas Page */
 .ideas .submission { background: url(asset-path('ideaBg.jpg')) no-repeat; background-size: cover; height: 239px; position: relative; }
@@ -126,15 +129,13 @@ header.withHeading .logoLink { display: none; }
 section.house { font-size: 16px; color: #838386; padding-bottom: 1.4em; }
 section.house img { width: 100%; }
 section.house p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-right: 100px; } }
+  @include desktop {
+    section.house img { margin-top: 1.5em; }
+  }
 
 /* Projects Page */
 body.projects .context { text-align: left; padding: 0 2em; line-height: 20px; }
 body.projects .link { text-align: center; margin: 1em 0 1.3em; color: #40746E; }
-
-@include desktop {
-  section.house img { margin-top: 1.5em; }
-
-  body.projects .context { text-align: center; }
-
-  section.philosophy { margin-top: 1.5em; }
-}
+  @include desktop {
+    body.projects .context { text-align: center; }
+  }
