@@ -102,6 +102,7 @@ header.withHeading .logoLink { display: none; }
 .philosophy blockquote { border-bottom: $greyLine; padding-top: 15px; padding-bottom: 15px; }
   @include desktop {
     section.philosophy { margin-top: 1.5em; }
+    .philosophy blockquote { border-bottom: 0; }
   }
 
 /* Ideas Page */
