@@ -3,7 +3,7 @@
     <%= @project.description %>
   </p>
   <div class="link">
-    <a href="<%= @project.link%>"><%= @project.link %></a>
+    <a href="<%= @project.url || 'http://superseriouscompany.com'%>"><%= @project.link %></a>
   </div>
 </section>
 
