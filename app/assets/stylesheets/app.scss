@@ -22,6 +22,11 @@ $accentBrown: #C69785;
 body { font-family: 'Questrial', Helvetica, sans-serif; visibility: visible; padding-top: $headerHeight; }
 a    { cursor: pointer; }
 .desktop-only { display: none; }
+  @include desktop {
+    body { padding-top: $desktopHeaderHeight; }
+    .mobile-only { display: none; }
+    .desktop-only { display: block; &img, &span, &a { display: inline} }
+  }
 
 /* Page Layout */
 h1              { text-align: center; margin: 0; padding-top: 11px; line-height: 18px; font-size: 18px; }
@@ -33,6 +38,17 @@ section.context { color: #838386; padding: 0 20px; text-align: center; border-to
 .nightshade     { opacity: 0.8; background-color: black; position: fixed; left: 0; top: 0; bottom: 0; right: 0; display: none; }
 body.hamburgerOpen .nightshade { display: block; }
 body.hamburgerOpen .menu       { display: block; }
+  @include desktop {
+    body { padding-top: $desktopHeaderHeight; }
+    h1 { padding: 14px 0 14px; display: inline-block; position: relative; z-index: 11;}
+    h1 img { width: 134px; }
+    h1.singleLine   { padding-top: 14px; }
+    section { margin: 0 auto; max-width: 500px; border: 0; font-size: 18px; }
+    section.context { font-size: 18px; max-width: none; border: $greyLine; border-width: 0 0 1px 0; line-height: initial; text-align: center; padding-bottom: 15px; }
+    section.context p { margin: 15px auto 0; max-width: 600px; }
+    .hero      { position: fixed; bottom: 0; left: 0; width: 15%; display: inline; }
+    .hero.neil { left: auto; right: 0; }
+  }
 
 /* Header */
 header { position: fixed; top: 0; width: 100%; z-index: 10; background-color: white; height: $headerHeight; border-bottom: $greyLine; }
@@ -44,17 +60,43 @@ header .item:first-child { border-top: 0; }
 header .item.active { color: $accentBrown; }
 header .pageHeading { text-transform: uppercase; display: inline-block; margin-top: 3px; }
 header.withHeading .logoLink { display: none; }
+  @include desktop {
+    header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; border-bottom: $greyLine; text-align: center; }
+    header.withHeading .logoLink { display: inline; }
+    header.withHeading .smallLogoLink { display: none; }
+    header.withHeading .pageHeading { display: none; }
+    header .hamburger { display: none; }
+    header .menu { top: 18px; width: 100%; background-color: transparent; border-radius: 0; display: block; }
+    header .item  { position: absolute; font-size: 16px; display: block; padding: 0; border-top: 0; color: #838386; text-transform: none; width: 148px; }
+    header .item.active { border: 4px solid $accentBrown; border-width: 0 0 4px 0; padding-bottom: 16px; }
+    header .top   { top: 37px; }
+    header .left  { left: 0px; position: static; float: left; }
+    header .right { right: 0px; position: static; float: right; }
+    header .bottom { bottom: 47px; }
+  }
 
 /* Post on homepage or project page */
 .day { border-top: $greyLine; padding: 2em 0 1.4em; &:first-child { border-top: 0; } }
 .day h2 { color: #94796E; font-size: 24px; text-align: center; margin: 0; }
 .day img.comic { width: 100%; border-left: 4px solid $accentBrown; }
+  @include desktop {
+    .day { padding-top: 1em; }
+    .day img.comic { border: 0; }
+    .day h2 { text-align: left; font-size: 16px; }
+  }
 
 /* Quotes on homepage, project page and philosophy page*/
 .quotes  { background: white; }
 .quotes blockquote { color: #94796E; line-height: 20px; margin: 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 38px 45px; padding-left: 38px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; }
 .quotes blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; }
 .quotes blockquote .chatBubble { display: none; }
+  @include desktop {
+    .quotes blockquote { margin: 0 auto; max-width: 520px; padding: 0 0.8em; background: none; border: 4px solid $accentBrown; border-width: 0 0 0 4px; position: relative; font-size: 18px; min-height: 0; }
+    .quotes blockquote.neil { background: none; border-width: 0 4px 0 0; text-align: right; }
+    .quotes blockquote .chatBubble { display: inline; width: 11px; position: absolute; left: -15px; top: 50%; margin-top: -7.5px; z-index: 2; }
+    .quotes blockquote.neil .chatBubble { left: auto; right: -15px; transform: scaleX(-1); }
+    .quotes blockquote p:first-child { margin-top: 0; }
+  }
 
 /* Philosophy Page */
 .philosophy blockquote { border-bottom: $greyLine; padding-top: 15px; padding-bottom: 15px; }
@@ -73,6 +115,12 @@ header.withHeading .logoLink { display: none; }
 .ideas .success img { width: 50px; display: block; margin: 0 auto 9px; }
 .ideas .failure { color: #D17059; width: 226px; height: 139px; padding: 28px 34px;}
 .ideas .failure a { position: absolute; bottom: 0; right: 0; left: 0; background-color: #D17059; color: #fff; text-decoration: center; padding: 11px 0 14px; border-radius: 0 0 8px 8px; text-decoration: none; }
+  @include desktop {
+    .ideas { padding-bottom: 2em; }
+    .ideas .submission { height: 319px; margin: 1.35em 0 2em; border-radius: 28px; }
+    .ideas .idea:first-of-type { border-top-width: 1px; }
+  }
+
 
 /* Our House Page */
 section.house { font-size: 16px; color: #838386; padding-bottom: 1.4em; }
@@ -84,48 +132,6 @@ body.projects .context { text-align: left; padding: 0 2em; line-height: 20px; }
 body.projects .link { text-align: center; margin: 1em 0 1.3em; color: #40746E; }
 
 @include desktop {
-  /* Global */
-  .mobile-only { display: none; }
-  .desktop-only { display: block; &img, &span, &a { display: inline} }
-
-  /* Page Layout */
-  h1 { padding: 14px 0 14px; display: inline-block; position: relative; z-index: 11;}
-  h1 img { width: 134px; }
-  h1.singleLine   { padding-top: 14px; }
-  body { padding-top: $desktopHeaderHeight; }
-  section { margin: 0 auto; max-width: 500px; border: 0; font-size: 18px; }
-  section.context { font-size: 18px; max-width: none; border: $greyLine; border-width: 0 0 1px 0; line-height: initial; text-align: center; padding-bottom: 15px; }
-  section.context p { margin: 15px auto 0; max-width: 600px; }
-  header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; border-bottom: $greyLine; text-align: center; }
-  header.withHeading .logoLink { display: inline; }
-  header.withHeading .smallLogoLink { display: none; }
-  header.withHeading .pageHeading { display: none; }
-  header .hamburger { display: none; }
-  header .menu { top: 18px; width: 100%; background-color: transparent; border-radius: 0; display: block; }
-  header .item  { position: absolute; font-size: 16px; display: block; padding: 0; border-top: 0; color: #838386; text-transform: none; width: 148px; }
-  header .item.active { border: 4px solid $accentBrown; border-width: 0 0 4px 0; padding-bottom: 16px; }
-  header .top   { top: 37px; }
-  header .left  { left: 0px; position: static; float: left; }
-  header .right { right: 0px; position: static; float: right; }
-  header .bottom { bottom: 47px; }
-  .hero      { position: fixed; bottom: 0; left: 0; width: 15%; display: inline; }
-  .hero.neil { left: auto; right: 0; }
-
-  .day { padding-top: 1em; }
-  .day img.comic { border: 0; }
-  .day h2 { text-align: left; font-size: 16px; }
-
-  .ideas { padding-bottom: 2em; }
-  .ideas .submission { height: 319px; margin: 1.35em 0 2em; border-radius: 28px; }
-  .ideas .idea:first-of-type { border-top-width: 1px; }
-
-  /* Quotes */
-  .quotes blockquote { margin: 0 auto; max-width: 520px; padding: 0 0.8em; background: none; border: 4px solid $accentBrown; border-width: 0 0 0 4px; position: relative; font-size: 18px; min-height: 0; }
-  .quotes blockquote.neil { background: none; border-width: 0 4px 0 0; text-align: right; }
-  .quotes blockquote .chatBubble { display: inline; width: 11px; position: absolute; left: -15px; top: 50%; margin-top: -7.5px; z-index: 2; }
-  .quotes blockquote.neil .chatBubble { left: auto; right: -15px; transform: scaleX(-1); }
-  .quotes blockquote p:first-child { margin-top: 0; }
-
   section.house img { margin-top: 1.5em; }
 
   body.projects .context { text-align: center; }
