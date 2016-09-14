@@ -141,7 +141,7 @@ days = project.days.create([
     english_title: 'Day Seven',
     santi_quote: """
       <p>
-        Sure, Peniche's a bit run down, but this place has skateparks!, soccer fields!, the best waves in Europe,! fish! – bunch of stuff. But anyways yeah Neil's not too stoked right meow.
+        Sure, Peniche's a bit run down, but this place has skateparks!, soccer fields!, the best waves in Europe!, fish! – bunch of stuff. But anyways yeah Neil's not too stoked right meow.
       </p>
     """,
     neil_quote: """
