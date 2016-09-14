@@ -118,5 +118,21 @@ days = project.days.create([
       </p>
     """,
     order: "neil"
-  }
+  },
+  {
+    image_url: 'comic6.jpg',
+    portuguese_title: 'Dia Sex',
+    english_title: 'Day Six',
+    santi_quote: """
+      <p>
+        Website wup-ah!!! One of our proudest moments. We setup this link where anyone can click it at any time and enter a group video chat with us – just like pop in. We've had ~40 visitors tonight. Anyways, at one point, a random shirtless dude laying on his bed popped in, got scared, and popped out.
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        I took Santi out to a nice dinner to celebrate making the website. He joked that we never go out anymore, but I caught a twinge of authentic sadness. At a restaurant on the river we toasted vinho branco over grilled octopus and talked about the future. When we got back, a bunch of our tinder friends and one unsuspecting intern jumped into our video chat. I am full and happy.
+      </p>
+    """,
+    order: "neil"
+  },
 ])
