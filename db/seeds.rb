@@ -135,4 +135,20 @@ days = project.days.create([
     """,
     order: "neil"
   },
+  {
+    image_url: 'comic7.jpg',
+    portuguese_title: 'Dia Sete',
+    english_title: 'Day Seven',
+    santi_quote: """
+      <p>
+        Sure, Peniche's a bit run down, but this place has skateparks!, soccer fields!, the best waves in Europe,! fish! – bunch of stuff. But anyways yeah Neil's not too stoked right meow.
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        So this is where we’re gonna live for a year. For whatever reason I was picturing big open windows to the beach. Whenever I go anywhere I’m picturing big open windows to a private beach. But it’s never like that I guess. At least the internet is still fast. We’re gonna spend the next week probably getting the essentials: bikes for transportation, boards for recreation and a house.
+      </p>
+    """,
+    order: "neil"
+  },
 ])
