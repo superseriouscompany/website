@@ -151,4 +151,36 @@ days = project.days.create([
     """,
     order: "neil"
   },
+  {
+    image_url: 'comic8.jpg',
+    portuguese_title: 'Dia Oito',
+    english_title: 'Day Eight',
+    santi_quote: """
+      <p>
+        Err... oops.
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        Today we finally hit the ocean. Santi gave me a crash course in boogie boarding, saying phrases like “really easy,” “perfect for beginners,” and “waves are tiiiiny today.” An hour later I’m on my butt in the shallow water, fins akimbo, facing the shore. Dead eyes idly surveying the boogie board I’d long since let go of. Completely defeated.
+      </p>
+    """,
+    order: "neil"
+  },
+  {
+    image_url: 'comic9.jpg',
+    portuguese_title: 'Dia Nove',
+    english_title: 'Day Nine',
+    santi_quote: """
+      <p>
+        Everything was going great; we got everything done for the day, had a fricken' blast doing it. We were even high fiving each other in the bus… high fives retracted. ಠ_ಠ
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        Tonight we were homeless in Lisbon lugging around a broken bike and we got robbed. It was also our best night here so far.
+      </p>
+    """,
+    order: "neil"
+  },
 ])
