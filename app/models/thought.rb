@@ -5,7 +5,7 @@ class Thought < ActiveRecord::Base
 
   def notify_slack
     payload = {
-      username: thinker || "Randy Rando",
+      username: thinker.present? ? thinker : "Randy Rando",
       text: body,
       icon_emoji: ":intriguing:"
     }
