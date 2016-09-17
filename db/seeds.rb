@@ -183,4 +183,20 @@ days = project.days.create([
     """,
     order: "neil"
   },
+  {
+    image_url: 'comic10.jpg',
+    portuguese_title: 'Dia Dez',
+    english_title: 'Day Ten',
+    santi_quote: """
+      <p>
+        Today we biked to all the nearby towns in hopes of finally finding an apartment to live in permanently. We were lost in a field of corn for like an hour. Gonna just try again tomorrow.
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        We apartment hunted on bikes for three hours today. My bike seat hurts my butt a lot and at one point I caught myself about to cry so I laughed out loud instead. It was real loud but I don’t think Santi heard bc he was too far ahead of me.
+      </p>
+    """,
+    order: "santi"
+  },
 ])
