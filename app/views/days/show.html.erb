@@ -1,0 +1,13 @@
+<section class="context">
+  <p>
+    <%= @day.portuguese_title %>
+  </p>
+</section>
+
+<section class="story">
+  <article class="day">
+    <% cache @day do %>
+      <%= render @day %>
+    <% end %>
+  </article>
+</section>

@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   post '/thoughts' => 'thoughts#create'
   get '/projects', to: redirect('/projects/this-website')
   get '/projects/:slug' => 'projects#show'
+  get '/dias/:id' => 'days#show'
   get '/:action', controller: 'pages'
 end
