@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   get '/projects', to: redirect('/projects/this-website')
   get '/projects/:slug' => 'projects#show'
   get '/dias/:id' => 'days#show'
+  post '/slack' => 'slack#post'
+
+  # Catchall
   get '/:action', controller: 'pages'
 end
