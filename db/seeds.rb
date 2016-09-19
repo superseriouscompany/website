@@ -199,4 +199,20 @@ days = project.days.create([
     """,
     order: "santi"
   },
+  {
+    image_url: 'comic11.jpg',
+    portuguese_title: 'Dia Onze',
+    english_title: 'Day Eleven',
+    santi_quote: """
+      <p>
+        We decided to put all work aside until we find a permanent residence; nothing's turned up yet, and it's kind of tearing Super Serious apart existentially. Neil says his mind is like a blender with nothing in it. I'm looking at flights to France.
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        I watched 8 hours of tv today and cooked two meals and that’s it. Starting to go a little stir-crazy in this airbnb, I can’t wait to settle in to a place and start working for real.
+      </p>
+    """,
+    order: "santi"
+  },
 ])
