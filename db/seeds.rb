@@ -215,4 +215,20 @@ days = project.days.create([
     """,
     order: "santi"
   },
+  {
+    image_url: 'comic12.jpg',
+    portuguese_title: 'Dia Doze',
+    english_title: 'Day Twelve',
+    santi_quote: """
+      <p>
+        This isn't what I had envisioned, but they left us no choice. Needless to say, a couple apartments appeared out of thin air...
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        I learned that “tudo bem” roughly means “it’s fine” and now I’m speaking confident Portuguese. I don’t understand most of the responses, but tudo bem.
+      </p>
+    """,
+    order: "santi"
+  },
 ])
