@@ -231,4 +231,20 @@ days = project.days.create([
     """,
     order: "santi"
   },
+  {
+    image_url: 'comic13.jpg',
+    portuguese_title: 'Dia Treze',
+    english_title: 'Day Thirteen',
+    santi_quote: """
+      <p>
+        We split up today: Neil biked around talking to real estate agents in Portuguese, while I bailed to go surf with a friend. Waves were exchanged. Turns out this guy, Tiago, knows absolutely everyone here. He and his family invited us out and hooked it up with contacts to the coolest houses around. Super Serious HQ coming soon.
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        We gon' make it
+      </p>
+    """,
+    order: "santi"
+  },
 ])
