@@ -3,11 +3,23 @@ class DaysController < ApplicationController
 
   def show
     @day = Day.find_by_id(params[:id])
-    @share_image_url = "http://superseriouscompany.com#{ActionController::Base.helpers.asset_url("comic#{params[:id]}.jpg")}"
     redirect_to '/' unless @day.present?
+    @share_image_url = @day.image_url.match(/\.com/) ? @day.image_url : "http://superseriouscompany.com#{ActionController::Base.helpers.asset_url("comic#{params[:id]}.jpg")}"
   end
 
   def create
-    head 204
+    day = Day.new(day_params)
+    day.project = Project.first
+    if day.save
+      head 204
+    else
+      render status: 400, json: { errors: day.errors.full_messages }
+    end
+  end
+
+  private
+
+  def day_params
+    params.require(:day).permit(:portuguese_title, :image_url, :santi_quote, :neil_quote, :order)
   end
 end
