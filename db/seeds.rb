@@ -247,4 +247,20 @@ days = project.days.create([
     """,
     order: "santi"
   },
+  {
+    image_url: 'comic14.jpg',
+    portuguese_title: 'Dia Quatorze',
+    english_title: 'Day Fourteen',
+    santi_quote: """
+      <p>
+        Landed the longest floater of my life today at this spot called Cantinho da Baia, which is out in front of our new place; it's a really fast left-hander, super fun. Then got home and slammed six eggs and two cans of tunashealashe.
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        I ate sardines on bread today and it was luxurious as fuck. Santi said he was spiraling and I responded with a heartfelt speech. I think it worked, but I didn’t look up from playing Mr. Jump on my iPhone the entire time so I can’t be 100% sure.
+      </p>
+    """,
+    order: "neil"
+  },
 ])
