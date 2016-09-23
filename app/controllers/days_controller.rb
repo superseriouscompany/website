@@ -16,7 +16,7 @@ class DaysController < ApplicationController
     day.santi_quote = "<p>#{day.santi_quote}</p>"
 
     if day.save
-      head 204
+      render status: 201, json: { id: day.id }
     else
       render status: 400, json: { errors: day.errors.full_messages }
     end
