@@ -279,4 +279,20 @@ days = project.days.create([
     """,
     order: "neil"
   },
+  {
+    image_url: 'comic16.jpg',
+    portuguese_title: 'Dia Dezesseis',
+    english_title: 'Day Sixteen',
+    santi_quote: """
+      <p>
+        One of Neil's goals is to become a true master in the software field, both in knowledge and in practice. Another of his goals is to be hot, and another one is to be able to rap on the spot. As cofounder, one of my jobs is to make sure he meets these goals, so I proposed during dinner that I take a two-week vacation through France in a couple months, to give him space to do tech research, etc. He bit.
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        After surfing, we re-committed to creating the working life we’d envisioned out here. Takeaways: I’m going to whisper freestyle rap lyrics into my pillow before going to sleep and Santi is going to masturbate every single day. This company is going to be worth millions.
+      </p>
+    """,
+    order: "neil"
+  },
 ])
