@@ -263,4 +263,20 @@ days = project.days.create([
     """,
     order: "neil"
   },
+  {
+    image_url: 'comic15.jpg',
+    portuguese_title: 'Dia Quinze',
+    english_title: 'Day Fifteen',
+    santi_quote: """
+      <p>
+        Yeehaw! So this tiny, little island is called Ilha do Baleal. We have a two-bedroom, with views of one beach on one side and another beach on the other side, each with waves coming from a different swell window (mwhappah!). It's cozy, so we'll get to know each other, but the views, they cannot be beat. There are no extra beds, so, visitors, prepare to sleep head-to-toe with the gardaddy.
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        When I wrote out a list of apartment priorities at the beginning of this search, “ocean view from the work area” was #4. Today I discovered it had been #1 in my heart this whole time.
+      </p>
+    """,
+    order: "neil"
+  },
 ])
