@@ -9,7 +9,7 @@ class Thought < ActiveRecord::Base
       text: body,
       icon_emoji: ":intriguing:"
     }
-    payload[:channel] = "@neil" if Rails.env.development?
+    payload[:channel] = Rails.env.development? ? "@neil" : "#ideas"
     HTTPClient.post("https://hooks.slack.com/services/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", { payload: payload.to_json})
   end
 end

@@ -247,4 +247,52 @@ days = project.days.create([
     """,
     order: "santi"
   },
+  {
+    image_url: 'comic14.jpg',
+    portuguese_title: 'Dia Quatorze',
+    english_title: 'Day Fourteen',
+    santi_quote: """
+      <p>
+        Landed the longest floater of my life today at this spot called Cantinho da Baia, which is out in front of our new place; it's a really fast left-hander, super fun. Then got home and slammed six eggs and two cans of tunashealashe.
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        I ate sardines on bread today and it was luxurious as fuck. Santi said he was spiraling and I responded with a heartfelt speech. I think it worked, but I didn’t look up from playing Mr. Jump on my iPhone the entire time so I can’t be 100% sure.
+      </p>
+    """,
+    order: "neil"
+  },
+  {
+    image_url: 'comic15.jpg',
+    portuguese_title: 'Dia Quinze',
+    english_title: 'Day Fifteen',
+    santi_quote: """
+      <p>
+        Yeehaw! So this tiny, little island is called Ilha do Baleal. We have a two-bedroom, with views of one beach on one side and another beach on the other side, each with waves coming from a different swell window (mwhappah!). It's cozy, so we'll get to know each other, but the views, they cannot be beat. There are no extra beds, so, visitors, prepare to sleep head-to-toe with the gardaddy.
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        When I wrote out a list of apartment priorities at the beginning of this search, “ocean view from the work area” was #4. Today I discovered it had been #1 in my heart this whole time.
+      </p>
+    """,
+    order: "neil"
+  },
+  {
+    image_url: 'comic16.jpg',
+    portuguese_title: 'Dia Dezesseis',
+    english_title: 'Day Sixteen',
+    santi_quote: """
+      <p>
+        One of Neil's goals is to become a true master in the software field, both in knowledge and in practice. Another of his goals is to be hot, and another one is to be able to rap on the spot. As cofounder, one of my jobs is to make sure he meets these goals, so I proposed during dinner that I take a two-week vacation through France in a couple months, to give him space to do tech research, etc. He bit.
+      </p>
+    """,
+    neil_quote: """
+      <p>
+        After surfing, we re-committed to creating the working life we’d envisioned out here. Takeaways: I’m going to whisper freestyle rap lyrics into my pillow before going to sleep and Santi is going to masturbate every single day. This company is going to be worth millions.
+      </p>
+    """,
+    order: "neil"
+  },
 ])
