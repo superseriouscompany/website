@@ -8,7 +8,7 @@
 </section>
 
 <section class="story">
-  <% @project.days.each do |day| %>
+  <% @days.each do |day| %>
     <article class="day">
       <h2><%= day.portuguese_title %></h2>
       <%= render day %>
