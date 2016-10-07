@@ -88,7 +88,7 @@ header.withHeading .logoLink { display: none; }
 
 /* Quotes on homepage, project page and philosophy page*/
 .quotes  { background: white; }
-.quotes blockquote { color: #94796E; line-height: 20px; margin: 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 38px 45px; padding-left: 38px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; }
+.quotes blockquote { color: #94796E; line-height: 20px; margin: 2px 0 0 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 37px 45px; padding-left: 37px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; }
 .quotes blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; }
 .quotes blockquote .chatBubble { display: none; }
   @include desktop {
