@@ -8,6 +8,8 @@ class DaysController < ApplicationController
   def show
     @day = Day.find_by_id(params[:id])
     redirect_to '/' and return unless @day.present?
+    @page_title = "#{@day.portuguese_title} Cartoon"
+    @meta_description = "Cartoon for day #{@day.id} in Portugal for Neil and Santi of Super Serious Company"
     @share_image_url = @day.image_url.match(/\.com/) ? @day.image_url : "http://superseriouscompany.com#{ActionController::Base.helpers.asset_url("comic#{params[:id]}.jpg")}"
   end
 
