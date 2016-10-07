@@ -2,14 +2,14 @@
 <html>
 <head>
 
-  <title>Super Serious Company</title>
+  <title><%= "#{@page_title} |" if @page_title.present? %> Super Serious Company </title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Pompous Pithy Tagline." />
+  <meta name="description" content="Plot: Homeless guy and his boss quit jobs and randomly move to Portugal." />
   <meta property="og:url"         content="http://superseriouscompany.com" />
   <meta property="og:title"       content="Super Serious Company" />
-  <meta property="og:description" content="Pompous Pithy Tagline." />
+  <meta property="og:description" content="Plot: Homeless guy and his boss quit jobs and randomly move to Portugal." />
   <meta property="og:image"       content="<%= @share_image_url || 'https://cldup.com/Kl5WvoFCg9.jpg'%>" />
 
   <!-- Favicon -->
