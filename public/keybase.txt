@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/neilsarkar
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://superseriouscompany.com
+  * I am neilsarkar (https://keybase.io/neilsarkar) on keybase.
+  * I have a public key with fingerprint AE1F D2C0 DD5D 0BA6 BBEB  9659 6A89 03A3 7E47 EA82
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101498893674e8db370778dbd251bc71f61d9bb267007a8825e66075bc3c48d9fc90a",
+            "fingerprint": "ae1fd2c0dd5d0ba6bbeb96596a8903a37e47ea82",
+            "host": "keybase.io",
+            "key_id": "6a8903a37e47ea82",
+            "kid": "0101498893674e8db370778dbd251bc71f61d9bb267007a8825e66075bc3c48d9fc90a",
+            "uid": "bec5d6c57f1ce36216ad7d5bdceeb719",
+            "username": "neilsarkar"
+        },
+        "service": {
+            "hostname": "superseriouscompany.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1475804945,
+    "expire_in": 157680000,
+    "prev": "d247a30d3842737206e7385ecc6ab0bd5c2c47ed38a6951da0b531f170fb2582",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.58
+Comment: https://keybase.io/crypto
+
+yMIuAnicrVJbSBRRGF6zC5lJIRQ9CDZv1RpnLmfOzBa7RlD0kPSgmaUu57Y6uDuz
+zsxa21aWGZYPQXSDbkRUdBGikEKDKLtgRAgV1YNagVEPUVkRUkadEXvrsfPyc/7/
++7//+z/+e7PzQwV5mYMHStrn9F7Oe3TnbCZU/f333JxEHJaVIjmpiU8EnmTc8+NN
+FpMiEpCBrJmGYao60rjBiIoAQiIyBcqEIjmhy8wkRNERAAgbhgK5rgMECVWpZjAz
+QU2ApbCUsOwG7qZdy/YFLeZygikUMAYZIFgnhBNTh6aODROoWEVcQxwbimhsdLyg
+Q4gj2ONLLUfkxCc+Ie8f+P+sOzNBRziFTKcQJWTKVV2RdcwQg4RRzgmSzQDocdfG
+KS7QNreSHnabsCttD0si32JRHlgb7DKJ8TJp7oqS5WQ86qTS2M4uFVEQpV3Hd6iT
+FKBG3097kYDEz6aDrs2cxCf54sSymTBVdLQIJsuxpYgskNS3ggGyhqABNFODYYlv
+SVsuj1sBAiLdAOIFc3iLoGSKhrAKmGpoClKRAnSOVANySnVMAGGQKlSYK+pYN6HM
+MCBQlRMyAgmiwAnLPd5sO1JEEzJxQ7Cb1WBjP+NyaXvf7dqpobyC0PRpU4JjCxXM
+nPP3BI9tnfF70/ncg8qBwnkrikMzb3R/CXdZbWv6tYFyX/lWoNWGS58/GXv/cl1P
+SdHPwrG2lzUfQHtZb/++zm5p/bbozQUX2of6KyOLTgzsHCpJ7irfsq2mR90QG66p
+Ov4wNl4RWR07l4XXBj8tSVXVr6ruGL8I50/reFzxBI+mXw++f9M69PDG16zdbO/o
+3htV6krrK4sv5w4ZA2+dquji3c3RteGnkVzrsz5+ctkwHjmy8mNbqrHoc9Xyur7m
+0JFbdZvk/OSVw4tm/Rxxrp8bPq3dLf7wK/XjflnpKJ/yLnf1VPT2/j13No51vjp6
+xt5dVjs6/SZ/cWasMLawNpZf/fRs16crR+sv/QEFtkkR
+=2BVs
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/neilsarkar
+
+==================================================================
