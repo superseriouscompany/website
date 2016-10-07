@@ -43,7 +43,20 @@
       reg.pushManager.subscribe({
         userVisibleOnly: true
       }).then(function(sub) {
-        console.log(sub.endpoint);
+        if( !sub.endpoint ) { return console.error("Endpoint not provided", sub); }
+        var subscriptionId = sub.endpoint.split('/').slice(-1)[0];
+        return fetch('/subscriptions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({fcm_id: subscriptionId})
+        }).then(function(res) {
+          if( res.status > 299 ) { return console.error("Received unexpected status", res.status); }
+          console.log("Subscribed", subscriptionId);
+        }).catch(function(err) {
+          console.error("Error adding subscription", err);
+        })
       }).catch(function(err) {
         console.error("Push subscription error :(", err);
       });
