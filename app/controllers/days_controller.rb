@@ -3,8 +3,21 @@ class DaysController < ApplicationController
 
   def show
     @day = Day.find_by_id(params[:id])
-    redirect_to '/' unless @day.present?
+    redirect_to '/' and return unless @day.present?
     @share_image_url = @day.image_url.match(/\.com/) ? @day.image_url : "http://superseriouscompany.com#{ActionController::Base.helpers.asset_url("comic#{params[:id]}.jpg")}"
+  end
+
+  def current
+    day = Day.order("id desc").first
+    render json: {
+      id: day.id,
+      portuguese_title: day.portuguese_title,
+      neil_quote: day.neil_quote,
+      santi_quote: day.santi_quote,
+      image_url: day.image_url,
+      project_id: day.project_id,
+      order: day.order
+    }
   end
 
   def create
