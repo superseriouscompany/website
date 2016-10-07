@@ -81,9 +81,9 @@ header.withHeading .logoLink { display: none; }
 .day h2 { color: #94796E; font-size: 24px; text-align: center; margin: 0; }
 .day img.comic { width: 100%; border-left: 4px solid $accentBrown; }
   @include desktop {
-    .day { padding-top: 1em; }
-    .day img.comic { border: 0; margin-bottom: 20px}
-    .day h2 { text-align: left; font-size: 16px; }
+    .day { padding-top: 1em; border: none; }
+    .day img.comic { border: 0;  margin-bottom: 10px; }
+    .day h2 { display: none; }
   }
 
 /* Quotes on homepage, project page and philosophy page*/
@@ -92,10 +92,13 @@ header.withHeading .logoLink { display: none; }
 .quotes blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; }
 .quotes blockquote .chatBubble { display: none; }
   @include desktop {
-    .quotes blockquote { margin: 0 auto; max-width: 520px; padding: 0 0.8em; background: none; border: 4px solid $accentBrown; border-width: 0 0 0 4px; position: relative; font-size: 16px; min-height: 0; }
-    .quotes blockquote.neil { background: none; border-width: 0 4px 0 0; text-align: right; }
-    .quotes blockquote .chatBubble { display: inline; width: 11px; position: absolute; left: -15px; top: 50%; margin-top: -7.5px; z-index: 2; }
-    .quotes blockquote.neil .chatBubble { left: auto; right: -15px; transform: scaleX(-1); }
+    .quotes { width: 520px; margin: 0 auto 4em; }
+    .quotes blockquote:first-child { margin-bottom: 1.2em; }
+    .quotes blockquote { margin: 0; max-width: 480px; padding: 1.2em; background: none; border: 1px solid #DBDBDC; position: relative; font-size: 16px; min-height: 0; border-radius: 18px; }
+    .quotes blockquote p { margin: 0; }
+    .quotes blockquote.neil { display: absolute; background: none; right: -40px; }
+    .quotes blockquote .chatBubble { display: block; width: 34px; position: absolute; bottom: -23px; left: 15px; z-index: 2; }
+    .quotes blockquote.neil .chatBubble { left: auto; right: 15px; transform: scaleX(-1); }
     .quotes blockquote p:first-child { margin-top: 0; }
   }
 
@@ -123,8 +126,7 @@ body.pages-home .readMore { a, a:visited, a:active { color: $linkColor; } }
 /* Philosophy Page */
 .philosophy blockquote { border-bottom: $greyLine; padding-top: 15px; padding-bottom: 15px; }
   @include desktop {
-    section.philosophy { margin-top: 1.5em; }
-    .philosophy blockquote { border-bottom: 0; }
+    .philosophy blockquote { margin-bottom: 1.2em; }
   }
 
 /* Ideas Page */
