@@ -2,6 +2,10 @@
   // Hook google analytics into turbolinks properly
   $(document).on('turbolinks:load', function() {
     ga('send', 'pageview');
+
+    if( supportsDesktopNotifications() ) {
+      $(document).find('.js-chrome-only').show();
+    }
   });
 
   // Ideas form submission
@@ -35,8 +39,9 @@
 
   if( isDev() ) { subscribe() }
 
+  // TODO: break this up and clean it up
   function subscribe() {
-    if( !('serviceWorker' in navigator) ) { return; }
+    if( !supportsDesktopNotifications() ) { return; }
     navigator.serviceWorker.register('/serviceWorker.js').then(function() {
       return navigator.serviceWorker.ready;
     }).then(function(reg) {
@@ -54,6 +59,7 @@
         }).then(function(res) {
           if( res.status > 299 ) { return console.error("Received unexpected status", res.status); }
           console.log("Subscribed", subscriptionId);
+          $(document).find('.js-chrome-only').html("Thanks!");
         }).catch(function(err) {
           console.error("Error adding subscription", err);
         })
@@ -63,6 +69,10 @@
     }).catch(function(err) {
       console.error("Service worker error :(", err)
     })
+  }
+
+  function supportsDesktopNotifications() {
+    return 'serviceWorker' in navigator
   }
 
   function isDev() {

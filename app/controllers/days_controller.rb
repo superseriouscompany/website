@@ -1,6 +1,10 @@
 class DaysController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
+  def index
+    @days = Day.order("id desc")
+  end
+
   def show
     @day = Day.find_by_id(params[:id])
     redirect_to '/' and return unless @day.present?

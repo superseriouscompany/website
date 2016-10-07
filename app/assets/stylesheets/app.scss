@@ -28,6 +28,7 @@ a    { cursor: pointer; }
     .mobile-only { display: none !important; }
     .desktop-only { display: block !important; &img, &span, &a { display: inline !important} }
   }
+.js-chrome-only { display: none; }
 
 /* Page Layout */
 h1              { text-align: center; margin: 0; padding-top: 11px; line-height: 18px; font-size: 18px; }
