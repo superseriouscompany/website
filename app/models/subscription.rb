@@ -1,7 +1,10 @@
 class Subscription < ActiveRecord::Base
   def self.notify_all
+    ids = all.map(&:fcm_id)
+    return false unless ids.present?
+
     payload = {
-      registration_ids: all.map(&:fcm_id)
+      registration_ids: ids
     }
     headers = {
       "Authorization" => 'key=AIzaSyC1HZtvMnW0ft7wrYqlvb61QFO6hXNQWZU',
