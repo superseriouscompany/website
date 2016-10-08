@@ -1,0 +1,18 @@
+<section class="context">
+  <p>
+    Plot: Homeless guy and his boss quit jobs and randomly move to Portugal.
+  </p>
+
+  <p class="js-chrome-only">
+    <a class="js-subscribe">Subscribe to Chrome Notifications</a>
+  </p>
+</section>
+
+<section class="story">
+  <% @days.each do |day| %>
+    <article class="day">
+      <h2><%= day.portuguese_title %></h2>
+      <%= render day %>
+    </article>
+  <% end %>
+</section>
