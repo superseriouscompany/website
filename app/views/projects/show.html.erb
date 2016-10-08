@@ -1,17 +1,20 @@
 <section class="context">
-  <p>
-    <%= @project.description %>
-  </p>
-  <div class="link">
-    <a href="<%= @project.url || 'http://superseriouscompany.com'%>"><%= @project.link %></a>
-  </div>
+  <%= raw @project.description %>
+  <% if @project.url.present? %>
+    <div class="link">
+      <a href="<%= @project.url %>"><%= @project.link %></a>
+    </div>
+  <% end %>
 </section>
 
-<section class="story">
-  <% @days.each do |day| %>
-    <article class="day">
-      <h2><%= day.portuguese_title %></h2>
-      <%= render day %>
+<section class="project">
+  <% @project.progress_updates.each do |update| %>
+    <article class="progressUpdate">
+      <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
+      <%= image_tag update.image_url, class: 'screenshot' %>
+      <div class="description">
+        <%= raw update.description %>
+      </div>
     </article>
   <% end %>
 </section>
