@@ -80,7 +80,7 @@ header.withHeading .logoLink { display: none; }
 
 /* Post on homepage or project page */
 .day { border-top: $greyLine; padding: 2em 0 1.4em; &:first-child { border-top: 0; } }
-.day h2 { color: #94796E; font-size: 24px; text-align: center; margin: 0; }
+.day h2 { color: #94796E; font-size: 24px; text-align: center; margin: 0; margin-top: -15px; padding-bottom: 15px; }
 .day img.comic { width: 100%; border-left: 4px solid $accentBrown; }
   @include desktop {
     .day { padding-top: 1em; border: none; }
