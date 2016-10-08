@@ -3,8 +3,9 @@
   $(document).on('turbolinks:load', function() {
     ga('send', 'pageview');
 
-    if( supportsDesktopNotifications() ) {
-      $(document).find('.js-chrome-only').show();
+    if( supportsDesktopNotifications() && (!window.localStorage || !window.localStorage.getItem('subscribed')) ) {
+      return;
+      $(document).find('.js-notifications').show();
     }
   });
 
@@ -59,7 +60,8 @@
         }).then(function(res) {
           if( res.status > 299 ) { return console.error("Received unexpected status", res.status); }
           console.log("Subscribed", subscriptionId);
-          $(document).find('.js-chrome-only').html("Thanks!");
+          window.localStorage && window.localStorage.setItem('subscribed', 1);
+          $(document).find('.js-notifications').html("Thanks!");
         }).catch(function(err) {
           console.error("Error adding subscription", err);
         })

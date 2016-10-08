@@ -170,7 +170,6 @@ body.projects-show .link { a, a:active, a:visited { color: $linkColor; } }
   }
 
 /* Story Page */
-a.subscribe { display: none !important }
   @include desktop {
     a.subscribe { color: $linkColor; text-decoration: underline; }
   }
