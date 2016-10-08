@@ -305,7 +305,7 @@ if project.blank?
     name: '¯\_(ツ)_/¯',
     description: """
     <p>
-      October's project doesn't have a name or even a code name yet, so #{'¯\_(ツ)_/¯'} it is.
+      October's project doesn't have a name or even a code name yet.
     </p>
     <p>
       Right now, it's a stupid-simple app where you can put a photo into \"the hat\". Every morning, the pic-of-the-day gets chosen at random from that hat, then users can record audio on top of that image. The funniest audio clip wins for that image. We're trying to bake a revenue model into every product, so we're thinking a user can pay a buck to prioritize their image in the draw from the hat.
