@@ -4,7 +4,6 @@
     ga('send', 'pageview');
 
     if( supportsDesktopNotifications() && (!window.localStorage || !window.localStorage.getItem('subscribed')) ) {
-      return;
       $(document).find('.js-notifications').show();
     }
   });

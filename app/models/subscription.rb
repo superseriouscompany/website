@@ -11,8 +11,8 @@ class Subscription < ActiveRecord::Base
       "Content-Type" => 'application/json'
     }
 
-    HTTPClient.post("https://android.googleapis.com/gcm/send", payload.to_json, headers)
+    response = HTTPClient.post("https://android.googleapis.com/gcm/send", payload.to_json, headers)
 
-    [x.status, x.body]
+    [response.status, response.body]
   end
 end
