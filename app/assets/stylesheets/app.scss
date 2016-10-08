@@ -69,11 +69,11 @@ header.withHeading .logoLink { display: none; }
     header.withHeading .pageHeading { display: none; }
     header .hamburger { display: none; }
     header .menu { top: 18px; width: 100%; background-color: transparent; border-radius: 0; display: block; }
-    header .item  { position: absolute; font-size: 16px; display: block; padding: 0; border-top: 0; color: $contextGrey; text-transform: none; width: 148px; }
+    header .item  { position: absolute; font-size: 16px; display: block; padding: 0; border-top: 0; color: $contextGrey; text-transform: none; width: 140px; }
     header .item.active { border: 4px solid $accentBrown; border-width: 0 0 4px 0; padding-bottom: 16px; }
     header .top   { top: 37px; }
-    header .left  { left: 0px; position: static; float: left; }
-    header .right { right: 0px; position: static; float: right; }
+    header .left  { left: 0; position: static; float: left; margin-left: 15px;}
+    header .right { right: 0; position: static; float: right; margin-right: 15px;}
     header .bottom { bottom: 47px; }
   }
 
