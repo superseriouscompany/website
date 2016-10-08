@@ -21,7 +21,7 @@ $contextGrey: #838386;
 
 /* Globals */
 *    { box-sizing: border-box; }
-body { font-family: 'Questrial', Helvetica, sans-serif; visibility: visible; padding-top: $headerHeight; }
+body { font-family: 'Questrial', Helvetica, sans-serif; visibility: visible; padding-top: $headerHeight; background: white; }
 a    { cursor: pointer; }
 .desktop-only { display: none !important; }
   @include desktop {
