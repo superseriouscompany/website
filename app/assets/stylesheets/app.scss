@@ -167,3 +167,8 @@ body.projects-show .link { a, a:active, a:visited { color: $linkColor; } }
   @include desktop {
     body.projects-show .context { text-align: center; }
   }
+
+/* Story Page */
+  @include desktop {
+    .js-subscribe { color: $linkColor; text-decoration: underline; }
+  }
