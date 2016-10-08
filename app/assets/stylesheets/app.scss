@@ -169,6 +169,12 @@ body.projects-show .link { a, a:active, a:visited { color: $linkColor; } }
     body.projects-show .context { text-align: center; }
   }
 
+/* Story Page */
+a.subscribe { display: none !important }
+  @include desktop {
+    a.subscribe { color: $linkColor; text-decoration: underline; }
+  }
+
 /* Progress Updates */
 .projects-show section { border: 0; font-size: 16px; }
 .progressUpdate { border-top: $greyLine; }
