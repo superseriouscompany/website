@@ -11,7 +11,6 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('push', function(event, foo) {
   var title = 'Push message';
 
-  // var request = new Request('http://localhost:3000/', {mode: 'no-cors'});
   var request = new Request('/dias/current');
 
   event.waitUntil(
