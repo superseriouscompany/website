@@ -169,8 +169,14 @@ body.projects-show .link { a, a:active, a:visited { color: $linkColor; } }
   }
 
 /* Progress Updates */
-.projects-show section { border: 0; }
+.projects-show section { border: 0; font-size: 16px; }
 .progressUpdate { border-top: $greyLine; }
 .progressUpdate h2 { text-align: center; color: #94796E; padding: .1em 0 .12em 0; }
 .progressUpdate img { width: 100%; }
-.progressUpdate .description { padding: 0 2em .5em; color: $contextGrey; }
+.progressUpdate .description { padding: .5em 2em .75em; color: $contextGrey; }
+  @include desktop {
+    .projects-show section.context p { display: none; }
+    .progressUpdate { border: 0; }
+    .progressUpdate h2 { text-align: left; font-size: 18px; padding: .1em 0 .12em 1em; }
+    .progressUpdate .description { padding: .5em 1em 1.5em; }
+  }
