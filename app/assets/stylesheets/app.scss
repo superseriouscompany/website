@@ -29,6 +29,7 @@ a    { cursor: pointer; }
     .mobile-only { display: none !important; }
     .desktop-only { display: block !important; &img, &span, &a { display: inline !important} }
   }
+.js-chrome-only { display: none; }
 
 /* Page Layout */
 h1              { text-align: center; margin: 0; padding-top: 11px; line-height: 18px; font-size: 18px; }
@@ -48,7 +49,7 @@ body.hamburgerOpen .menu       { display: block; }
     section { margin: 0 auto; max-width: 550px; border: 0; font-size: 18px; }
     section.context { font-size: 16px; max-width: none; line-height: 20px; text-align: center; padding-bottom: 15px; }
     section.context p { margin: 15px auto 0; max-width: 600px; }
-    .hero      { position: fixed; bottom: 0; left: 0; width: 15%; display: inline; }
+    .hero      { position: fixed; bottom: 0; left: 0; width: 15%; display: inline; z-index: -1; }
     .hero.neil { left: auto; right: 0; }
   }
 
