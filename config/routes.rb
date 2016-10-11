@@ -2,10 +2,11 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   # API
-  post '/thoughts' => 'thoughts#create'
-  post '/dias' => 'days#create'
-  post '/subscriptions' => 'subscriptions#create'
-  get '/dias/current' => 'days#current'
+  post '/thoughts'         => 'thoughts#create'
+  post '/dias'             => 'days#create'
+  post '/subscriptions'    => 'subscriptions#create'
+  post '/progress_updates' => 'progress_updates#create'
+  get '/dias/current'      => 'days#current'
 
   # Website
   get '/projects', to: redirect('/projects/untitled-october')
