@@ -8,7 +8,7 @@
 </section>
 
 <section class="project">
-  <% @project.progress_updates.each do |update| %>
+  <% @progress_updates.each do |update| %>
     <article class="progressUpdate">
       <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
       <%= image_tag update.image_url, class: 'screenshot' %>
