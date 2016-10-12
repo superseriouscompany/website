@@ -11,9 +11,9 @@ Rails.application.routes.draw do
   # Website
   get '/projects', to: redirect('/projects/untitled-october')
   get '/projects/this-website', to: redirect('/story')
-  get '/projects/:slug' => 'projects#show'
-  get '/dias/:id' => 'days#show'
-  get '/story' => 'days#index'
+  get '/projects/:slug' => 'pages#show_project'
+  get '/dias/:id' => 'pages#show_day'
+  get '/story' => 'pages#story'
 
   # Catchall
   get '/:action', controller: 'pages'
