@@ -29,6 +29,13 @@
     $(document.body).toggleClass('heartsShown');
   })
 
+  $(document).on('click', '.js-heart', function() {
+    $(this).closest('.heartHolder').addClass('active');
+    setTimeout(function() {
+      $('.js-summonHearts').click();
+    }, 1000);
+  })
+
   if( isDev() ) { subscribe() }
 
   // TODO: break this up and clean it up

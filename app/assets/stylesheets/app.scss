@@ -85,6 +85,9 @@ header.withHeading .logoLink { display: none; }
 .heartHolder { @include absCenter; width: 111px; height: 111px; display: none; }
 body.heartsShown .heartHolder { display: block; }
 .heartHolder img { width: 100%; }
+.heartHolder .full { display: none; }
+.heartHolder.active .empty { display: none; }
+.heartHolder.active .full { display: inline; }
 
 /* Post on homepage or project page */
 .day { border-top: $greyLine; padding: 2em 0 1.4em; &:first-child { border-top: 0; } }
