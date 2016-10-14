@@ -1,24 +1,24 @@
-<div class="comicHolder js-likable">
+<div class="comicHolder js-likable" data-id="day-<%=day.id%>-comic">
   <%= image_tag day.image_url, class: "comic" %>
 </div>
 <div class="quotes">
   <% if day.order == "neil" %>
-    <blockquote class="neil js-likable">
+    <blockquote class="neil js-likable" data-id="day-<%=day.id%>-neilQuote">
       <%= raw day.neil_quote %>
       <%= image_tag "chatBubble.png", class: "chatBubble" %>
     </blockquote>
 
-    <blockquote class="santi js-likable">
+    <blockquote class="santi js-likable" data-id="day-<%=day.id%>-santiQuote">
       <%= raw day.santi_quote %>
       <%= image_tag "chatBubble.png", class: "chatBubble" %>
     </blockquote>
   <% else %>
-    <blockquote class="santi js-likable">
+    <blockquote class="santi js-likable" data-id="day-<%=day.id%>-santiQuote">
       <%= raw day.santi_quote %>
       <%= image_tag "chatBubble.png", class: "chatBubble" %>
     </blockquote>
 
-    <blockquote class="neil js-likable">
+    <blockquote class="neil js-likable" data-id="day-<%=day.id%>-neilQuote">
       <%= raw day.neil_quote %>
       <%= image_tag "chatBubble.png", class: "chatBubble" %>
     </blockquote>

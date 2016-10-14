@@ -30,10 +30,35 @@
   })
 
   $(document).on('click', '.js-heart', function() {
-    $(this).closest('.heartHolder').addClass('active');
-    setTimeout(function() {
-      $('.js-summonHearts').click();
-    }, 1000);
+    var $el = $(this),
+        $container = $el.closest('.js-likable');
+
+    if( !$container[0] ){ return console.error("No .js-likable found"); }
+    if( !$container.data('id') ) { return console.error("No id set"); }
+
+    var image = $container.find('img')[0];
+    var payload = {
+      contentId: $container.data('id'),
+      src: image && image.src,
+      html: $container.html()
+    }
+
+    fetch('/likes', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    }).then(function(response) {
+      if( response.status > 299 ) { throw new Error("Unexpected response " + response.status ); }
+      $(this).closest('.heartHolder').addClass('active');
+      setTimeout(function() {
+        $('.js-summonHearts').click();
+      }, 1000);
+    }).catch(function(err) {
+      return console.error(err);
+    })
   })
 
   if( isDev() ) { subscribe() }

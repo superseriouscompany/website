@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post '/dias'             => 'days#create'
   post '/subscriptions'    => 'subscriptions#create'
   post '/progress_updates' => 'progress_updates#create'
+  post '/likes'            => 'likes#create'
   get '/dias/current'      => 'days#current'
 
   # Website
