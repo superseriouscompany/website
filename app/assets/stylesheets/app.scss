@@ -90,14 +90,15 @@ header.withHeading .logoLink { display: none; }
 
 /* Quotes on homepage, project page and philosophy page*/
 .quotes  { background: white; }
-.quotes blockquote { color: #94796E; line-height: 20px; margin: 2px 0 0 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 37px 45px; padding-left: 37px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; }
+.quotes blockquote { color: #94796E; line-height: 20px; margin: 2px 0 1em 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 37px 45px; padding-left: 37px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; }
+.quotes blockquote p { &:first-of-type {margin-top: 0} &:last-of-type {margin-bottom: 0} }
+.quotes blockquote:last-of-type { margin-bottom: 0; }
 .quotes blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; }
 .quotes blockquote .chatBubble { display: none; }
   @include desktop {
     .quotes { width: 520px; margin: 0 auto 4em; }
     .quotes blockquote:first-child { margin-bottom: 1.2em; }
     .quotes blockquote { margin: 0; max-width: 480px; padding: 1.2em; background: none; border: 1px solid #DBDBDC; position: relative; font-size: 16px; min-height: 0; border-radius: 18px; }
-    .quotes blockquote p { margin: 0; }
     .quotes blockquote.neil { display: absolute; background: none; right: -40px; }
     .quotes blockquote .chatBubble { display: block; width: 34px; position: absolute; bottom: -23px; left: 15px; z-index: 2; }
     .quotes blockquote.neil .chatBubble { left: auto; right: 15px; transform: scaleX(-1); }

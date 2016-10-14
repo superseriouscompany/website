@@ -18,10 +18,6 @@ class DaysController < ApplicationController
     day = Day.new(day_params)
     day.project = Project.first
 
-    # TODO: this sux
-    day.neil_quote = "<p>#{day.neil_quote}</p>"
-    day.santi_quote = "<p>#{day.santi_quote}</p>"
-
     if day.save
       Subscription.notify_all
       render status: 201, json: { id: day.id }
