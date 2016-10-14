@@ -30,6 +30,7 @@ a    { cursor: pointer; }
     .desktop-only { display: block !important; &img, &span, &a { display: inline !important} }
   }
 .js-chrome-only { display: none; }
+.hide { display: none !important; }
 
 /* Page Layout */
 h1              { text-align: center; margin: 0; padding-top: 11px; line-height: 18px; font-size: 18px; }
@@ -77,6 +78,13 @@ header.withHeading .logoLink { display: none; }
     header .right { right: 0; position: static; float: right; margin-right: 15px;}
     header .bottom { bottom: 47px; }
   }
+
+/* Floating likes */
+.summonHearts { position: fixed; width: 82px; right: 11px; bottom: 11px; }
+.summonHearts img { width: 100%; }
+.heartHolder { @include absCenter; width: 111px; height: 111px; display: none; }
+body.heartsShown .heartHolder { display: block; }
+.heartHolder img { width: 100%; }
 
 /* Post on homepage or project page */
 .day { border-top: $greyLine; padding: 2em 0 1.4em; &:first-child { border-top: 0; } }

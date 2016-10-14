@@ -1,22 +1,24 @@
-<%= image_tag day.image_url, class: "comic" %>
+<div class="comicHolder js-likable">
+  <%= image_tag day.image_url, class: "comic" %>
+</div>
 <div class="quotes">
   <% if day.order == "neil" %>
-    <blockquote class="neil">
+    <blockquote class="neil js-likable">
       <%= raw day.neil_quote %>
       <%= image_tag "chatBubble.png", class: "chatBubble" %>
     </blockquote>
 
-    <blockquote class="santi">
+    <blockquote class="santi js-likable">
       <%= raw day.santi_quote %>
       <%= image_tag "chatBubble.png", class: "chatBubble" %>
     </blockquote>
   <% else %>
-    <blockquote class="santi">
+    <blockquote class="santi js-likable">
       <%= raw day.santi_quote %>
       <%= image_tag "chatBubble.png", class: "chatBubble" %>
     </blockquote>
 
-    <blockquote class="neil">
+    <blockquote class="neil js-likable">
       <%= raw day.neil_quote %>
       <%= image_tag "chatBubble.png", class: "chatBubble" %>
     </blockquote>

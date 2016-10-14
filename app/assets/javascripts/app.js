@@ -6,28 +6,15 @@
     if( supportsDesktopNotifications() && (!window.localStorage || !window.localStorage.getItem('subscribed')) ) {
       $(document).find('.js-notifications').show();
     }
+
+    $(document).find('.js-likable').each(function() {
+      var $el = $(this);
+      var currentPosition = $el.css('position');
+      if( !currentPosition || currentPosition == 'static' ) { $el.css('position', 'relative'); }
+
+      $('.js-heartTemplate').last().clone().removeClass('hide').appendTo($el);
+    })
   });
-
-  // Ideas form submission
-  $(document).on('submit', '.js-submission-form', function() {
-    var form = $(this);
-    var $body = form.find('.js-body');
-    var $thinker = form.find('.js-thinker');
-
-    if( !$body.val() ) {
-      return false;
-    }
-
-    if( $body.is(':visible') ) {
-      $body.hide();
-      $thinker.show().focus();
-      return false;
-    }
-  })
-  $(document).on('keyup', '.js-detect-filled', function() {
-    var input = $(this);
-    input.parents('form').toggleClass('submittable', !!input.val());
-  })
 
   // Hamburger menu behavior
   $(document).on('click', '.js-hamburger', function() {
@@ -36,6 +23,11 @@
 
   // Desktop notifications
   $(document).on('click', '.js-subscribe', subscribe);
+
+  // Floating likes
+  $(document).on('click', '.js-summonHearts', function() {
+    $(document.body).toggleClass('heartsShown');
+  })
 
   if( isDev() ) { subscribe() }
 
