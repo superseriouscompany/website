@@ -61,7 +61,8 @@ header .menu { display: none; position: absolute; top: $headerHeight + 9px; righ
 header .item { display: block; text-align: center; text-decoration: none; color: #07070D; padding: 16px 0; text-transform: uppercase; border-top: $greyLine; }
 header .item:first-child { border-top: 0; }
 header .item.active { color: $accentBrown; }
-header .pageHeading { text-transform: uppercase; display: inline-block; margin-top: 3px; }
+header .pageHeading { font-family: 'helvetica neue'; font-size: 18px; font-weight: bold; color: #474340; text-transform: lowercase; display: inline-block; }
+header .pageHeading .bottom { font-weight: normal }
 header.withHeading .logoLink { display: none; }
   @include desktop {
     header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; border-bottom: $greyLine; text-align: center; }

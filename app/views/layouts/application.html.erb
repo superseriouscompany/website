@@ -44,11 +44,20 @@
         <%= image_tag "smallLogo.jpg", class: "smallLogo", alt: "Super Serious Company" %>
       </a>
     <% end %>
-    <h1 class="<%= 'singleLine' if @page_heading && !@page_heading.match(/br \//) %>">
+    <h1 class="<%= 'singleLine' if @page_heading && !@page_heading.match("\n") %>">
       <% if @page_heading %>
-        <span class="pageHeading">
-          <%= raw @page_heading %>
-        </span>
+        <div class="pageHeading">
+          <% if @page_heading.match("\n") %>
+            <div class="top">
+              <%= @page_heading.split("\n")[0] %>
+            </div>
+            <div class="bottom">
+              <%= @page_heading.split("\n")[1] %>
+            </div>
+          <% else %>
+            <%= raw @page_heading %>
+          <% end %>
+      </div>
       <% end %>
       <a class="logoLink" href="/">
         <%= image_tag "logo.jpg", alt: "Super Serious Company" %>
