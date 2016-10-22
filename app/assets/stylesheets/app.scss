@@ -92,10 +92,10 @@ header.withHeading .logoLink { display: none; }
 
 /* Quotes on homepage, project page and philosophy page*/
 .quotes  { background: white; }
-.quotes blockquote { color: $quoteText; line-height: 20px; margin: 2px 0 1em 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 37px 45px; padding-left: 37px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; }
+.quotes blockquote { color: $quoteText; line-height: 20px; margin: 2px 0 0 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 37px 45px; padding-left: 37px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; background-position-y: 3px; }
 .quotes blockquote p { &:first-of-type {margin-top: 0} &:last-of-type {margin-bottom: 0} }
 .quotes blockquote:last-of-type { margin-bottom: 0; }
-.quotes blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; }
+.quotes blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; background-position-y: 0px; }
 .quotes blockquote .chatBubble { display: none; }
   @include desktop {
     .quotes { width: 520px; margin: 0 auto 4em; }
