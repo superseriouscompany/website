@@ -67,8 +67,8 @@ header .pageHeading .bottom { font-weight: normal }
 header.withHeading .logoLink { display: none; }
   @include desktop {
     header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; border-bottom: $greyLine; text-align: center; }
+    header .smallLogoLink { display: none; }
     header.withHeading .logoLink { display: inline; }
-    header.withHeading .smallLogoLink { display: none; }
     header.withHeading .pageHeading { display: none; }
     header .hamburger { display: none; }
     header .menu { top: 18px; width: 100%; background-color: transparent; border-radius: 0; display: block; }
