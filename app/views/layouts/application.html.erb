@@ -39,7 +39,7 @@
 </head>
 <body class="<%= "#{controller_name}-#{action_name}" %>">
   <header class="<%= 'withHeading' if @page_heading %>">
-    <% if @page_heading %>
+    <% if action_name != 'home' %>
       <a href="/" class="smallLogoLink">
         <%= image_tag "moneyBagIcon.png", class: "smallLogo", alt: "Super Serious Company" %>
       </a>
