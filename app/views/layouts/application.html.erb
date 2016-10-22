@@ -41,7 +41,7 @@
   <header class="<%= 'withHeading' if @page_heading %>">
     <% if @page_heading %>
       <a href="/" class="smallLogoLink">
-        <%= image_tag "smallLogo.jpg", class: "smallLogo", alt: "Super Serious Company" %>
+        <%= image_tag "moneyBagIcon.png", class: "smallLogo", alt: "Super Serious Company" %>
       </a>
     <% end %>
     <h1 class="<%= 'singleLine' if @page_heading && !@page_heading.match("\n") %>">
@@ -60,7 +60,7 @@
       </div>
       <% end %>
       <a class="logoLink" href="/">
-        <%= image_tag "logo.jpg", alt: "Super Serious Company" %>
+        <%= image_tag "logo.png", alt: "Super Serious Company" %>
       </a>
     </h1>
     <%= image_tag "hamburger.jpg", class: "hamburger js-hamburger" %>

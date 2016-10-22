@@ -12,7 +12,8 @@ $desktopHeaderHeight: 60px;
 $greyLine: 1px solid #DBDBDC;
 $accentBrown: #C69785;
 $linkColor: #40746E;
-$contextGrey: #838386;
+$contextGrey: #656868;
+$quoteText: #656868;
 
 @mixin absCenter() { position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; }
 @mixin desktop() {
@@ -34,7 +35,7 @@ a    { cursor: pointer; }
 /* Page Layout */
 h1              { text-align: center; margin: 0; padding-top: 11px; line-height: 18px; font-size: 18px; }
 h1.singleLine   { padding-top: 19px; }
-h1 img          { width: 141px; }
+h1 img          { width: 134px; margin-top: 2px; }
 section         { border-top: $greyLine; font-size: 16px; line-height: 20px; }
 section.context { color: $contextGrey; padding: 0 20px; text-align: center; border-top: 0; }
 .hero           { display: none; }
@@ -44,7 +45,7 @@ body.hamburgerOpen .menu       { display: block; }
   @include desktop {
     body { padding-top: $desktopHeaderHeight; }
     h1 { padding: 14px 0 14px; display: inline-block; position: relative; z-index: 11;}
-    h1 img { width: 134px; }
+    h1 img { width: 134px; margin: 0; }
     h1.singleLine   { padding-top: 14px; }
     section { margin: 0 auto; max-width: 550px; border: 0; font-size: 18px; }
     section.context { font-size: 16px; max-width: none; line-height: 20px; text-align: center; padding-bottom: 15px; }
@@ -56,7 +57,7 @@ body.hamburgerOpen .menu       { display: block; }
 /* Header */
 header { position: fixed; top: 0; width: 100%; z-index: 10; background-color: white; height: $headerHeight; border-bottom: $greyLine; }
 header .hamburger { position:absolute; right: 18px; top: 18px; width: 29px; height: 20px; cursor: pointer; }
-header .smallLogo { position: absolute; left: 15px; top: 12px; width: 58px; }
+header .smallLogo { position: absolute; left: 15px; top: 12px; width: 58px; background: aliceblue}
 header .menu { display: none; position: absolute; top: $headerHeight + 9px; right: 9px; width: 66%; background-color: white; border-radius: 10px; padding: 3px 0; }
 header .item { display: block; text-align: center; text-decoration: none; color: #07070D; padding: 16px 0; text-transform: uppercase; border-top: $greyLine; }
 header .item:first-child { border-top: 0; }
@@ -81,7 +82,7 @@ header.withHeading .logoLink { display: none; }
 
 /* Post on homepage or project page */
 .day { border-top: $greyLine; padding: 2em 0 1.4em; &:first-child { border-top: 0; } }
-.day h2 { color: #94796E; font-size: 24px; text-align: center; margin: 0; margin-top: -15px; padding-bottom: 15px; }
+.day h2 { color: $quoteText; font-size: 24px; text-align: center; margin: 0; margin-top: -15px; padding-bottom: 15px; }
 .day img.comic { width: 100%; border-left: 4px solid $accentBrown; }
   @include desktop {
     .day { padding-top: 1em; border: none; }
@@ -91,7 +92,7 @@ header.withHeading .logoLink { display: none; }
 
 /* Quotes on homepage, project page and philosophy page*/
 .quotes  { background: white; }
-.quotes blockquote { color: #94796E; line-height: 20px; margin: 2px 0 1em 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 37px 45px; padding-left: 37px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; }
+.quotes blockquote { color: $quoteText; line-height: 20px; margin: 2px 0 1em 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 37px 45px; padding-left: 37px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; }
 .quotes blockquote p { &:first-of-type {margin-top: 0} &:last-of-type {margin-bottom: 0} }
 .quotes blockquote:last-of-type { margin-bottom: 0; }
 .quotes blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; }
@@ -179,7 +180,7 @@ body.projects-show .link { a, a:active, a:visited { color: $linkColor; } }
 /* Progress Updates */
 .projects-show section { border: 0; font-size: 16px; }
 .progressUpdate { border-top: $greyLine; }
-.progressUpdate h2 { text-align: center; color: #94796E; padding: .1em 0 .12em 0; }
+.progressUpdate h2 { text-align: center; color: $quoteText; padding: .1em 0 .12em 0; }
 .progressUpdate img { width: 100%; }
 .progressUpdate img.gif { width: 50%; display: block; margin: 0 auto; }
 .progressUpdate .description { padding: .5em 2em .75em; color: $contextGrey; }
