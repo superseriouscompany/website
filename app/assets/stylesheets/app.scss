@@ -81,8 +81,8 @@ header.withHeading .logoLink { display: none; }
   }
 
 /* Post on homepage or project page */
-.day { border-top: $greyLine; padding: 2em 0 1.4em; &:first-child { border-top: 0; } }
-.day h2 { color: $quoteText; font-size: 24px; text-align: center; margin: 0; margin-top: -15px; padding-bottom: 15px; }
+.day { border-top: $greyLine; padding: 0 0 1.4em; &:first-child { border-top: 0; } }
+.day h2 { color: $quoteText; font-size: 24px; text-align: center; margin: 0; padding: 16px 0 17px; }
 .day img.comic { width: 100%; border-left: 4px solid $accentBrown; }
   @include desktop {
     .day { padding-top: 1em; border: none; }
@@ -92,7 +92,7 @@ header.withHeading .logoLink { display: none; }
 
 /* Quotes on homepage, project page and philosophy page*/
 .quotes  { background: white; }
-.quotes blockquote { color: $quoteText; line-height: 20px; margin: 2px 0 0 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 37px 45px; padding-left: 37px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; background-position-y: 3px; }
+.quotes blockquote { color: $quoteText; line-height: 20px; margin: 16px 0 0 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 37px 45px; padding-left: 37px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; background-position-y: 3px; }
 .quotes blockquote p { &:first-of-type {margin-top: 0} &:last-of-type {margin-bottom: 0} }
 .quotes blockquote:last-of-type { margin-bottom: 0; }
 .quotes blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; background-position-y: 0px; }
