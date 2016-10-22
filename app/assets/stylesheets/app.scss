@@ -57,7 +57,7 @@ body.hamburgerOpen .menu       { display: block; }
 /* Header */
 header { position: fixed; top: 0; width: 100%; z-index: 10; background-color: white; height: $headerHeight; border-bottom: $greyLine; }
 header .hamburger { position:absolute; right: 18px; top: 18px; width: 29px; height: 20px; cursor: pointer; }
-header .smallLogo { position: absolute; left: 15px; top: 12px; width: 58px; background: aliceblue}
+header .smallLogo { position: absolute; left: 15px; top: 11.25px; width: 32px; }
 header .menu { display: none; position: absolute; top: $headerHeight + 9px; right: 9px; width: 66%; background-color: white; border-radius: 10px; padding: 3px 0; }
 header .item { display: block; text-align: center; text-decoration: none; color: #07070D; padding: 16px 0; text-transform: uppercase; border-top: $greyLine; }
 header .item:first-child { border-top: 0; }
