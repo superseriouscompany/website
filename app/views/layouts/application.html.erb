@@ -39,11 +39,9 @@
 </head>
 <body class="<%= "#{controller_name}-#{action_name}" %>">
   <header class="<%= 'withHeading' if @page_heading %>">
-    <% if action_name != 'home' %>
-      <a href="/" class="smallLogoLink">
-        <%= image_tag "moneyBagIcon.png", class: "smallLogo", alt: "Super Serious Company" %>
-      </a>
-    <% end %>
+    <a href="/" class="smallLogoLink">
+      <%= image_tag "moneyBagIcon.png", class: "smallLogo", alt: "Super Serious Company" %>
+    </a>
     <h1 class="<%= 'singleLine' if @page_heading && !@page_heading.match("\n") %>">
       <% if @page_heading %>
         <div class="pageHeading">
