@@ -43,4 +43,8 @@ class PagesController < ApplicationController
     @page_title = "Customer Support: Giggles App"
     @page_heading = "Giggles Support"
   end
+
+  def privacy
+    @page_title = "Privacy Policy"
+  end
 end
