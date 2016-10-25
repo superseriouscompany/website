@@ -38,4 +38,9 @@ class PagesController < ApplicationController
     @page_title       = @project.name
     @meta_description = "#{@project.name}: a Super Serious Company effort"
   end
+
+  def giggles_support
+    @page_title = "Customer Support: Giggles App"
+    @page_heading = "Giggles Support"
+  end
 end

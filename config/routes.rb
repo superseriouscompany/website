@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/projects/:slug' => 'pages#show_project'
   get '/dias/:id' => 'pages#show_day'
   get '/story' => 'pages#story'
+  get '/support/giggles' => 'pages#giggles_support'
 
   # Catchall
   get '/:action', controller: 'pages'
