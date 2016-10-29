@@ -299,10 +299,10 @@ if Project.count < 1
   ])
 end
 
-project = Project.find_by_slug("untitled-october")
+project = Project.find_by_slug("giggles")
 if project.blank?
   project = Project.create({
-    name: '¯\_(ツ)_/¯',
+    name: 'Giggles',
     description: """
     <p>
       October's project doesn't have a name or even a code name yet.
@@ -314,7 +314,7 @@ if project.blank?
       Our long-term vision is for you to be able to post much more than just images and make a joke with much more than just audio files.  Another part of the vision is for this to be a game, actually, where users can post a thing in a real place (like a coffee shop), and people can discover it there and make a joke there.
     </p>
     """,
-    slug: "untitled-october"
+    slug: "giggles"
   })
 end
 project.progress_updates.create([
