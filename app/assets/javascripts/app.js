@@ -1,4 +1,6 @@
 (function() {
+  var currentMode = (window.localStorage && localStorage.getItem('mode')) || 'santi';
+
   // Hook google analytics into turbolinks properly
   $(document).on('turbolinks:load', function() {
     ga('send', 'pageview');
@@ -7,7 +9,6 @@
       $(document).find('.js-notifications').show();
     }
 
-    var currentMode = (window.localStorage && localStorage.getItem('mode')) || 'santi';
     switchMode(currentMode);
   });
 
