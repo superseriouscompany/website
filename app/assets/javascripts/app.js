@@ -6,6 +6,9 @@
     if( supportsDesktopNotifications() && (!window.localStorage || !window.localStorage.getItem('subscribed')) ) {
       $(document).find('.js-notifications').show();
     }
+
+    var currentMode = (window.localStorage && localStorage.getItem('mode')) || 'santi';
+    switchMode(currentMode);
   });
 
   // Hamburger menu behavior
@@ -16,7 +19,19 @@
   // Desktop notifications
   $(document).on('click', '.js-subscribe', subscribe);
 
+  // Neil mode
+  $(document).on('click', '.js-mode', function() {
+    currentMode = currentMode == 'santi' ? 'neil' : 'santi';
+    switchMode(currentMode);
+  })
+
   if( isDev() ) { subscribe() }
+
+  function switchMode(mode) {
+    $('html').toggleClass('neil', mode == 'neil');
+    $('.js-mode').find('span').text(mode == 'neil' ? 'santi' : 'neil');
+    window.localStorage && localStorage.setItem('mode', mode);
+  }
 
   // TODO: break this up and clean it up
   function subscribe() {

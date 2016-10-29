@@ -80,6 +80,14 @@ header.withHeading .logoLink { display: none; }
     header .bottom { bottom: 47px; }
   }
 
+/* Footer */
+footer { text-align: center; padding-bottom: 1em;}
+.mode-switch { font-size: smaller; cursor: pointer; text-decoration: underline; display: none; -webkit-user-select: none; }
+  @include desktop {
+    .mode-switch { display: block; }
+  }
+
+
 /* Post on homepage or project page */
 .day { border-top: $greyLine; padding: 0 0 1.4em; &:first-child { border-top: 0; } }
 .day h2 { color: $quoteText; font-size: 24px; text-align: center; margin: 0; padding: 16px 0 17px; }
@@ -190,3 +198,28 @@ body.projects-show .link { a, a:active, a:visited { color: $linkColor; } }
     .progressUpdate h2 { text-align: left; font-size: 18px; padding: .1em 0 .12em 1em; }
     .progressUpdate .description { padding: .5em 1em 1.5em; }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html.neil {
+  @include desktop {
+    img.hero { box-shadow: 0 0 20px 0 mediumpurple !important; border-radius: 50px 0 0 !important; }
+    img.hero.santi { box-shadow: 0 0 20px 0 gold !important; border-radius: 0 50px 0 0 !important; }
+    blockquote { background-color: rgba(147,115,216,0.3) !important; border-color: mediumpurple !important; }
+    blockquote.santi { background-color: rgba(254,213,48,0.2) !important; border-color: gold !important; }
+    header .item.active { border-color: mediumpurple !important; color: mediumpurple !important; }
+  }
+}
