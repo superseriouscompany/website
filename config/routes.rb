@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get '/dias/:id' => 'pages#show_day'
   get '/story' => 'pages#story'
   get '/support/giggles' => 'pages#giggles_support'
+  get '/neil-sarkar' => 'pages#neil'
+  get '/santi-garza' => 'pages#santi'
 
   # Catchall
   get '/:action', controller: 'pages'
