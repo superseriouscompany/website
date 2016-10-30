@@ -67,6 +67,8 @@
       <a href="/projects/untitled-october" class="bottom left item <%= 'active' if action_name == 'show_project'%>">Current Project</a>
       <a href="/philosophy" class="desktop-only bottom right item <%= 'active' if action_name == 'philosophy' %>">Nobody Cares</a>
       <a href="/house" class="top right item <%= 'active' if action_name == 'house' %>">Our House</a>
+      <a href="/neil-sarkar" class="mobile-only item <%= 'active' if action_name == 'neil' %>">Neil</a>
+      <a href="/santi-garza" class="mobile-only item <%= 'active' if action_name == 'santi' %>">Santi</a>
       <a href="/philosophy" class="mobile-only bottom right item <%= 'active' if action_name == 'philosophy' %>">Nobody Cares</a>
     </div>
   </header>
@@ -74,8 +76,12 @@
   <%= yield %>
 
   <footer>
-    <%= image_tag "santiHero.jpg", class: "santi hero" %>
-    <%= image_tag "neilHero.jpg", class: "neil hero" %>
+    <a href="/santi-garza">
+      <%= image_tag "santiHero.jpg", class: "santi hero" %>
+    </a>
+    <a href="/neil-sarkar">
+      <%= image_tag "neilHero.jpg", class: "neil hero" %>
+    </a>
   </footer>
 
   <div class="nightshade"></div>

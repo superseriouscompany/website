@@ -50,7 +50,7 @@ body.hamburgerOpen .menu       { display: block; }
     section { margin: 0 auto; max-width: 550px; border: 0; font-size: 18px; }
     section.context { font-size: 16px; max-width: none; line-height: 20px; text-align: center; padding-bottom: 15px; }
     section.context p { margin: 15px auto 0; max-width: 600px; }
-    .hero      { position: fixed; bottom: 0; left: 0; width: 15%; display: inline; z-index: -1; }
+    .hero      { position: fixed; bottom: 0; left: 0; width: 15%; display: inline; }
     .hero.neil { left: auto; right: 0; }
   }
 
@@ -189,4 +189,17 @@ body.projects-show .link { a, a:active, a:visited { color: $linkColor; } }
     .progressUpdate { border: 0; }
     .progressUpdate h2 { text-align: left; font-size: 18px; padding: .1em 0 .12em 1em; }
     .progressUpdate .description { padding: .5em 1em 1.5em; }
+  }
+
+/* Founders page */
+section.photos .exhibit { font-size: 16px; color: $contextGrey; font-style: italic; text-align: center; }
+section.photos .caption { padding: 1em; padding-top: .25em; padding-bottom: 1.6em; }
+section.photos img { width: 100%; }
+section.photos p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-right: 100px; } }
+  @include desktop {
+    .pages-santi .context { text-align: center; margin: 15px auto 0; max-width: 600px; }
+    .pages-neil .context { text-align: center; margin: 15px auto 0; max-width: 600px; }
+    section.house img { margin-top: 1.5em; }
+    section.photos img { border-radius: 2px; }
+    section.photos .caption { padding: 1em; padding-top: .75em; padding-bottom: 4em; }
   }

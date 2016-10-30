@@ -47,4 +47,16 @@ class PagesController < ApplicationController
   def privacy
     @page_title = "Privacy Policy"
   end
+
+  def neil
+    @page_title = "Neil Sarkar"
+    @person = 'neil'
+    render :founder
+  end
+
+  def santi
+    @page_title = "Santi Garza"
+    @person = 'santi'
+    render :founder
+  end
 end
