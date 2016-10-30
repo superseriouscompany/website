@@ -201,7 +201,7 @@ body.projects-show .link { a, a:active, a:visited { color: $linkColor; } }
 
 /* Founders page */
 section.photos .exhibit { font-size: 16px; color: $contextGrey; font-style: italic; text-align: center; }
-section.photos .caption { padding: 1em; padding-top: .25em; padding-bottom: 1.6em; }
+section.photos .caption { padding: 1em; padding-top: .25em; padding-bottom: 1.6em; min-height: 80px; }
 section.photos img { width: 100%; }
 section.photos p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-right: 100px; } }
   @include desktop {
@@ -209,7 +209,7 @@ section.photos p { margin: 20px 22px; &:first-child { margin-left: 100px; margin
     .pages-neil .context { text-align: center; margin: 15px auto 0; max-width: 600px; }
     section.house img { margin-top: 1.5em; }
     section.photos img { border-radius: 2px; }
-    section.photos .caption { padding: 1em; padding-top: .75em; padding-bottom: 4em; }
+    section.photos .caption { padding: 1em; padding-top: .75em; margin-bottom: 4em; min-height: 0; }
   }
 
 
@@ -233,5 +233,8 @@ html.neil {
     blockquote { background-color: rgba(147,115,216,0.3) !important; border-color: mediumpurple !important; }
     blockquote.santi { background-color: rgba(254,213,48,0.2) !important; border-color: gold !important; }
     header .item.active { border-color: mediumpurple !important; color: #656868 !important; }
+
+    body.pages-neil .caption { background-color: rgba(254,213,48,0.2) !important; border-color: gold !important; border-width: 1px !important; border-style: solid !important; border-radius: 10px; }
+    body.pages-santi .caption { background-color: rgba(147,115,216,0.3) !important; border-color: mediumpurple !important; border-width: 1px !important; border-style: solid !important; border-radius: 10px; }
   }
 }
