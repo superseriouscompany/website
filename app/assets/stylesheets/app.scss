@@ -192,8 +192,12 @@ body.projects-show .link { a, a:active, a:visited { color: $linkColor; } }
   }
 
 /* Founders page */
+section.photos .exhibit { font-size: 16px; color: $contextGrey; font-style: italic; text-align: center; }
+section.photos .caption { padding: 1em; padding-top: .25em; padding-bottom: 2em; }
 section.photos img { width: 100%; }
-section.photos .exhibit {
-  border: 10px solid cornflowerblue;
-  padding: 1em 0;
-}
+section.photos p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-right: 100px; } }
+  @include desktop {
+    section.house img { margin-top: 1.5em; }
+    section.photos img { border-radius: 2px; }
+    section.photos .caption { padding: 1em; padding-top: .75em; padding-bottom: 4em; }
+  }
