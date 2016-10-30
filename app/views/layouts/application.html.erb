@@ -64,7 +64,7 @@
     <%= image_tag "hamburger.jpg", class: "hamburger js-hamburger" %>
     <div class="menu">
       <a href="/story" class="bottom left item <%= 'active' if action_name == 'story' %>">Story</a>
-      <a href="/projects/untitled-october" class="bottom left item <%= 'active' if action_name == 'show_project'%>">Current Project</a>
+      <a href="/projects/giggles" class="bottom left item <%= 'active' if action_name == 'show_project'%>">Current Project</a>
       <a href="/philosophy" class="desktop-only bottom right item <%= 'active' if action_name == 'philosophy' %>">Nobody Cares</a>
       <a href="/house" class="top right item <%= 'active' if action_name == 'house' %>">Our House</a>
       <a href="/neil-sarkar" class="mobile-only item <%= 'active' if action_name == 'neil' %>">Neil</a>
@@ -82,6 +82,10 @@
     <a href="/neil-sarkar">
       <%= image_tag "neilHero.jpg", class: "neil hero" %>
     </a>
+    <div class="copyright">
+      &copy; <%= Time.now.year %> Super Serious LLC
+    </div>
+    <div class="mode-switch js-mode">switch to <span>neil</span> mode</div>
   </footer>
 
   <div class="nightshade"></div>
