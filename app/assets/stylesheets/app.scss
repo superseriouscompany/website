@@ -23,6 +23,7 @@ $quoteText: #656868;
 /* Globals */
 *    { box-sizing: border-box; }
 body { font-family: 'Questrial', Helvetica, sans-serif; visibility: visible; padding-top: $headerHeight; background: white; }
+footer { font-family: 'Questrial', Helvetica, sans-serif; color: $contextGrey; }
 a    { cursor: pointer; }
 .desktop-only { display: none !important; }
   @include desktop {
