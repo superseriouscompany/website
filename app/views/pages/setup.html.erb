@@ -1,0 +1,146 @@
+<h1>Giggles</h1>
+
+<section class="rps graphs">
+  <h2>12,242 requests per second</h2>
+  <ul class="postit">
+    <li>2xx</li>
+    <li>3xx</li>
+    <li>4xx</li>
+    <li>5xx</li>
+  </ul>
+  <%= image_tag "sampleGraph.jpg", class: "graph" %>
+  <table class="by-endpoint">
+    <tr>
+      <th>Endpoint</th>
+      <th>2xx</th>
+      <th>3xx</th>
+      <th>4xx</th>
+      <th>5xx</th>
+    </tr>
+    <tr>
+      <td>/ping</td>
+      <td>100%</td>
+      <td>0%</td>
+      <td>0%</td>
+    </tr>
+    <tr>
+      <td>/submissions</td>
+      <td>97%</td>
+      <td>2%</td>
+      <td>1%</td>
+    </tr>
+  </table>
+
+  <table class="by-host">
+    <tr>
+      <th>Host</th>
+      <th>2xx</th>
+      <th>3xx</th>
+      <th>4xx</th>
+      <th>5xx</th>
+    </tr>
+    <tr>
+      <td>24.22.50.104</td>
+      <td>96%</td>
+      <td>3%</td>
+      <td>1%</td>
+    </tr>
+    <tr>
+      <td>243.102.15.102</td>
+      <td>97%</td>
+      <td>2%</td>
+      <td>1%</td>
+    </tr>
+  </table>
+</section>
+
+<section class="latency graphs">
+  <h2>500ms average latency</h2>
+  <ul class="postit">
+    <li>P99</li>
+    <li>P90</li>
+    <li>Average</li>
+  </ul>
+  <%= image_tag "sampleGraph.jpg", class: "graph" %>
+  <table class="by-endpoint">
+    <tr>
+      <th>Endpoint</th>
+      <th>P99</th>
+      <th>P90</th>
+      <th>Average</th>
+    </tr>
+    <tr>
+      <td>/ping</td>
+      <td>1.15s</td>
+      <td>500ms</td>
+      <td>80ms</td>
+    </tr>
+    <tr>
+      <td>/submissions</td>
+      <td>2.31s</td>
+      <td>500ms</td>
+      <td>80ms</td>
+    </tr>
+  </table>
+
+  <table class="by-host">
+    <tr>
+      <th>Host</th>
+      <th>P99</th>
+      <th>P90</th>
+      <th>Average</th>
+    </tr>
+    <tr>
+      <td>24.22.50.104</td>
+      <td>1.69s</td>
+      <td>500ms</td>
+      <td>80ms</td>
+    </tr>
+    <tr>
+      <td>243.102.15.102</td>
+      <td>1.69s</td>
+      <td>500ms</td>
+      <td>80ms</td>
+    </tr>
+  </table>
+</section>
+
+<section class="cpu graphs">
+  <h2>28% average CPU utilization</h2>
+  <%= image_tag "sampleGraph.jpg", class: "graph" %>
+
+  <table class="by-host">
+    <tr>
+      <th>Host</th>
+      <th>Utilization</th>
+    </tr>
+    <tr>
+      <td>24.22.50.104 📋</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <td>243.102.15.102 📋</td>
+      <td>14%</td>
+    </tr>
+  </table>
+</section>
+
+<section class="memory graphs">
+  <h2>60% average memory usage</h2>
+  <%= image_tag "sampleGraph.jpg", class: "graph" %>
+
+  <table class="by-host">
+    <tr>
+      <th>Host</th>
+      <th>Utilization</th>
+    </tr>
+    <tr>
+      <td>24.22.50.104 📋</td>
+      <td>75%</td>
+    </tr>
+    <tr>
+      <td>243.102.15.102 📋</td>
+      <td>50%</td>
+    </tr>
+  </table>
+</section>
