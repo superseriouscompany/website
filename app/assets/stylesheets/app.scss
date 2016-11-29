@@ -223,7 +223,17 @@ section.photos p { margin: 20px 22px; &:first-child { margin-left: 100px; margin
 
 
 
-
+body.pages-setup {
+  padding-top: 0;
+  header, footer { display: none;}
+  h1 { padding-bottom: 11px; }
+  .graphs { position: relative; }
+  .postit { position: absolute; right: 1em; top: 0; width: 25%; background-color: palegoldenrod; border: 1px solid goldenrod; box-shadow: 0 0 2px 0 black; list-style: none; padding: .5em; cursor: pointer; opacity: 0.9; }
+  img { width: 100%; }
+  section { margin-bottom: 1em; }
+  table { width: 100%; display: none; }
+  h2 { text-align: center; }
+}
 
 
 

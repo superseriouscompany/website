@@ -67,6 +67,16 @@
     })
   }
 
+  $(document).on('click', '.postit', function() {
+    $('.postit').hide();
+  })
+
+  $(document).on('click', 'img', function() {
+    var table = $(this).closest('section').find('table:hidden').first();
+    $(this).closest('section').find('table').hide();
+    table.show();
+  })
+
   function supportsDesktopNotifications() {
     return 'serviceWorker' in navigator
   }
