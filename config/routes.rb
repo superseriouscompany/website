@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   get '/neil-sarkar' => 'pages#neil'
   get '/santi-garza' => 'pages#santi'
 
+  # RSS (thanks a lot caldwell)
+  get '/feed', to: 'days#feed'
+
   # Catchall
   get '/:action', controller: 'pages'
 end

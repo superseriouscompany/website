@@ -26,6 +26,13 @@ class DaysController < ApplicationController
     end
   end
 
+  def feed
+    @days = Day.order("id desc")
+    respond_to do |format|
+      format.rss { render layout: false }
+    end
+  end
+
   private
 
   def day_params
