@@ -308,7 +308,9 @@ i = 0
       name: slug.titleize,
       description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
       slug: slug,
-      completed_at: i.days.ago
+      completed_at: i.days.ago,
+      app_store_url: "https://apple.com",
+      play_store_url: "https://google.com",
     })
   end
 end
@@ -319,7 +321,8 @@ end
     Project.create({
       name: slug.titleize,
       description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-      slug: slug
+      slug: slug,
+      mac_app_store_url: "https://apple.com/macbook"
     })
   end
 end
@@ -362,5 +365,21 @@ project.progress_updates.create([
     </p>
     """,
     image_url: "progress1.jpg"
-  }
+  },
+  {
+    description: """
+    <p>
+      This is the page with all the recordings posted on today's pick of the day. The list of recordings scrolls. You can tap the play button over the submitter's photo on the left to play the recording. If you think it's funny, you can press the \"vote up\" button on the right of the recording.
+    </p>
+    """,
+    image_url: "progress1.jpg"
+  },
+  {
+    description: """
+    <p>
+      This is the page with all the recordings posted on today's pick of the day. The list of recordings scrolls. You can tap the play button over the submitter's photo on the left to play the recording. If you think it's funny, you can press the \"vote up\" button on the right of the recording.
+    </p>
+    """,
+    image_url: "progress1.jpg"
+  },
 ])

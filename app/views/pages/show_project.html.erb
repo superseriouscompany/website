@@ -1,24 +1,62 @@
 <section class="context">
   <%= raw @project.description %>
-  <% if @project.url.present? %>
-    <div class="link">
-      <a href="<%= @project.url %>"><%= @project.link %></a>
-    </div>
-  <% end %>
+
+  <div class="links">
+    <% if @project.url.present? %>
+      <div class="link">
+        <a href="<%= @project.url %>"><%= @project.link %></a>
+      </div>
+    <% end %>
+
+    <% if @project.app_store_url.present? %>
+      <div class="link">
+        <a href="<%= @project.app_store_url %>">
+          <%= image_tag "appStoreIcon.jpg" %>
+        </a>
+      </div>
+    <% end %>
+
+    <% if @project.play_store_url.present? %>
+      <div class="link">
+        <a href="<%= @project.play_store_url %>">
+          <%= image_tag "playStoreIcon.jpg" %>
+        </a>
+      </div>
+    <% end %>
+
+    <% if @project.mac_app_store_url.present? %>
+      <div class="link">
+        <a href="<%= @project.mac_app_store_url %>">
+          <%= image_tag "appStoreIcon.jpg" %>
+        </a>
+      </div>
+    <% end %>
+  </div>
 </section>
 
 <section class="project">
-  <% @progress_updates.each do |update| %>
-    <article class="progressUpdate">
-      <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
+  <h2>Our Latest Update</h2>
+
+  <% update = @progress_updates.first %>
+
+  <article class="progressUpdate">
+    <% if update.image_url.match(/\.gif/)  %>
+      <%= image_tag update.image_url, class: 'screenshot gif' %>
+    <% else %>
+      <%= image_tag update.image_url, class: 'screenshot' %>
+    <% end %>
+    <div class="description">
+      <%= raw update.description %>
+    </div>
+  </article>
+
+  <div class="grid">
+    <% @progress_updates.each do |update| %>
       <% if update.image_url.match(/\.gif/)  %>
-        <%= image_tag update.image_url, class: 'screenshot gif' %>
+        <div class="update" style="background-image: url(https://placehold.it/420x420)"></div>
       <% else %>
-        <%= image_tag update.image_url, class: 'screenshot' %>
+        <div class="update" style="background-image: url(<%= asset_path(update.image_url) %>)"></div>
       <% end %>
-      <div class="description">
-        <%= raw update.description %>
-      </div>
-    </article>
-  <% end %>
+    <% end %>
+  </div>
 </section>
