@@ -59,4 +59,10 @@ class PagesController < ApplicationController
     @person = 'santi'
     render :founder
   end
+
+  def andrew
+    @page_title = "Andrew Sauer"
+    @person = 'andrew'
+    render :founder
+  end
 end

@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/support/giggles' => 'pages#giggles_support'
   get '/neil-sarkar' => 'pages#neil'
   get '/santi-garza' => 'pages#santi'
+  get '/andrew-sauer' => 'pages#andrew'
 
   # RSS (thanks a lot caldwell)
   get '/feed', to: 'days#feed'
