@@ -8,7 +8,7 @@
 
 if Project.count < 1
   project = Project.create({
-    name: "This Website",
+    name: "The Website",
     description: """
       Our first project is this shameless, self-absorbed website.
       It’s here mostly to show people back home that we’re doing something and to post future projects, favorable pics of ourselves, etc.
@@ -16,7 +16,7 @@ if Project.count < 1
     """,
     url: "http://superseriouscompany.com",
     link: "superseriouscompany.com",
-    slug: "this-website"
+    slug: "website"
   })
 
   days = project.days.create([
@@ -299,6 +299,31 @@ if Project.count < 1
   ])
 end
 
+i = 0
+["giggles", "junkfood", "tempted", "volado"].each do |slug|
+  i += 1
+  project = Project.find_by_slug(slug)
+  if project.blank?
+    Project.create({
+      name: slug.titleize,
+      description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+      slug: slug,
+      completed_at: i.days.ago
+    })
+  end
+end
+
+["belay"].each do |slug, i|
+  project = Project.find_by_slug(slug)
+  if project.blank?
+    Project.create({
+      name: slug.titleize,
+      description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+      slug: slug
+    })
+  end
+end
+
 project = Project.find_by_slug("giggles")
 if project.blank?
   project = Project.create({
@@ -317,6 +342,7 @@ if project.blank?
     slug: "giggles"
   })
 end
+
 project.progress_updates.create([
   {
     description: """

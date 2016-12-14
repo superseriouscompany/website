@@ -75,7 +75,7 @@ class PagesController < ApplicationController
   def projects
     @page_title = "Projects"
     @meta_description = "We're doing work, I swear"
-    @active_projects = [Project.first, Project.last, Project.first, Project.last, Project.first]
-    @finished_projects = Project.all
+    @active_projects = Project.current
+    @finished_projects = Project.completed
   end
 end
