@@ -71,4 +71,11 @@ class PagesController < ApplicationController
     @share_image_url = "https://superseriouscompany.com#{ActionController::Base.helpers.asset_url("andrew-sauer/andrew-sauer-animal-menagerie.jpg")}"
     render :founder
   end
+
+  def projects
+    @page_title = "Projects"
+    @meta_description = "We're doing work, I swear"
+    @active_projects = [Project.first, Project.last, Project.first, Project.last, Project.first]
+    @finished_projects = Project.all
+  end
 end

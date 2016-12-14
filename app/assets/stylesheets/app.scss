@@ -9,6 +9,7 @@
 */
 $headerHeight: 58px;
 $desktopHeaderHeight: 60px;
+$textColor: black;
 $greyLine: 1px solid #DBDBDC;
 $accentBrown: #C69785;
 $linkColor: #40746E;
@@ -174,6 +175,14 @@ section.house p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-
   }
 
 /* Projects Page */
+body.pages-projects section { padding: 0 1em; border: 0; }
+body.pages-projects .grid { display: flex; flex-wrap: wrap; }
+body.pages-projects .app  { width: 24%; margin: 0 1% 1em 0; }
+body.pages-projects .app:nth-of-type(4n)  { margin-right: 0; }
+body.pages-projects .app img { width: 100%; border-radius: 10px; }
+body.pages-projects .app a { text-decoration: none; color: $contextGrey; font-size: 12px; text-align: center; }
+
+/* Project Page */
 body.projects-show .context { text-align: left; padding: 0 2em; line-height: 20px; }
 body.projects-show .link { text-align: center; margin: 1em 0 1.3em; }
 body.projects-show .link { a, a:active, a:visited { color: $linkColor; } }
