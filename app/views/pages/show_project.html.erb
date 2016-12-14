@@ -53,9 +53,13 @@
   <div class="grid">
     <% @progress_updates.each do |update| %>
       <% if update.image_url.match(/\.gif/)  %>
-        <div class="update" style="background-image: url(https://placehold.it/420x420)"></div>
+        <div class="update gif">
+          <img src="https://placehold.it/450x450" />
+        </div>
       <% else %>
-        <div class="update" style="background-image: url(<%= asset_path(update.image_url) %>)"></div>
+        <div class="update">
+          <img src="https://placehold.it/420x420" />
+        </div>
       <% end %>
     <% end %>
   </div>
