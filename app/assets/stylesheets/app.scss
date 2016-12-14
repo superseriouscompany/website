@@ -190,11 +190,14 @@ body.pages-show_project .grid { display: flex; flex-wrap: wrap; }
 body.pages-show_project .update { width: 32%; margin-right: 2%; }
 body.pages-show_project .update:nth-of-type(3n) { margin-right: 0%; }
 body.pages-show_project .update img { width: 100%; }
-.lightbox { position: fixed; left: 0; top: 0; bottom: 0; right: 0; background: rgba(0,0,0,0.8); z-index: 11; }
-.lightbox .top { height: 10%; width: 100%; position: absolute; top: 0; }
-.lightbox .main { height: 70%; width: 100%; position: absolute; top: 10%; background-color: white; }
+.lightbox { position: fixed; left: 0; top: 0; bottom: 0; right: 0; background: rgba(0,0,0,0.95); z-index: 11; display: none; }
+body.lightbox-open .lightbox { display: block; }
+.lightbox .top { height: 5%; padding-top: 2%; width: 100%; position: absolute; top: 0; color: white; text-align: center; }
+.lightbox .main { height: 85%; width: 100%; position: absolute; top: 5%; background-color: white; }
 .lightbox .main img { width: 25%; }
-.lightbox .bottom { height: 20%; width: 100%; position:absolute; bottom: 0; }
+.lightbox .bottom { height: 10%; width: 100%; position:absolute; bottom: 0; color: white; text-align: center; padding-top: 5%; }
+.lightbox .bottom .left { float: left; margin-left: 2em; }
+.lightbox .bottom .right { float: right; margin-right: 2em; }
   @include desktop {
     body.pages-show_project .context { text-align: center; }
   }
