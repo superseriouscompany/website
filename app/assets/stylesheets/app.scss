@@ -8,7 +8,7 @@
   * rules go in order of specificity: globals, reusable components, page specific
 */
 $headerHeight: 58px;
-$desktopHeaderHeight: 60px;
+$desktopHeaderHeight: 48px;
 $greyLine: 1px solid #DBDBDC;
 $accentBrown: #C69785;
 $linkColor: #40746E;
@@ -39,20 +39,15 @@ h1.singleLine   { padding-top: 19px; }
 h1 img          { width: 134px; margin-top: 2px; }
 section         { border-top: $greyLine; font-size: 16px; line-height: 20px; }
 section.context { color: $contextGrey; padding: 0 20px; text-align: center; border-top: 0; }
-.hero           { display: none; }
 .nightshade     { opacity: 0.8; background-color: black; position: fixed; left: 0; top: 0; bottom: 0; right: 0; display: none; }
 body.hamburgerOpen .nightshade { display: block; }
 body.hamburgerOpen .menu       { display: block; }
   @include desktop {
     body { padding-top: $desktopHeaderHeight; }
-    h1 { padding: 14px 0 14px; display: inline-block; position: relative; z-index: 11;}
-    h1 img { width: 134px; margin: 0; }
-    h1.singleLine   { padding-top: 14px; }
+    h1 { display: none; }
     section { margin: 0 auto; max-width: 550px; border: 0; font-size: 18px; }
     section.context { font-size: 16px; max-width: none; line-height: 20px; text-align: center; padding-bottom: 15px; }
     section.context p { margin: 15px auto 0; max-width: 600px; }
-    .hero      { position: fixed; bottom: 0; left: 0; width: 15%; display: inline; }
-    .hero.neil { left: auto; right: 0; }
   }
 
 /* Header */
@@ -72,13 +67,9 @@ header.withHeading .logoLink { display: none; }
     header.withHeading .logoLink { display: inline; }
     header.withHeading .pageHeading { display: none; }
     header .hamburger { display: none; }
-    header .menu { top: 18px; width: 100%; background-color: transparent; border-radius: 0; display: block; }
-    header .item  { position: absolute; font-size: 16px; display: block; padding: 0; border-top: 0; color: $contextGrey; text-transform: none; width: 140px; }
+    header .menu { top: 12px; width: 100%; background-color: transparent; border-radius: 0; display: flex; align-items: space-between; justify-content: center; }
+    header .item  { font-size: 14px; display: block; padding: 0; border-top: 0; color: $contextGrey; text-transform: none; padding: 0 1em; }
     header .item.active { border: 4px solid $accentBrown; border-width: 0 0 4px 0; padding-bottom: 16px; }
-    header .top   { top: 37px; }
-    header .left  { left: 0; position: static; float: left; margin-left: 15px;}
-    header .right { right: 0; position: static; float: right; margin-right: 15px;}
-    header .bottom { bottom: 47px; }
   }
 
 /* Footer */
@@ -95,7 +86,7 @@ footer { text-align: center; padding-bottom: 1em;}
 .day img.comic { width: 100%; }
   @include desktop {
     .day { padding-top: 1em; border: none; }
-    .day img.comic { border: 0;  margin-bottom: 10px; }
+    .day img.comic { border: 0;  margin-bottom: 10px; box-shadow: 0 0 4px 0; }
     .day h2 { display: none; }
   }
 
@@ -105,14 +96,11 @@ footer { text-align: center; padding-bottom: 1em;}
 .quotes blockquote p { &:first-of-type {margin-top: 0} &:last-of-type {margin-bottom: 0} }
 .quotes blockquote:last-of-type { margin-bottom: 0; }
 .quotes blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; background-position-y: -7px; }
-.quotes blockquote .chatBubble { display: none; }
   @include desktop {
     .quotes { width: 520px; margin: 0 auto 4em; }
     .quotes blockquote:first-child { margin-bottom: 1.2em; }
-    .quotes blockquote { margin: 0; max-width: 480px; padding: 1.2em; background: none; border: 1px solid #DBDBDC; position: relative; font-size: 16px; min-height: 0; border-radius: 18px; }
-    .quotes blockquote.neil { display: absolute; background: none; right: -40px; }
-    .quotes blockquote .chatBubble { display: block; width: 34px; position: absolute; bottom: -23px; left: 15px; z-index: 2; }
-    .quotes blockquote.neil .chatBubble { left: auto; right: 15px; transform: scaleX(-1); }
+    .quotes blockquote { margin: 0; max-width: 480px; padding: 1.2em; background-image: url(asset-path('santiHead.png')); position: relative; font-size: 16px; min-height: 0; border-radius: 18px; background-size: 41px 41px; background-position-y: 20px; padding-left: 50px; }
+    .quotes blockquote.neil { background-image: url(asset-path('neilHead.png')); background-size: 41px 41px; background-position-y: 20px; }
     .quotes blockquote p:first-child { margin-top: 0; }
   }
 

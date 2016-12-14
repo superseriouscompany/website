@@ -60,31 +60,22 @@
           <% end %>
       </div>
       <% end %>
-      <a class="logoLink" href="/">
-        <%= image_tag "logo.png", alt: "Super Serious Company" %>
-      </a>
     </h1>
     <%= image_tag "hamburger.jpg", class: "hamburger js-hamburger" %>
     <div class="menu">
+      <a href="/projects" class="bottom left item <%= 'active' if action_name == 'show_project' or action_name == 'projects'%>">Projects</a>
       <a href="/story" class="bottom left item <%= 'active' if action_name == 'story' %>">Story</a>
-      <a href="/projects/giggles" class="bottom left item <%= 'active' if action_name == 'show_project'%>">Current Project</a>
-      <a href="/philosophy" class="desktop-only bottom right item <%= 'active' if action_name == 'philosophy' %>">Nobody Cares</a>
-      <a href="/house" class="top right item <%= 'active' if action_name == 'house' %>">Our House</a>
-      <a href="/neil-sarkar" class="mobile-only item <%= 'active' if action_name == 'neil' %>">Neil</a>
-      <a href="/santi-garza" class="mobile-only item <%= 'active' if action_name == 'santi' %>">Santi</a>
-      <a href="/philosophy" class="mobile-only bottom right item <%= 'active' if action_name == 'philosophy' %>">Nobody Cares</a>
+      <a href="/neil-sarkar" class="item <%= 'active' if action_name == 'neil' %>">Neil</a>
+      <a href="/santi-garza" class="item <%= 'active' if action_name == 'santi' %>">Santi</a>
+      <a href="/andrew-sauer" class="item <%= 'active' if action_name == 'andrew' %>">Sauer</a>
+      <a href="/house" class="item <%= 'active' if action_name == 'house' %>">HQ</a>
+      <a href="/philosophy" class="item <%= 'active' if action_name == 'philosophy' %>">Nobody Cares</a>
     </div>
   </header>
 
   <%= yield %>
 
   <footer>
-    <a href="/santi-garza">
-      <%= image_tag "santiHero.jpg", class: "santi hero" %>
-    </a>
-    <a href="/neil-sarkar">
-      <%= image_tag "neilHero.jpg", class: "neil hero" %>
-    </a>
     <div class="copyright">
       &copy; <%= Time.now.year %> Super Serious LLC
     </div>
