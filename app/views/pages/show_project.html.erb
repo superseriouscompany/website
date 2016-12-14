@@ -54,11 +54,15 @@
     <% @progress_updates.each do |update| %>
       <% if update.image_url.match(/\.gif/)  %>
         <div class="update gif">
-          <img src="https://placehold.it/450x450" />
+          <a href="javascript:alert('nope')">
+            <img src="https://placehold.it/450x450" />
+          </a>
         </div>
       <% else %>
         <div class="update">
-          <img src="https://placehold.it/420x420" />
+          <a href="javascript:alert('nope')">
+            <img src="https://placehold.it/420x420" />
+          </a>
         </div>
       <% end %>
     <% end %>
