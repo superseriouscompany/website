@@ -5,7 +5,7 @@
     <% @active_projects.each do |p| %>
       <div class="app">
         <a href="/projects/<%= p.slug%>">
-          <img src="https://placehold.it/420x420" />
+          <%= image_tag "projects/#{p.slug}Icon.png" %>
           <div class="name">
             <%= p.name %>
           </div>
@@ -21,7 +21,7 @@
     <% @finished_projects.each do |p| %>
       <div class="app">
         <a href="/projects/<%= p.slug%>">
-          <img src="https://placehold.it/69x69" />
+          <%= image_tag "projects/#{p.slug}Icon.png" %>
           <div class="name">
             <%= p.name %>
           </div>
