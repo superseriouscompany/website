@@ -68,3 +68,27 @@
     <% end %>
   </div>
 </section>
+
+<div class="lightbox">
+  <div class="top">
+    1/69
+  </div>
+
+  <div class="main progressUpdate">
+    <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
+    <% if update.image_url.match(/\.gif/)  %>
+      <%= image_tag update.image_url, class: 'screenshot gif' %>
+    <% else %>
+      <%= image_tag update.image_url, class: 'screenshot' %>
+    <% end %>
+    <div class="description">
+      <%= raw update.description %>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <a class="left">&lt;</a>
+    <a class="close">close this thing</a>
+    <a class="right">&gt;</a>
+  </div>
+</div>
