@@ -63,8 +63,11 @@
     </h1>
     <%= image_tag "hamburger.jpg", class: "hamburger js-hamburger" %>
     <div class="menu">
-      <a href="/projects" class="bottom left item <%= 'active' if action_name == 'show_project' or action_name == 'projects'%>">Projects</a>
-      <a href="/story" class="bottom left item <%= 'active' if action_name == 'story' %>">Story</a>
+      <a href="/" class="item">
+        <%= image_tag "moneyBagIcon.png", alt: "Super Serious Company", class: "desktop-only logo" %>
+      </a>
+      <a href="/projects" class="item <%= 'active' if action_name == 'show_project' or action_name == 'projects'%>">Projects</a>
+      <a href="/story" class="item <%= 'active' if action_name == 'story' %>">Story</a>
       <a href="/neil-sarkar" class="item <%= 'active' if action_name == 'neil' %>">Neil</a>
       <a href="/santi-garza" class="item <%= 'active' if action_name == 'santi' %>">Santi</a>
       <a href="/andrew-sauer" class="item <%= 'active' if action_name == 'andrew' %>">Sauer</a>

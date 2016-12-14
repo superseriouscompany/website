@@ -64,6 +64,7 @@ header.withHeading .logoLink { display: none; }
   @include desktop {
     header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; border-bottom: $greyLine; text-align: center; }
     header .smallLogoLink { display: none; }
+    header .logo { width: 24px; margin-top: -6px; }
     header.withHeading .logoLink { display: inline; }
     header.withHeading .pageHeading { display: none; }
     header .hamburger { display: none; }
