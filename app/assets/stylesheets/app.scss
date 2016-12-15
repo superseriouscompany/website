@@ -175,9 +175,11 @@ section.house p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-
   }
 
 /* Projects Page */
+$appWidth: 24%;
+$marginWidth: (100% - $appWidth*4)/3;
 body.pages-projects section { padding: 0 1em; border: 0; }
 body.pages-projects .grid { display: flex; flex-wrap: wrap; }
-body.pages-projects .app  { width: 24%; margin: 0 1% 1em 0; }
+body.pages-projects .app  { width: $appWidth; margin: 0 $marginWidth 1em 0; }
 body.pages-projects .app:nth-of-type(4n)  { margin-right: 0; }
 body.pages-projects .app img { width: 100%; border-radius: 10px; }
 body.pages-projects .app a { text-decoration: none; color: $contextGrey; font-size: 12px; text-align: center; }
