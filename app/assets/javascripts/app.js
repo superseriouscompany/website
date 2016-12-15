@@ -26,10 +26,6 @@
     switchMode(currentMode);
   })
 
-  $(document).on('click', '.js-toggle-lightbox', function() {
-    $(document.body).toggleClass('lightbox-open');
-  })
-
   if( isDev() ) { subscribe() }
 
   function switchMode(mode) {

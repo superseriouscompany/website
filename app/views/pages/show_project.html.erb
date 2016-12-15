@@ -51,7 +51,7 @@
   </article>
 
   <div class="grid">
-    <% @progress_updates.each do |update| %>
+    <% @progress_updates.each_with_index do |update, i| %>
       <% if update.image_url.match(/\.gif/)  %>
         <div class="update gif">
           <a class="js-toggle-lightbox">
@@ -65,6 +65,18 @@
           </a>
         </div>
       <% end %>
+
+      <script type="text/template" id="update-<%=i%>">
+        <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
+        <% if update.image_url.match(/\.gif/)  %>
+          <%= image_tag update.image_url, class: 'screenshot gif' %>
+        <% else %>
+          <%= image_tag update.image_url, class: 'screenshot' %>
+        <% end %>
+        <div class="description">
+          <%= raw update.description %>
+        </div>
+      </script>
     <% end %>
   </div>
 </section>
@@ -74,21 +86,12 @@
     1/69
   </div>
 
-  <div class="main progressUpdate">
-    <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
-    <% if update.image_url.match(/\.gif/)  %>
-      <%= image_tag update.image_url, class: 'screenshot gif' %>
-    <% else %>
-      <%= image_tag update.image_url, class: 'screenshot' %>
-    <% end %>
-    <div class="description">
-      <%= raw update.description %>
-    </div>
+  <div class="main progressUpdate js-stage">
   </div>
 
   <div class="bottom">
-    <a class="left">&lt;</a>
+    <a class="left js-prev-project-update">&lt;</a>
     <a class="close js-toggle-lightbox">close this thing</a>
-    <a class="right">&gt;</a>
+    <a class="right js-next-project-update">&gt;</a>
   </div>
 </div>
