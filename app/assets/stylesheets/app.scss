@@ -188,6 +188,13 @@ body.pages-projects .app:nth-of-type(4n)  { margin-right: 0; }
 body.pages-projects .app img { width: 100%; }
 body.pages-projects .name { width: 125%; margin-left: -12.5%; line-height: 12px; }
 body.pages-projects .app a { text-decoration: none; color: $projectGrey; font-size: 12px; text-align: center; }
+  @include desktop {
+    .everyphone { background-color: black; width: 531px; height: 685px; margin: 0 auto; border-radius: 29px; padding: 85px 60px; position: relative; }
+    .top-circle { background-color: #383838; border-radius: 50%; width: 9px; height: 9px; position: absolute; top: 27px; left: 0; right: 0; margin: 0 auto; }
+    .bottom-circle { border: 1px solid white; width: 49px; height: 49px; border-radius: 49px; bottom: 31px; position: absolute; left: 0; right: 0; margin: 0 auto; }
+    body.pages-projects h4 { display: none; }
+    body.pages-projects .app a { color: white; }
+  }
 
 /* Project Page */
 body.pages-show_project .context { text-align: left; padding: 0 2em; line-height: 17px; color: $contextGrey; font-size: 16px; line-height: 20px;}
