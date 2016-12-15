@@ -54,13 +54,13 @@
     <% @progress_updates.each_with_index do |update, i| %>
       <% if update.image_url.match(/\.gif/)  %>
         <div class="update gif">
-          <a class="js-toggle-lightbox">
+          <a class="js-toggle-lightbox js-load-project-update" data-update-id="<%=i%>">
             <img src="https://placehold.it/450x450" />
           </a>
         </div>
       <% else %>
         <div class="update">
-          <a class="js-toggle-lightbox">
+          <a class="js-toggle-lightbox js-load-project-update" data-update-id="<%=i%>">
             <img src="https://placehold.it/420x420" />
           </a>
         </div>
@@ -83,7 +83,7 @@
 
 <div class="lightbox">
   <div class="top">
-    1/69
+    <span class="js-current-slide">1</span>/<%= @progress_updates.count %>
   </div>
 
   <div class="main progressUpdate js-stage">
