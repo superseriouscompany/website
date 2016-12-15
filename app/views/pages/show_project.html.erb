@@ -34,7 +34,7 @@
   </div>
 </section>
 
-<section class="project">
+<section class="project last-update">
   <h2>Our Latest Update</h2>
 
   <% update = @progress_updates.first %>
@@ -49,7 +49,10 @@
       <%= raw update.description %>
     </div>
   </article>
+</section>
 
+<section class="project all-updates">
+  <h2>Project Evolution</h2>
   <div class="grid">
     <% @progress_updates.each_with_index do |update, i| %>
       <% if update.image_url.match(/\.gif/)  %>
