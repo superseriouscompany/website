@@ -184,7 +184,7 @@ body.pages-projects h4 { margin: 0; font-size: 14px; margin-bottom: 1em;}
 body.pages-projects .grid { display: flex; flex-wrap: wrap; }
 body.pages-projects .app  { width: $appWidth; margin: 0 $marginWidth 1em 0; }
 body.pages-projects .app:nth-of-type(4n)  { margin-right: 0; }
-body.pages-projects .app img { width: 100%; border-radius: 20px; }
+body.pages-projects .app img { width: 100%; }
 body.pages-projects .name { line-height: 12px; }
 body.pages-projects .app a { text-decoration: none; color: $projectGrey; font-size: 12px; text-align: center; }
 
