@@ -59,7 +59,11 @@
             <% else %>
               <%= raw @page_heading %>
             <% end %>
-        </div>
+          </div>
+        <% else %>
+          <a class="logolink" href="/">
+            <%= image_tag "logo.png" %>
+          </a>
         <% end %>
       </h1>
       <%= image_tag "hamburger.jpg", class: "hamburger js-hamburger" %>
