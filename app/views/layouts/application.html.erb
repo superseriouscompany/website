@@ -69,7 +69,7 @@
       <%= image_tag "hamburger.jpg", class: "hamburger js-hamburger" %>
       <div class="menu">
         <a href="/" class="item desktop-only">
-          <%= image_tag "moneyBagIcon.png", alt: "Super Serious Company", class: "logo" %>
+          <%= image_tag action_name =='home' ? "moneyBagIcon.png" : "moneyBagIconDark.png", class: "logo", alt: "Super Serious Company" %>
         </a>
         <a href="/projects" class="item <%= 'active' if action_name == 'show_project' or action_name == 'projects'%>">Projects</a>
         <a href="/story" class="item <%= 'active' if action_name == 'story' %>">Story</a>
