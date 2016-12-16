@@ -9,6 +9,8 @@
 */
 $headerHeight: 58px;
 $desktopHeaderHeight: 60px;
+$footerHeight: 49px;
+
 $textColor: black;
 $greyLine: 1px solid #DBDBDC;
 $accentBrown: #C69785;
@@ -86,6 +88,10 @@ header.withHeading .logoLink { display: none; }
 
 /* Footer */
 footer { text-align: center; padding-bottom: 1em;}
+html, body { height: 100%; }
+.page-wrap { min-height: 100%; margin-bottom: -$footerHeight; }
+.page-wrap:after { content: ""; display: block; }
+footer, .page-wrap:after { height: $footerHeight; }
 .mode-switch { font-size: smaller; cursor: pointer; text-decoration: underline; display: none; -webkit-user-select: none; }
   @include desktop {
     .mode-switch { display: block; }
