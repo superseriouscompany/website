@@ -41,48 +41,49 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= "#{controller_name}-#{action_name}" %>">
-  <header class="<%= 'withHeading' if @page_heading %>">
-    <a href="/" class="smallLogoLink">
-      <%= image_tag "moneyBagIcon.png", class: "smallLogo", alt: "Super Serious Company" %>
-    </a>
-    <h1 class="<%= 'singleLine' if @page_heading && !@page_heading.match("\n") %>">
-      <% if @page_heading %>
-        <div class="pageHeading">
-          <% if @page_heading.match("\n") %>
-            <div class="top">
-              <%= @page_heading.split("\n")[0] %>
-            </div>
-            <div class="bottom">
-              <%= @page_heading.split("\n")[1] %>
-            </div>
-          <% else %>
-            <%= raw @page_heading %>
-          <% end %>
-      </div>
-      <% end %>
-    </h1>
-    <%= image_tag "hamburger.jpg", class: "hamburger js-hamburger" %>
-    <div class="menu">
-      <a href="/" class="item">
-        <%= image_tag "moneyBagIcon.png", alt: "Super Serious Company", class: "desktop-only logo" %>
+  <div class="page-wrap">
+    <header class="<%= 'withHeading' if @page_heading %>">
+      <a href="/" class="smallLogoLink">
+        <%= image_tag "moneyBagIcon.png", class: "smallLogo", alt: "Super Serious Company" %>
       </a>
-      <a href="/projects" class="item <%= 'active' if action_name == 'show_project' or action_name == 'projects'%>">Projects</a>
-      <a href="/story" class="item <%= 'active' if action_name == 'story' %>">Story</a>
-      <a href="/neil-sarkar" class="item <%= 'active' if action_name == 'neil' %>">Neil</a>
-      <a href="/santi-garza" class="item <%= 'active' if action_name == 'santi' %>">Santi</a>
-      <a href="/andrew-sauer" class="item <%= 'active' if action_name == 'andrew' %>">Sauer</a>
-      <a href="/house" class="item <%= 'active' if action_name == 'house' %>">HQ</a>
-      <a href="/philosophy" class="item <%= 'active' if action_name == 'philosophy' %>">Nobody Cares</a>
-    </div>
-  </header>
+      <h1 class="<%= 'singleLine' if @page_heading && !@page_heading.match("\n") %>">
+        <% if @page_heading %>
+          <div class="pageHeading">
+            <% if @page_heading.match("\n") %>
+              <div class="top">
+                <%= @page_heading.split("\n")[0] %>
+              </div>
+              <div class="bottom">
+                <%= @page_heading.split("\n")[1] %>
+              </div>
+            <% else %>
+              <%= raw @page_heading %>
+            <% end %>
+        </div>
+        <% end %>
+      </h1>
+      <%= image_tag "hamburger.jpg", class: "hamburger js-hamburger" %>
+      <div class="menu">
+        <a href="/" class="item desktop-only">
+          <%= image_tag "moneyBagIcon.png", alt: "Super Serious Company", class: "logo" %>
+        </a>
+        <a href="/projects" class="item <%= 'active' if action_name == 'show_project' or action_name == 'projects'%>">Projects</a>
+        <a href="/story" class="item <%= 'active' if action_name == 'story' %>">Story</a>
+        <a href="/neil-sarkar" class="item <%= 'active' if action_name == 'neil' %>">Neil</a>
+        <a href="/santi-garza" class="item <%= 'active' if action_name == 'santi' %>">Santi</a>
+        <a href="/andrew-sauer" class="item <%= 'active' if action_name == 'andrew' %>">Sauer</a>
+        <a href="/house" class="item <%= 'active' if action_name == 'house' %>">HQ</a>
+        <a href="/philosophy" class="item <%= 'active' if action_name == 'philosophy' %>">Nobody Cares</a>
+      </div>
+    </header>
 
-  <%= yield %>
+    <%= yield %>
+  </div>
 
   <footer>
     <div class="copyright">
       &copy; <%= Time.now.year %> Super Serious LLC
     </div>
-    <div class="mode-switch js-mode">switch to <span>neil</span> mode</div>
   </footer>
 
   <div class="nightshade"></div>

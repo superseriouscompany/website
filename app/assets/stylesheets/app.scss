@@ -9,7 +9,7 @@
 */
 $headerHeight: 58px;
 $desktopHeaderHeight: 48px;
-$footerHeight: 49px;
+$footerHeight: 30px;
 
 $textColor: black;
 $greyLine: 1px solid #DBDBDC;
@@ -26,12 +26,11 @@ $projectGrey: #838386;
 
 /* Globals */
 *    { box-sizing: border-box; }
-body { font-family: 'Questrial', Helvetica, sans-serif; visibility: visible; padding-top: $headerHeight; background: white; }
-footer { font-family: 'Questrial', Helvetica, sans-serif; color: $contextGrey; font-size: 14px; margin: 25px 0px 5px; }
+body { font-family: 'Questrial', Helvetica, sans-serif; visibility: visible; background: white; }
+footer { font-family: 'Questrial', Helvetica, sans-serif; color: $contextGrey; font-size: 14px; text-align: center; padding-bottom: 1em; }
 a    { cursor: pointer; }
 .desktop-only { display: none !important; }
   @include desktop {
-    body { padding-top: $desktopHeaderHeight; }
     footer { font-size: 16px; }
     .mobile-only { display: none !important; }
     .desktop-only { display: block !important; &img, &span, &a { display: inline !important} }
@@ -48,7 +47,6 @@ section.context { color: $contextGrey; padding: 0 20px; text-align: center; bord
 body.hamburgerOpen .nightshade { display: block; }
 body.hamburgerOpen .menu       { display: block; }
   @include desktop {
-    body { padding-top: $desktopHeaderHeight; }
     h1 { display: none; }
     section { margin: 0 auto; max-width: 550px; border: 0; font-size: 18px; }
     section.context { margin: 35px 0 41px; font-size: 16px; max-width: none; line-height: 20px; text-align: center; }
@@ -61,7 +59,7 @@ header .hamburger { position:absolute; right: 18px; top: 18px; width: 29px; heig
 header .smallLogo { position: absolute; left: 15px; top: 11.25px; width: 32px; }
 header .menu { display: none; position: absolute; top: $headerHeight + 9px; right: 9px; width: 66%; background-color: white; border-radius: 10px; padding: 3px 0; }
 header .item { display: block; text-align: center; text-decoration: none; color: #07070D; padding: 16px 0; text-transform: uppercase; border-top: $greyLine; }
-header .item:first-child { border-top: 0; }
+header .item:nth-child(2) { border-top: 0; }
 header .item.active { color: $accentBrown; }
 header .pageHeading { font-family: 'helvetica neue'; font-size: 18px; font-weight: bold; color: #474340; text-transform: lowercase; display: inline-block; }
 header .pageHeading .bottom { font-weight: normal }
@@ -79,16 +77,13 @@ header.withHeading .logoLink { display: none; }
   }
 
 /* Footer */
-footer { text-align: center; padding-bottom: 1em;}
 html, body { height: 100%; }
-.page-wrap { min-height: 100%; margin-bottom: -$footerHeight; }
+.page-wrap { min-height: 100%; margin-bottom: -$footerHeight; padding-top: $headerHeight; }
 .page-wrap:after { content: ""; display: block; }
 footer, .page-wrap:after { height: $footerHeight; }
-.mode-switch { font-size: smaller; cursor: pointer; text-decoration: underline; display: none; -webkit-user-select: none; }
   @include desktop {
-    .mode-switch { display: block; }
+    .page-wrap { padding-top: $desktopHeaderHeight; }
   }
-
 
 /* Post on homepage or project page */
 .day { border-top: $greyLine; padding: 0 0 1.4em; &:first-child { border-top: 0; } }
