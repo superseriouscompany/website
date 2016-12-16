@@ -104,19 +104,19 @@ footer { text-align: center; padding-bottom: 1em;}
 
 /* Quotes on homepage, project page and philosophy page*/
 .quotes  { background: white; }
-.quotes blockquote { color: $quoteText; line-height: 20px; margin: 16px 0 0 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 37px 45px; padding-left: 37px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; background-position-y: 0px; }
-.quotes blockquote p { &:first-of-type {margin-top: 0} &:last-of-type {margin-bottom: 0} }
-.quotes blockquote:last-of-type { margin-bottom: 0; }
-.quotes blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; background-position-y: -7px; }
-.quotes blockquote .chatBubble { display: none; }
+blockquote { color: $quoteText; line-height: 20px; margin: 16px 0 0 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 37px 45px; padding-left: 37px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; background-position-y: 0px; }
+blockquote p { &:first-of-type {margin-top: 0} &:last-of-type {margin-bottom: 0} }
+blockquote:last-of-type { margin-bottom: 0; }
+blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; background-position-y: -7px; }
+blockquote .chatBubble { display: none; }
   @include desktop {
     .quotes { width: 520px; margin: 0 auto 4em; }
-    .quotes blockquote:first-child { margin-bottom: 1.2em; }
-    .quotes blockquote { margin: 0; max-width: 480px; padding: 1.2em; background: none; border: 1px solid #DBDBDC; position: relative; font-size: 16px; min-height: 0; border-radius: 18px; }
-    .quotes blockquote.neil { display: absolute; background: none; right: -40px; }
-    .quotes blockquote .chatBubble { display: block; width: 34px; position: absolute; bottom: -23px; left: 15px; z-index: 2; }
-    .quotes blockquote.neil .chatBubble { left: auto; right: 15px; transform: scaleX(-1); }
-    .quotes blockquote p:first-child { margin-top: 0; }
+    blockquote:first-child { margin-bottom: 1.2em; }
+    blockquote { margin: 0; max-width: 480px; padding: 1.2em; background: none; border: 1px solid #DBDBDC; position: relative; font-size: 16px; min-height: 0; border-radius: 18px; }
+    blockquote.neil { display: absolute; background: none; right: -40px; }
+    blockquote .chatBubble { display: block; width: 34px; position: absolute; bottom: -23px; left: 15px; z-index: 2; }
+    blockquote.neil .chatBubble { left: auto; right: 15px; transform: scaleX(-1); }
+    blockquote p:first-child { margin-top: 0; }
   }
 
 /* Social section on homepage */
@@ -223,7 +223,9 @@ body.lightbox-open .lightbox { display: block; }
   @include desktop {
     body.pages-show_project { padding-bottom: 66px; }
     body.pages-show_project .context { text-align: center; }
-    body.pages-show_project .links { position: fixed; bottom: 0; background-color: black; left: 0; right: 0; margin: 0; z-index: 1; padding: 10px 0; }
+    body.pages-show_project .links { position: fixed; bottom: 0; background-color: black; left: 0; right: 0; margin: 0; z-index: 12; padding: 10px 0; }
+    body.pages-show_project h2 { text-align: left; }
+    body.pages-show_project .close { position: absolute; top: 2em; right: 2em; color: $contextGrey; user-select: none; }
   }
 
 /* Story Page */
@@ -232,17 +234,24 @@ body.lightbox-open .lightbox { display: block; }
   }
 
 /* Progress Updates */
-.projects-show section { border: 0; font-size: 16px; }
 .progressUpdate { border-top: $greyLine; }
 .progressUpdate h2 { text-align: center; color: $quoteText; padding: .1em 0 .12em 0; }
 .progressUpdate img { width: 100%; }
 .progressUpdate img.gif { width: 50%; display: block; margin: 0 auto; }
 .progressUpdate .description { padding: .5em 2em .75em; color: $contextGrey; }
   @include desktop {
-    .projects-show section.context p { display: none; }
     .progressUpdate { border: 0; }
     .progressUpdate h2 { text-align: left; font-size: 18px; padding: .1em 0 .12em 1em; }
     .progressUpdate .description { padding: .5em 1em 1.5em; }
+    .progressUpdate { height: 500px; max-width: 1235px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; overflow: hidden; }
+    .progressUpdate > div { display: flex !important; height: 100%; }
+    .progressUpdate > div.mobile-only { display: none !important; }
+    .progressUpdate .image { flex-basis: 66.6666%; background-color: black; color: white; position: relative; text-align: center; }
+    .progressUpdate img { width: auto; height: 100%; }
+    .progressUpdate .text { flex-basis: 33.3333%; background-color: white; position: relative; }
+    .progressUpdate .slideCount { width: 100%; position: absolute; bottom: 10px; text-align: center; }
+    .progressUpdate .left { position: absolute; bottom: 1em; left: 1em; user-select: none; }
+    .progressUpdate .right { position: absolute; bottom: 1em; right: 1em; user-select: none; }
   }
 
 /* Founders page */

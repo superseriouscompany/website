@@ -76,14 +76,35 @@
         <% end %>
 
         <script type="text/template" id="update-<%=i%>">
-          <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
-          <% if update.image_url.match(/\.gif/)  %>
-            <%= image_tag update.image_url, class: 'screenshot gif' %>
-          <% else %>
-            <%= image_tag update.image_url, class: 'screenshot' %>
-          <% end %>
-          <div class="description">
-            <%= raw update.description %>
+          <div class="mobile-only">
+            <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
+            <% if update.image_url.match(/\.gif/)  %>
+              <%= image_tag update.image_url, class: 'screenshot gif' %>
+            <% else %>
+              <%= image_tag update.image_url, class: 'screenshot' %>
+            <% end %>
+            <div class="description">
+              <%= raw update.description %>
+            </div>
+          </div>
+          <div class="desktop-only">
+            <div class="image">
+              <a class="left js-prev-project-update">&lt;</a>
+              <% if update.image_url.match(/\.gif/)  %>
+                <%= image_tag update.image_url, class: 'screenshot gif' %>
+              <% else %>
+                <%= image_tag update.image_url, class: 'screenshot' %>
+              <% end %>
+              <a class="right js-next-project-update">&gt;</a>
+            </div>
+
+            <div class="text">
+              <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
+              <blockquote><%= raw update.description %></blockquote>
+              <div class="slideCount">
+                <span class="js-current-slide">1</span>/<%= @progress_updates.count %>
+              </div>
+            </div>
           </div>
         </script>
       <% end %>
@@ -92,16 +113,23 @@
 <% end %>
 
 <div class="lightbox">
-  <div class="top">
-    <span class="js-current-slide">1</span>/<%= @progress_updates.count %>
+  <div class="mobile-only">
+    <div class="top">
+      <span class="js-current-slide">1</span>/<%= @progress_updates.count %>
+    </div>
+
+    <div class="main progressUpdate js-stage">
+    </div>
+
+    <div class="bottom">
+      <a class="left js-prev-project-update"><%= image_tag "leftArrow.png" %></a>
+      <a class="close js-toggle-lightbox">close</a>
+      <a class="right js-next-project-update"><%= image_tag "rightArrow.png" %></a>
+    </div>
   </div>
 
-  <div class="main progressUpdate js-stage">
-  </div>
-
-  <div class="bottom">
-    <a class="left js-prev-project-update"><%= image_tag "leftArrow.png" %></a>
-    <a class="close js-toggle-lightbox">close</a>
-    <a class="right js-next-project-update"><%= image_tag "rightArrow.png" %></a>
+  <div class="desktop-only">
+    <a class="close js-toggle-lightbox">&times;</a>
+    <div class="progressUpdate js-stage"></div>
   </div>
 </div>
