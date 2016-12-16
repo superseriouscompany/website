@@ -6,6 +6,21 @@
     $(document.body).removeClass('lightbox-open');
   })
 
+  $(document).on('keyup', function(e) {
+    if( !$(document.body).hasClass('lightbox-open') ) { return; }
+
+    // left arrow
+    if( e.keyCode == 37 ) {
+      loadUpdate(currentIndex-1);
+    // right arrow
+    } else if( e.keyCode == 39 ) {
+      loadUpdate(currentIndex+1);
+    // escape key
+    } else if( e.keyCode == 27 ) {
+      $(document.body).removeClass('lightbox-open');
+    }
+  })
+
   $(document).on('click', '.js-toggle-lightbox', function() {
     $(document.body).toggleClass('lightbox-open');
   })
