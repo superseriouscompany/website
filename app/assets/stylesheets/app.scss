@@ -207,16 +207,19 @@ body.pages-show_project .grid { display: flex; flex-wrap: wrap; }
 body.pages-show_project .update { width: 32%; margin-right: 2%; }
 body.pages-show_project .update:nth-of-type(3n) { margin-right: 0%; }
 body.pages-show_project .update img { width: 100%; }
-.lightbox { position: fixed; left: 0; top: 0; bottom: 0; right: 0; background: rgba(0,0,0,0.95); z-index: 11; display: none; }
+.lightbox { position: fixed; left: 0; top: 0; bottom: 0; right: 0; background: rgba(0,0,0,0.92); z-index: 11; display: none; }
 body.lightbox-open { overflow:hidden; }
 body.lightbox-open .lightbox { display: block; }
-.lightbox .top { height: 5%; padding-top: 2%; width: 100%; position: absolute; top: 0; color: white; text-align: center; }
-.lightbox .main { height: 85%; width: 100%; position: absolute; top: 5%; background-color: white; overflow-y: auto; }
+.lightbox .top { height: 31px; width: 100%; position: absolute; top: 0; color: white; text-align: center; }
+.lightbox .top span { line-height: 32px; }
+.lightbox .main { height: 100%; width: 100%; margin: 31px 0 0px; padding: 0 0 100px; position: absolute; top: 0; background-color: white; overflow-y: auto; border: 0 !important; }
 .lightbox .main img { width: 100%; }
-.lightbox .bottom { height: 10%; width: 100%; position:absolute; bottom: 0; color: white; text-align: center; padding-top: 5%; }
-.lightbox .bottom .left { float: left; margin-left: 2em; }
-.lightbox .bottom .right { float: right; margin-right: 2em; }
-.lightbox .bottom .close { text-decoration: underline; }
+.lightbox .bottom { height: 63px; width: 100%; position: absolute; bottom: 0; color: white; text-align: center; background: rgba(0,0,0,0.92); }
+.lightbox .bottom .left { float: left; margin-left: 2em; padding-top: 27px; }
+.lightbox .bottom .left img { height: 22px; margin-top: -11px; }
+.lightbox .bottom .right { float: right; margin-right: 2em; padding-top: 27px; }
+.lightbox .bottom .right img { height: 22px; margin-top: -11px; }
+.lightbox .bottom .close { text-decoration: underline; line-height: 61px; }
   @include desktop {
     body.pages-show_project { padding-bottom: 66px; }
     body.pages-show_project .context { text-align: center; }
