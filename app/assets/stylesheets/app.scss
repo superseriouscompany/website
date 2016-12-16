@@ -233,13 +233,16 @@ body.lightbox-open .lightbox { display: block; }
     .progressUpdate { border: 0; }
     .progressUpdate h2 { text-align: left; font-size: 18px; padding: .1em 0 .12em 1em; }
     .progressUpdate .description { padding: .5em 1em 1.5em; }
-    .progressUpdate { height: 500px; max-width: 1235px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; overflow: hidden; }
+    .progressUpdate { height: 75%; width: 80%; max-width: 1235px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; overflow: hidden; padding-bottom: 37px; }
     .progressUpdate > div { display: flex !important; height: 100%; }
     .progressUpdate > div.mobile-only { display: none !important; }
-    .progressUpdate .image { flex-basis: 66.6666%; background-color: black; color: white; position: relative; text-align: center; }
-    .progressUpdate img { width: auto; height: 100%; }
-    .progressUpdate .text { flex-basis: 33.3333%; background-color: white; position: relative; }
-    .progressUpdate .slideCount { width: 100%; position: absolute; bottom: 10px; text-align: center; }
+    .progressUpdate .image { flex-basis: 66.6666%; background-color: black; color: white; position: relative; text-align: center; overflow: auto; }
+    .progressUpdate .image-container { display: flex; align-items: center; justify-content: center; background: red; height: 100%; width: 100%; }
+    .progressUpdate img { height: auto; width: auto; max-width: 100%; max-height: 100%; }
+    .progressUpdate .text { flex-basis: 33.3333%; background-color: white; position: relative; padding: 1em 1.5em; }
+    .progressUpdate .scroll { height: 100%; overflow-y: auto; }
+    .progressUpdate .text h2 { padding: 0; }
+    .progressUpdate .slideCount { width: 100%; position: absolute; bottom: 0; left: 0; padding: 14px; text-align: center; background: white; }
     .progressUpdate .left { position: absolute; bottom: 1em; left: 1em; user-select: none; }
     .progressUpdate .right { position: absolute; bottom: 1em; right: 1em; user-select: none; }
   }
