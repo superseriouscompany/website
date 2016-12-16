@@ -3,22 +3,18 @@
   <% if day.order == "neil" %>
     <blockquote class="neil">
       <%= raw day.neil_quote %>
-      <%= image_tag "chatBubble.png", class: "chatBubble" %>
     </blockquote>
 
     <blockquote class="santi">
       <%= raw day.santi_quote %>
-      <%= image_tag "chatBubble.png", class: "chatBubble" %>
     </blockquote>
   <% else %>
     <blockquote class="santi">
       <%= raw day.santi_quote %>
-      <%= image_tag "chatBubble.png", class: "chatBubble" %>
     </blockquote>
 
     <blockquote class="neil">
       <%= raw day.neil_quote %>
-      <%= image_tag "chatBubble.png", class: "chatBubble" %>
     </blockquote>
   <% end %>
 </div>

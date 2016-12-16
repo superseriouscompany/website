@@ -8,7 +8,7 @@
   <meta name="viewport"           content="width=device-width, initial-scale=1.0"/>
   <meta name="description"        content="<%= @meta_description.present? ? @meta_description : "Plot: Homeless guy and his boss quit jobs and randomly move to Portugal, build apps til they run out of cash."%>" />
   <meta property="og:url"         content="<%= request.original_url %>" />
-  <meta property="og:title"       content="Super Serious Company" />
+  <meta property="og:title"       content="<%= "#{@page_title} |" if @page_title.present? %> Super Serious Company"/>
   <meta property="og:description" content="<%= @meta_description.present? ? @meta_description : "Plot: Homeless guy and his boss quit jobs and randomly move to Portugal, build apps til they run out of cash."%>" />
   <meta property="og:image"       content="<%= @share_image_url || 'https://cldup.com/Kl5WvoFCg9.jpg'%>" />
 
@@ -60,31 +60,25 @@
           <% end %>
       </div>
       <% end %>
-      <a class="logoLink" href="/">
-        <%= image_tag "logo.png", alt: "Super Serious Company" %>
-      </a>
     </h1>
     <%= image_tag "hamburger.jpg", class: "hamburger js-hamburger" %>
     <div class="menu">
-      <a href="/story" class="bottom left item <%= 'active' if action_name == 'story' %>">Story</a>
-      <a href="/projects" class="bottom left item <%= 'active' if action_name == 'show_project' or action_name == 'projects' %>">Projects</a>
-      <a href="/philosophy" class="desktop-only bottom right item <%= 'active' if action_name == 'philosophy' %>">Nobody Cares</a>
-      <a href="/house" class="top right item <%= 'active' if action_name == 'house' %>">Our House</a>
-      <a href="/neil-sarkar" class="mobile-only item <%= 'active' if action_name == 'neil' %>">Neil</a>
-      <a href="/santi-garza" class="mobile-only item <%= 'active' if action_name == 'santi' %>">Santi</a>
-      <a href="/philosophy" class="mobile-only bottom right item <%= 'active' if action_name == 'philosophy' %>">Nobody Cares</a>
+      <a href="/" class="item">
+        <%= image_tag "moneyBagIcon.png", alt: "Super Serious Company", class: "desktop-only logo" %>
+      </a>
+      <a href="/projects" class="item <%= 'active' if action_name == 'show_project' or action_name == 'projects'%>">Projects</a>
+      <a href="/story" class="item <%= 'active' if action_name == 'story' %>">Story</a>
+      <a href="/neil-sarkar" class="item <%= 'active' if action_name == 'neil' %>">Neil</a>
+      <a href="/santi-garza" class="item <%= 'active' if action_name == 'santi' %>">Santi</a>
+      <a href="/andrew-sauer" class="item <%= 'active' if action_name == 'andrew' %>">Sauer</a>
+      <a href="/house" class="item <%= 'active' if action_name == 'house' %>">HQ</a>
+      <a href="/philosophy" class="item <%= 'active' if action_name == 'philosophy' %>">Nobody Cares</a>
     </div>
   </header>
 
   <%= yield %>
 
   <footer>
-    <a href="/santi-garza">
-      <%= image_tag "santiHero.jpg", class: "santi hero" %>
-    </a>
-    <a href="/neil-sarkar">
-      <%= image_tag "neilHero.jpg", class: "neil hero" %>
-    </a>
     <div class="copyright">
       &copy; <%= Time.now.year %> Super Serious LLC
     </div>
