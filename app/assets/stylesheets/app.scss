@@ -115,7 +115,7 @@ section.social .icons { display: flex; width: 262px; margin: 0 auto; }
 section.social a { display: inline-block; width: 33%; text-align: center; }
 section.social img { width: 65px; }
   @include desktop {
-    section.social { padding: 0 0 3em;}
+    section.social { padding: 0 0 1em;}
     section.social .icons { width: 232px; }
     section.social img { width: 55px; }
   }
@@ -126,7 +126,7 @@ body.pages-home, body.pages-show_day { .day { padding-bottom: 0; } }
 .readMore { a, a:visited, a:active { color: $linkColor; } }
   @include desktop {
     body.pages-home, body.pages-show_day { section.story p:last-child { margin-bottom: 0; } }
-    .readMore { margin: 2.2em 0 0; padding: 0 0 1em; border: 0; font-size: 16px; }
+    .readMore { margin: 1em 0 0; padding: 0 0 4.6em; border: 0; font-size: 16px; }
   }
 
 /* Philosophy Page */
