@@ -25,11 +25,12 @@ $projectGrey: #838386;
 /* Globals */
 *    { box-sizing: border-box; }
 body { font-family: 'Questrial', Helvetica, sans-serif; visibility: visible; padding-top: $headerHeight; background: white; }
-footer { font-family: 'Questrial', Helvetica, sans-serif; color: $contextGrey; }
+footer { font-family: 'Questrial', Helvetica, sans-serif; color: $contextGrey; font-size: 14px; }
 a    { cursor: pointer; }
 .desktop-only { display: none !important; }
   @include desktop {
     body { padding-top: $desktopHeaderHeight; }
+    footer { font-size: 16px; }
     .mobile-only { display: none !important; }
     .desktop-only { display: block !important; &img, &span, &a { display: inline !important} }
   }
