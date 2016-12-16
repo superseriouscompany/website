@@ -50,7 +50,7 @@ body.hamburgerOpen .menu       { display: block; }
     h1 { display: none; }
     section { margin: 0 auto; max-width: 550px; border: 0; font-size: 18px; }
     section.context { margin: 35px 0 41px; font-size: 16px; max-width: none; line-height: 20px; text-align: center; }
-    section.context p { margin: 0 auto 0; max-width: 600px; }
+    section.context p { margin: 0 auto 0; max-width: 600px; line-height: 25px; }
   }
 
 /* Header */
@@ -103,8 +103,8 @@ blockquote:last-of-type { margin-bottom: 0; }
 blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; background-position-y: -7px; }
   @include desktop {
     .quotes { width: 520px; margin: 0 auto 2.25em; }
-    blockquote { margin: 0; padding: 1.2em; background-image: url(asset-path('santiHead.png')); position: relative; font-size: 16px; min-height: 0; border-radius: 18px; background-size: 41px 41px; background-position-y: 20px; padding-left: 50px; }
-    blockquote.neil { background-image: url(asset-path('neilHead.png')); background-size: 41px 41px; background-position-y: 20px; }
+    blockquote { margin: 0; padding: 1.2em 0em 1.2em 1.2em; background-image: url(asset-path('santiHead.png')); position: relative; font-size: 16px; min-height: 0; border-radius: 18px; background-size: 41px 41px; background-position-y: 9px; background-position-x: -3px; padding-left: 50px; }
+    blockquote.neil { background-image: url(asset-path('neilHead.png')); background-size: 41px 41px; background-position-y: 9px; background-position-x: -3px; }
     blockquote p:first-child { margin-top: 0; }
   }
 
