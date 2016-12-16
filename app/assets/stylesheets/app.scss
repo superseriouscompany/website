@@ -13,11 +13,11 @@ $footerHeight: 30px;
 
 $textColor: black;
 $greyLine: 1px solid #DBDBDC;
-$accentBrown: #C69785;
 $linkColor: #40746E;
 $contextGrey: #656868;
 $quoteText: #656868;
 $projectGrey: #838386;
+$accentGrey: #B1B3B3;
 
 @mixin absCenter() { position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; }
 @mixin desktop() {
@@ -60,7 +60,7 @@ header .smallLogo { position: absolute; left: 15px; top: 11.25px; width: 32px; }
 header .menu { display: none; position: absolute; top: $headerHeight + 9px; right: 9px; width: 66%; background-color: white; border-radius: 10px; padding: 3px 0; }
 header .item { display: block; text-align: center; text-decoration: none; color: #07070D; padding: 16px 0; text-transform: uppercase; border-top: $greyLine; }
 header .item:nth-child(2) { border-top: 0; }
-header .item.active { color: $accentBrown; }
+header .item.active { color: $accentGrey; }
 header .pageHeading { font-family: 'helvetica neue'; font-size: 18px; font-weight: bold; color: #474340; text-transform: lowercase; display: inline-block; }
 header .pageHeading .bottom { font-weight: normal }
 header.withHeading .logoLink { display: none; }
@@ -73,7 +73,7 @@ header.withHeading .logoLink { display: none; }
     header .hamburger { display: none; }
     header .menu { width: 100%; position: static; max-width: 1020px; margin: 12px auto 0; background-color: transparent; border-radius: 0; display: flex; justify-content: space-between; }
     header .item  { font-size: 14px; display: block; padding: 0; border-top: 0; color: $contextGrey; text-transform: none; padding: 0 1em; }
-    header .item.active { border: 4px solid $accentBrown; border-width: 0 0 4px 0; padding-bottom: 16px; }
+    header .item.active { border-width: 0 0 4px 0; padding-bottom: 16px; }
   }
 
 /* Footer */
