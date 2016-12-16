@@ -103,7 +103,7 @@ blockquote:last-of-type { margin-bottom: 0; }
 blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; background-position-y: -7px; }
   @include desktop {
     .quotes { width: 520px; margin: 0 auto 2.25em; }
-    blockquote { margin: 0; padding: 1.2em 0.6em 1.2em 1.2em; background-image: url(asset-path('santiHead.png')); position: relative; font-size: 16px; min-height: 0; border-radius: 18px; background-size: 41px 41px; background-position-y: 10px; background-position-x: -2px; padding-left: 50px; }
+    blockquote { margin: 0; line-height: 25px; padding: 1.2em 0.6em 1.2em 1.2em; background-image: url(asset-path('santiHead.png')); position: relative; font-size: 16px; min-height: 0; border-radius: 18px; background-size: 41px 41px; background-position-y: 10px; background-position-x: -2px; padding-left: 50px; }
     blockquote.neil { background-image: url(asset-path('neilHead.png')); background-size: 41px 41px; background-position-y: 10px; background-position-x: -2px; }
     blockquote p:first-child { margin-top: 0; }
   }
@@ -162,6 +162,7 @@ section.house { font-size: 16px; color: $contextGrey; padding-bottom: 1.4em; }
 section.house img { width: 100%; }
 section.house p { margin: 0px 22px 20px; &:first-child { margin-left: 100px; margin-right: 100px; } }
   @include desktop {
+    section.house { line-height: 25px; }
     section.house img { margin-bottom: 1.5em; }
   }
 
