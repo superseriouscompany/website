@@ -91,7 +91,7 @@ footer, .page-wrap:after { height: $footerHeight; }
 .day img.comic { width: 100%; }
   @include desktop {
     .day { border: none; }
-    .day img.comic { border: 0;  margin-bottom: 10px; box-shadow: 0 0 4px 0; }
+    .day img.comic { border: 0;  margin-bottom: 18px; box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .25); }
     .day h2 { display: none; }
   }
 
@@ -102,9 +102,8 @@ blockquote p { &:first-of-type {margin-top: 0} &:last-of-type {margin-bottom: 0}
 blockquote:last-of-type { margin-bottom: 0; }
 blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; background-position-y: -7px; }
   @include desktop {
-    .quotes { width: 520px; margin: 0 auto 4em; }
-    blockquote:first-child { margin-bottom: 1.2em; }
-    blockquote { margin: 0; max-width: 480px; padding: 1.2em; background-image: url(asset-path('santiHead.png')); position: relative; font-size: 16px; min-height: 0; border-radius: 18px; background-size: 41px 41px; background-position-y: 20px; padding-left: 50px; }
+    .quotes { width: 520px; margin: 0 auto 2.25em; }
+    blockquote { margin: 0; padding: 1.2em; background-image: url(asset-path('santiHead.png')); position: relative; font-size: 16px; min-height: 0; border-radius: 18px; background-size: 41px 41px; background-position-y: 20px; padding-left: 50px; }
     blockquote.neil { background-image: url(asset-path('neilHead.png')); background-size: 41px 41px; background-position-y: 20px; }
     blockquote p:first-child { margin-top: 0; }
   }
