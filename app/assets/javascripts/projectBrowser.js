@@ -1,6 +1,11 @@
 (function() {
   var currentIndex = null;
 
+  $(document).on('click', '.js-lightbox', function(e) {
+    if( this != e.target ) { return; }
+    $(document.body).removeClass('lightbox-open');
+  })
+
   $(document).on('click', '.js-toggle-lightbox', function() {
     $(document.body).toggleClass('lightbox-open');
   })
