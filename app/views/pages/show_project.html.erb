@@ -1,88 +1,95 @@
 <section class="context">
   <%= raw @project.description %>
 
-  <div class="links">
-    <% if @project.url.present? %>
-      <div class="link">
-        <a href="<%= @project.url %>"><%= @project.link %></a>
-      </div>
-    <% end %>
-
-    <% if @project.app_store_url.present? %>
-      <div class="link">
-        <a href="<%= @project.app_store_url %>">
-          <%= image_tag "appStoreIcon.jpg" %>
-        </a>
-      </div>
-    <% end %>
-
-    <% if @project.play_store_url.present? %>
-      <div class="link">
-        <a href="<%= @project.play_store_url %>">
-          <%= image_tag "playStoreIcon.jpg" %>
-        </a>
-      </div>
-    <% end %>
-
-    <% if @project.mac_app_store_url.present? %>
-      <div class="link">
-        <a href="<%= @project.mac_app_store_url %>">
-          <%= image_tag "appStoreIcon.jpg" %>
-        </a>
-      </div>
-    <% end %>
-  </div>
-</section>
-
-<section class="project last-update">
-  <h2>Our Latest Update</h2>
-
-  <% update = @progress_updates.first %>
-
-  <article class="progressUpdate">
-    <% if update.image_url.match(/\.gif/)  %>
-      <%= image_tag update.image_url, class: 'screenshot gif' %>
-    <% else %>
-      <%= image_tag update.image_url, class: 'screenshot' %>
-    <% end %>
-    <div class="description">
-      <%= raw update.description %>
-    </div>
-  </article>
-</section>
-
-<section class="project all-updates">
-  <h2>Project Evolution</h2>
-  <div class="grid">
-    <% @progress_updates.each_with_index do |update, i| %>
-      <% if update.image_url.match(/\.gif/)  %>
-        <div class="update gif">
-          <a class="js-toggle-lightbox js-load-project-update" data-update-id="<%=i%>">
-            <img src="https://placehold.it/450x450" />
-          </a>
+  <div class="links-container">
+    <div class="links">
+      <% if @project.url.present? %>
+        <div class="link">
+          <a href="<%= @project.url %>"><%= @project.link %></a>
         </div>
-      <% else %>
-        <div class="update">
-          <a class="js-toggle-lightbox js-load-project-update" data-update-id="<%=i%>">
-            <img src="https://placehold.it/420x420" />
+      <% end %>
+
+      <% if @project.app_store_url.present? %>
+        <div class="link">
+          <a href="<%= @project.app_store_url %>">
+            <%= image_tag "appStoreIcon.jpg", class: "mobile-only" %>
+            <%= image_tag "desktopAppStoreIcon.png", class: "desktop-only" %>
           </a>
         </div>
       <% end %>
 
-      <script type="text/template" id="update-<%=i%>">
-        <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
-        <% if update.image_url.match(/\.gif/)  %>
-          <%= image_tag update.image_url, class: 'screenshot gif' %>
-        <% else %>
-          <%= image_tag update.image_url, class: 'screenshot' %>
-        <% end %>
-        <div class="description">
-          <%= raw update.description %>
+      <% if @project.play_store_url.present? %>
+        <div class="link">
+          <a href="<%= @project.play_store_url %>">
+            <%= image_tag "playStoreIcon.jpg", class: "mobile-only" %>
+            <%= image_tag "desktopPlayStoreIcon.png", class: "desktop-only" %>
+          </a>
         </div>
-      </script>
-    <% end %>
+      <% end %>
+
+      <% if @project.mac_app_store_url.present? %>
+        <div class="link">
+          <a href="<%= @project.mac_app_store_url %>">
+            <%= image_tag "appStoreIcon.jpg", class: "mobile-only" %>
+            <%= image_tag "desktopAppStoreIcon.png", class: "desktop-only" %>
+          </a>
+        </div>
+      <% end %>
+    </div>
   </div>
 </section>
+
+<% update = @progress_updates.first %>
+<% if update.present? %>
+  <section class="project last-update mobile-only">
+    <h2>Our Latest Update</h2>
+
+
+    <article class="progressUpdate">
+      <% if update.image_url.match(/\.gif/)  %>
+        <%= image_tag update.image_url, class: 'screenshot gif' %>
+      <% else %>
+        <%= image_tag update.image_url, class: 'screenshot' %>
+      <% end %>
+      <div class="description">
+        <%= raw update.description %>
+      </div>
+    </article>
+  </section>
+
+  <section class="project all-updates">
+    <h2>Project Evolution</h2>
+    <div class="grid">
+      <% @progress_updates.each_with_index do |update, i| %>
+        <% if update.image_url.match(/\.gif/)  %>
+          <div class="update gif">
+            <a class="js-toggle-lightbox js-load-project-update" data-update-id="<%=i%>">
+              <img src="https://placehold.it/450x450" />
+            </a>
+          </div>
+        <% else %>
+          <div class="update">
+            <a class="js-toggle-lightbox js-load-project-update" data-update-id="<%=i%>">
+              <img src="https://placehold.it/420x420" />
+            </a>
+          </div>
+        <% end %>
+
+        <script type="text/template" id="update-<%=i%>">
+          <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
+          <% if update.image_url.match(/\.gif/)  %>
+            <%= image_tag update.image_url, class: 'screenshot gif' %>
+          <% else %>
+            <%= image_tag update.image_url, class: 'screenshot' %>
+          <% end %>
+          <div class="description">
+            <%= raw update.description %>
+          </div>
+        </script>
+      <% end %>
+    </div>
+  </section>
+<% end %>
 
 <div class="lightbox">
   <div class="top">
