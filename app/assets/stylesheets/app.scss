@@ -34,6 +34,7 @@ a    { cursor: pointer; }
     footer { font-size: 16px; }
     .mobile-only { display: none !important; }
     .desktop-only { display: block !important; &img, &span, &a { display: inline !important}; }
+    a { font-family: 'Questrial', Helvetica, sans-serif; }
   }
 .js-chrome-only { display: none; }
 
@@ -50,7 +51,7 @@ body.hamburgerOpen .menu       { display: block; }
     h1 { display: none; }
     h2 { font-weight: 100; }
     section { margin: 0 auto; max-width: 550px; border: 0; font-size: 18px; font-family: Helvetica, sans-serif !important; font-weight: 100; }
-    section.context { margin: 35px 0 41px; font-size: 16px; max-width: none; line-height: 20px; text-align: center; }
+    section.context { margin: 35px 0 41px; font-size: 16px; max-width: none; line-height: 26px; text-align: center; }
     section.context p { margin: 0 auto 0; max-width: 600px; }
   }
 
@@ -104,8 +105,8 @@ blockquote:last-of-type { margin-bottom: 0; }
 blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; background-position-y: -7px; }
   @include desktop {
     .quotes { width: 520px; margin: 0 auto 2.25em; }
-    blockquote { margin: 0; line-height: 25px; padding: 1.2em 0.6em 1.2em 1.2em; background-image: url(asset-path('santiHead.png')); position: relative; font-size: 16px; min-height: 0; border-radius: 18px; background-size: 41px 41px; background-position-y: 10px; background-position-x: -2px; padding-left: 50px; }
-    blockquote.neil { background-image: url(asset-path('neilHead.png')); background-size: 41px 41px; background-position-y: 10px; background-position-x: -2px; }
+    blockquote { margin: 0; line-height: 26px; padding: 1.2em 0.6em 1.2em 1.2em; background-image: url(asset-path('santiHead.png')); position: relative; font-size: 16px; min-height: 0; border-radius: 18px; background-size: 41px 41px; background-position-y: 10px; background-position-x: 0px; padding-left: 50px; }
+    blockquote.neil { background-image: url(asset-path('neilHead.png')); background-size: 41px 41px; background-position-y: 10px; background-position-x: 0px; }
     blockquote p:first-child { margin-top: 0; }
   }
 
@@ -133,12 +134,13 @@ body.pages-home, body.pages-show_day { .day { padding-bottom: 0; } }
 /* Philosophy Page */
 .philosophy blockquote { padding-top: 15px; padding-bottom: 15px; }
   @include desktop {
+    .philosophy .quotes { margin-top: -20px; }
     .philosophy blockquote { margin-bottom: 1.2em; }
   }
 
 /* Ideas Page */
 .ideas .submission { background: url(asset-path('ideaBg.jpg')) no-repeat; background-size: cover; height: 239px; position: relative; }
-.ideas .inputContainer { position:absolute; bottom: 28px; right: 22px; left: 22px; }
+.ideas .inputContainer { position:absolute; bottom: 26px; right: 22px; left: 22px; }
 .ideas input[type=text] { width: 100%; padding: 15px 50px 15px 12px; font-size: 16px; border: 0; box-shadow: none; }
 .ideas button { width: 27px; height: 27px; background: url(asset-path('submitCircle.jpg')) left top; background-size: 100%; border: 0; cursor: pointer; position: absolute; top: 11px; right: 11px; padding: 0; }
 .ideas .submittable button { background-position: left bottom; }
@@ -163,7 +165,7 @@ section.house { font-size: 16px; color: $contextGrey; padding-bottom: 1.4em; }
 section.house img { width: 100%; }
 section.house p { margin: 0px 22px 20px; &:first-child { margin-left: 100px; margin-right: 100px; } }
   @include desktop {
-    section.house { line-height: 25px; }
+    section.house { line-height: 26px; }
     section.house img { margin-bottom: 1.5em; }
   }
 
