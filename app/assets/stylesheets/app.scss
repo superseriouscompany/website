@@ -237,14 +237,16 @@ body.lightbox-open .lightbox { display: block; }
     .progressUpdate > div { display: flex !important; height: 100%; }
     .progressUpdate > div.mobile-only { display: none !important; }
     .progressUpdate .image { flex-basis: 66.6666%; background-color: black; color: white; position: relative; text-align: center; overflow: auto; }
-    .progressUpdate .image-container { display: flex; align-items: center; justify-content: center; background: red; height: 100%; width: 100%; }
+    .progressUpdate .image-container { display: flex; align-items: center; justify-content: center; height: 100%; width: 100%; }
     .progressUpdate img { height: auto; width: auto; max-width: 100%; max-height: 100%; }
     .progressUpdate .text { flex-basis: 33.3333%; background-color: white; position: relative; padding: 1em 1.5em; }
     .progressUpdate .scroll { height: 100%; overflow-y: auto; }
     .progressUpdate .text h2 { padding: 0; }
-    .progressUpdate .slideCount { width: 100%; position: absolute; bottom: 0; left: 0; padding: 14px; text-align: center; background: white; }
-    .progressUpdate .left { position: absolute; bottom: 1em; left: 1em; user-select: none; }
-    .progressUpdate .right { position: absolute; bottom: 1em; right: 1em; user-select: none; }
+    .progressUpdate .slideCount { width: 100%; position: absolute; bottom: 0; left: 0; padding: 22px; text-align: center; background: white; color: $contextGrey; }
+    .progressUpdate .left { position: absolute; bottom: .25em; left: .75em; user-select: none; }
+    .progressUpdate .right { position: absolute; bottom: .25em; right: .75em; user-select: none; }
+    .progressUpdate .left img { height: 47px; }
+    .progressUpdate .right img { height: 47px; }
   }
 
 /* Founders page */

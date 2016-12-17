@@ -89,7 +89,7 @@
           </div>
           <div class="desktop-only">
             <div class="image">
-              <a class="left js-prev-project-update">&lt;</a>
+              <a class="left js-prev-project-update"><%= image_tag "leftArrowCircle.png" %></a>
               <div class="image-container">
                 <% if update.image_url.match(/\.gif/)  %>
                   <%= image_tag update.image_url, class: 'screenshot gif' %>
@@ -97,7 +97,7 @@
                   <%= image_tag update.image_url, class: 'screenshot' %>
                 <% end %>
               </div>
-              <a class="right js-next-project-update">&gt;</a>
+              <a class="right js-next-project-update"><%= image_tag "rightArrowCircle.png" %></a>
             </div>
 
             <div class="text">
