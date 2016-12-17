@@ -216,6 +216,7 @@ body.lightbox-open .lightbox { display: block; }
     body.pages-show_project .links { position: fixed; bottom: 0; background-color: black; left: 0; right: 0; margin: 0; z-index: 12; padding: 10px 0; }
     body.pages-show_project h2 { text-align: left; }
     body.pages-show_project .close { position: absolute; top: 2em; right: 2em; color: $contextGrey; user-select: none; }
+    body.pages-show_project .close img { height: 19px; }
   }
 
 /* Story Page */
