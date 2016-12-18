@@ -1,0 +1,40 @@
+<section class="context desktop-only">
+  <p>We also make apps.</p>
+</section>
+
+<div class="everyphone">
+  <div class="top-circle"></div>
+  <section class="apps">
+    <h4>In Progress</h4>
+
+    <div class="grid">
+      <% @active_projects.each do |p| %>
+        <div class="app">
+          <a href="/projects/<%= p.slug%>">
+            <%= image_tag "projects/#{p.slug}Icon.png" %>
+            <div class="name">
+              <%= p.name %>
+            </div>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </section>
+  <section class="apps">
+    <h4>Finished</h4>
+
+    <div class="grid">
+      <% @finished_projects.each do |p| %>
+        <div class="app">
+          <a href="/projects/<%= p.slug%>">
+            <%= image_tag "projects/#{p.slug}Icon.png" %>
+            <div class="name">
+              <%= p.name %>
+            </div>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </section>
+  <div class="bottom-circle"></div>
+</div>

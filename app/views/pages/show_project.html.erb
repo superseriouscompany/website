@@ -1,16 +1,50 @@
 <section class="context">
   <%= raw @project.description %>
-  <% if @project.url.present? %>
-    <div class="link">
-      <a href="<%= @project.url %>"><%= @project.link %></a>
+
+  <div class="links-container">
+    <div class="links">
+      <% if @project.url.present? %>
+        <div class="link">
+          <a href="<%= @project.url %>"><%= @project.link %></a>
+        </div>
+      <% end %>
+
+      <% if @project.app_store_url.present? %>
+        <div class="link">
+          <a href="<%= @project.app_store_url %>">
+            <%= image_tag "appStoreIcon.jpg", class: "mobile-only" %>
+            <%= image_tag "desktopAppStoreIcon.png", class: "desktop-only" %>
+          </a>
+        </div>
+      <% end %>
+
+      <% if @project.play_store_url.present? %>
+        <div class="link">
+          <a href="<%= @project.play_store_url %>">
+            <%= image_tag "playStoreIcon.jpg", class: "mobile-only" %>
+            <%= image_tag "desktopPlayStoreIcon.png", class: "desktop-only" %>
+          </a>
+        </div>
+      <% end %>
+
+      <% if @project.mac_app_store_url.present? %>
+        <div class="link">
+          <a href="<%= @project.mac_app_store_url %>">
+            <%= image_tag "appStoreIcon.jpg", class: "mobile-only" %>
+            <%= image_tag "desktopAppStoreIcon.png", class: "desktop-only" %>
+          </a>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </section>
 
-<section class="project">
-  <% @progress_updates.each do |update| %>
+<% update = @progress_updates.first %>
+<% if update.present? %>
+  <section class="project last-update mobile-only">
+    <h2>Our Latest Update</h2>
+
     <article class="progressUpdate">
-      <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
       <% if update.image_url.match(/\.gif/)  %>
         <%= image_tag update.image_url, class: 'screenshot gif' %>
       <% else %>
@@ -20,5 +54,85 @@
         <%= raw update.description %>
       </div>
     </article>
-  <% end %>
-</section>
+  </section>
+
+  <section class="project all-updates">
+    <h2>Project Evolution</h2>
+    <div class="grid">
+      <% @progress_updates.each_with_index do |update, i| %>
+        <% if update.image_url.match(/\.gif/)  %>
+          <div class="update gif">
+            <a class="js-toggle-lightbox js-load-project-update" data-update-id="<%=i%>">
+              <%= image_tag update.thumbnail_url %>
+            </a>
+          </div>
+        <% else %>
+          <div class="update">
+            <a class="js-toggle-lightbox js-load-project-update" data-update-id="<%=i%>">
+              <%= image_tag update.thumbnail_url %>
+            </a>
+          </div>
+        <% end %>
+
+        <script type="text/template" id="update-<%=i%>">
+          <div class="mobile-only">
+            <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
+            <% if update.image_url.match(/\.gif/)  %>
+              <%= image_tag update.image_url, class: 'screenshot gif' %>
+            <% else %>
+              <%= image_tag update.image_url, class: 'screenshot' %>
+            <% end %>
+            <div class="description">
+              <%= raw update.description %>
+            </div>
+          </div>
+          <div class="desktop-only">
+            <div class="image">
+              <a class="left js-prev-project-update"><%= image_tag "leftArrowCircle.png" %></a>
+              <div class="image-container">
+                <% if update.image_url.match(/\.gif/)  %>
+                  <%= image_tag update.image_url, class: 'screenshot gif' %>
+                <% else %>
+                  <%= image_tag update.image_url, class: 'screenshot' %>
+                <% end %>
+              </div>
+              <a class="right js-next-project-update"><%= image_tag "rightArrowCircle.png" %></a>
+            </div>
+
+            <div class="text">
+              <div class="scroll">
+                <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
+                <blockquote><%= raw update.description %></blockquote>
+              </div>
+              <div class="slideCount">
+                <span class="js-current-slide">1</span>/<%= @progress_updates.count %>
+              </div>
+            </div>
+          </div>
+        </script>
+      <% end %>
+    </div>
+  </section>
+<% end %>
+
+<div class="lightbox js-lightbox">
+  <div class="mobile-only">
+    <div class="top">
+      <span class="js-current-slide">1</span>/<%= @progress_updates.count %>
+    </div>
+
+    <div class="main progressUpdate js-stage">
+    </div>
+
+    <div class="bottom">
+      <a class="left js-prev-project-update"><%= image_tag "leftArrow.png" %></a>
+      <a class="close js-toggle-lightbox">close</a>
+      <a class="right js-next-project-update"><%= image_tag "rightArrow.png" %></a>
+    </div>
+  </div>
+
+  <div class="desktop-only">
+    <a class="close js-toggle-lightbox"><%= image_tag "greyX.png" %></a>
+    <div class="progressUpdate js-stage"></div>
+  </div>
+</div>

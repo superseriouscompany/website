@@ -3,7 +3,7 @@
 
   // Hook google analytics into turbolinks properly
   $(document).on('turbolinks:load', function() {
-    ga('send', 'pageview');
+    window.ga && ga('send', 'pageview');
 
     if( supportsDesktopNotifications() && (!window.localStorage || !window.localStorage.getItem('subscribed')) ) {
       $(document).find('.js-notifications').show();

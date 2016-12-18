@@ -7,13 +7,25 @@ class ProgressUpdatesController < ApplicationController
     if progress_update.save
       render status: 201, json: { id: progress_update.id }
     else
-      render status: 400, json: { errors: day.errors.full_messages }
+      render status: 400, json: { errors: progress_update.errors.full_messages }
+    end
+  end
+
+  def update
+    progress_update = ProgressUpdate.find(params[:id])
+
+    progress_update.thumbnail_url = params[:progress_update][:thumbnail_url]
+
+    if progress_update.save
+      render status: 204
+    else
+      render status: 400, json: { errors: progress_update.errors.full_messages }
     end
   end
 
   private
 
   def progress_update_params
-    params.require(:progress_update).permit(:description, :image_url)
+    params.require(:progress_update).permit(:description, :image_url, :thumbnail_url)
   end
 end

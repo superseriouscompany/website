@@ -8,12 +8,16 @@
   * rules go in order of specificity: globals, reusable components, page specific
 */
 $headerHeight: 58px;
-$desktopHeaderHeight: 60px;
+$desktopHeaderHeight: 48px;
+$footerHeight: 30px;
+
+$textColor: black;
 $greyLine: 1px solid #DBDBDC;
-$accentBrown: #C69785;
 $linkColor: #40746E;
 $contextGrey: #656868;
 $quoteText: #656868;
+$projectGrey: #838386;
+$accentGrey: #B1B3B3;
 
 @mixin absCenter() { position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; }
 @mixin desktop() {
@@ -22,14 +26,15 @@ $quoteText: #656868;
 
 /* Globals */
 *    { box-sizing: border-box; }
-body { font-family: 'Questrial', Helvetica, sans-serif; visibility: visible; padding-top: $headerHeight; background: white; }
-footer { font-family: 'Questrial', Helvetica, sans-serif; color: $contextGrey; }
+body { font-family: 'Questrial', Helvetica, sans-serif; visibility: visible; background: white; }
+footer { font-family: 'Questrial', Helvetica, sans-serif; color: $contextGrey; font-size: 14px; text-align: center; padding-bottom: 1em; }
 a    { cursor: pointer; }
 .desktop-only { display: none !important; }
   @include desktop {
-    body { padding-top: $desktopHeaderHeight; }
+    footer { font-size: 16px; }
     .mobile-only { display: none !important; }
-    .desktop-only { display: block !important; &img, &span, &a { display: inline !important} }
+    .desktop-only { display: block !important; &img, &span, &a { display: inline !important}; }
+    a { font-family: 'Questrial', Helvetica, sans-serif; }
   }
 .js-chrome-only { display: none; }
 
@@ -39,20 +44,15 @@ h1.singleLine   { padding-top: 19px; }
 h1 img          { width: 134px; margin-top: 2px; }
 section         { border-top: $greyLine; font-size: 16px; line-height: 20px; }
 section.context { color: $contextGrey; padding: 0 20px; text-align: center; border-top: 0; }
-.hero           { display: none; }
 .nightshade     { opacity: 0.8; background-color: black; position: fixed; left: 0; top: 0; bottom: 0; right: 0; display: none; }
 body.hamburgerOpen .nightshade { display: block; }
 body.hamburgerOpen .menu       { display: block; }
   @include desktop {
-    body { padding-top: $desktopHeaderHeight; }
-    h1 { padding: 14px 0 14px; display: inline-block; position: relative; z-index: 11;}
-    h1 img { width: 134px; margin: 0; }
-    h1.singleLine   { padding-top: 14px; }
-    section { margin: 0 auto; max-width: 550px; border: 0; font-size: 18px; }
-    section.context { font-size: 16px; max-width: none; line-height: 20px; text-align: center; padding-bottom: 15px; }
-    section.context p { margin: 15px auto 0; max-width: 600px; }
-    .hero      { position: fixed; bottom: 0; left: 0; width: 15%; display: inline; }
-    .hero.neil { left: auto; right: 0; }
+    h1 { display: none; }
+    h2 { font-weight: 100; }
+    section { margin: 0 auto; max-width: 550px; border: 0; font-size: 18px; font-family: Helvetica, sans-serif !important; font-weight: 100; }
+    section.context { margin: 35px 0 41px; font-size: 16px; max-width: none; line-height: 26px; text-align: center; }
+    section.context p { margin: 0 auto 0; max-width: 600px; }
   }
 
 /* Header */
@@ -61,59 +61,53 @@ header .hamburger { position:absolute; right: 18px; top: 18px; width: 29px; heig
 header .smallLogo { position: absolute; left: 15px; top: 11.25px; width: 32px; }
 header .menu { display: none; position: absolute; top: $headerHeight + 9px; right: 9px; width: 66%; background-color: white; border-radius: 10px; padding: 3px 0; }
 header .item { display: block; text-align: center; text-decoration: none; color: #07070D; padding: 16px 0; text-transform: uppercase; border-top: $greyLine; }
-header .item:first-child { border-top: 0; }
-header .item.active { color: $accentBrown; }
+header .item:nth-child(2) { border-top: 0; }
+header .item.active { color: $accentGrey; }
 header .pageHeading { font-family: 'helvetica neue'; font-size: 18px; font-weight: bold; color: #474340; text-transform: lowercase; display: inline-block; }
 header .pageHeading .bottom { font-weight: normal }
 header.withHeading .logoLink { display: none; }
   @include desktop {
-    header  { position: fixed; width: 100%; background-color: white; top: 0; height: $desktopHeaderHeight; border-bottom: $greyLine; text-align: center; }
+    header  { background-color: white; height: $desktopHeaderHeight; border-bottom: $greyLine; text-align: center; }
     header .smallLogoLink { display: none; }
+    header .logo { width: 24px; margin-top: -6px; }
     header.withHeading .logoLink { display: inline; }
     header.withHeading .pageHeading { display: none; }
     header .hamburger { display: none; }
-    header .menu { top: 18px; width: 100%; background-color: transparent; border-radius: 0; display: block; }
-    header .item  { position: absolute; font-size: 16px; display: block; padding: 0; border-top: 0; color: $contextGrey; text-transform: none; width: 140px; }
-    header .item.active { border: 4px solid $accentBrown; border-width: 0 0 4px 0; padding-bottom: 16px; }
-    header .top   { top: 37px; }
-    header .left  { left: 0; position: static; float: left; margin-left: 15px;}
-    header .right { right: 0; position: static; float: right; margin-right: 15px;}
-    header .bottom { bottom: 47px; }
+    header .menu { width: 100%; position: static; max-width: 1020px; margin: 12px auto 0; background-color: transparent; border-radius: 0; display: flex; justify-content: space-between; }
+    header .item  { font-size: 14px; display: block; padding: 0; border-top: 0; color: $contextGrey; text-transform: none; padding: 0 1em; }
+    header .item.active { border-width: 0 0 4px 0; padding-bottom: 16px; }
   }
 
 /* Footer */
-footer { text-align: center; padding-bottom: 1em;}
-.mode-switch { font-size: smaller; cursor: pointer; text-decoration: underline; display: none; -webkit-user-select: none; }
+html, body { height: 100%; }
+.page-wrap { min-height: 100%; margin-bottom: -$footerHeight; padding-top: $headerHeight; }
+.page-wrap:after { content: ""; display: block; }
+footer, .page-wrap:after { height: $footerHeight; }
   @include desktop {
-    .mode-switch { display: block; }
+    .page-wrap { padding-top: $desktopHeaderHeight; }
   }
-
 
 /* Post on homepage or project page */
 .day { border-top: $greyLine; padding: 0 0 1.4em; &:first-child { border-top: 0; } }
 .day h2 { color: $quoteText; font-size: 24px; text-align: center; margin: 0; padding: 16px 0 17px; }
 .day img.comic { width: 100%; }
   @include desktop {
-    .day { padding-top: 1em; border: none; }
-    .day img.comic { border: 0;  margin-bottom: 10px; }
+    .day { border: none; }
+    .day img.comic { border: 0;  margin-bottom: 18px; box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .25); }
     .day h2 { display: none; }
   }
 
 /* Quotes on homepage, project page and philosophy page*/
 .quotes  { background: white; }
-.quotes blockquote { color: $quoteText; line-height: 20px; margin: 16px 0 0 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 37px 45px; padding-left: 37px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; background-position-y: 0px; }
-.quotes blockquote p { &:first-of-type {margin-top: 0} &:last-of-type {margin-bottom: 0} }
-.quotes blockquote:last-of-type { margin-bottom: 0; }
-.quotes blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; background-position-y: -7px; }
-.quotes blockquote .chatBubble { display: none; }
+blockquote { color: $quoteText; line-height: 20px; margin: 16px 0 0 0; background: url(asset-path('santiSideIcon.jpg')) no-repeat left 2px; background-size: 37px 45px; padding-left: 37px+15px; padding-right: 15px; font-size: 16px; min-height: 45px; background-position-y: 0px; }
+blockquote p { &:first-of-type {margin-top: 0} &:last-of-type {margin-bottom: 0} }
+blockquote:last-of-type { margin-bottom: 0; }
+blockquote.neil { background-image: url(asset-path('neilSideIcon.jpg')); background-size: 37px 45px; background-position-y: -7px; }
   @include desktop {
-    .quotes { width: 520px; margin: 0 auto 4em; }
-    .quotes blockquote:first-child { margin-bottom: 1.2em; }
-    .quotes blockquote { margin: 0; max-width: 480px; padding: 1.2em; background: none; border: 1px solid #DBDBDC; position: relative; font-size: 16px; min-height: 0; border-radius: 18px; }
-    .quotes blockquote.neil { display: absolute; background: none; right: -40px; }
-    .quotes blockquote .chatBubble { display: block; width: 34px; position: absolute; bottom: -23px; left: 15px; z-index: 2; }
-    .quotes blockquote.neil .chatBubble { left: auto; right: 15px; transform: scaleX(-1); }
-    .quotes blockquote p:first-child { margin-top: 0; }
+    .quotes { width: 520px; margin: 0 auto 2.25em; }
+    blockquote { margin: 0; line-height: 26px; padding: 1.2em 0.6em 1.2em 1.2em; background-image: url(asset-path('santiHead.png')); position: relative; font-size: 16px; min-height: 0; border-radius: 18px; background-size: 41px 41px; background-position-y: 10px; background-position-x: 0px; padding-left: 50px; }
+    blockquote.neil { background-image: url(asset-path('neilHead.png')); background-size: 41px 41px; background-position-y: 10px; background-position-x: 0px; }
+    blockquote p:first-child { margin-top: 0; }
   }
 
 /* Social section on homepage */
@@ -123,7 +117,7 @@ section.social .icons { display: flex; width: 262px; margin: 0 auto; }
 section.social a { display: inline-block; width: 33%; text-align: center; }
 section.social img { width: 65px; }
   @include desktop {
-    section.social { padding: 0 0 3em;}
+    section.social { padding: 0 0 1em;}
     section.social .icons { width: 232px; }
     section.social img { width: 55px; }
   }
@@ -134,18 +128,19 @@ body.pages-home, body.pages-show_day { .day { padding-bottom: 0; } }
 .readMore { a, a:visited, a:active { color: $linkColor; } }
   @include desktop {
     body.pages-home, body.pages-show_day { section.story p:last-child { margin-bottom: 0; } }
-    .readMore { margin: 2.2em 0 0; padding: 0 0 1em; border: 0; font-size: 16px; }
+    .readMore { margin: 1em 0 0; padding: 0 0 4.6em; border: 0; font-size: 16px; }
   }
 
 /* Philosophy Page */
-.philosophy blockquote { border-bottom: $greyLine; padding-top: 15px; padding-bottom: 15px; }
+.philosophy blockquote { padding-top: 15px; padding-bottom: 15px; }
   @include desktop {
+    .philosophy .quotes { margin-top: -20px; }
     .philosophy blockquote { margin-bottom: 1.2em; }
   }
 
 /* Ideas Page */
 .ideas .submission { background: url(asset-path('ideaBg.jpg')) no-repeat; background-size: cover; height: 239px; position: relative; }
-.ideas .inputContainer { position:absolute; bottom: 28px; right: 22px; left: 22px; }
+.ideas .inputContainer { position:absolute; bottom: 26px; right: 22px; left: 22px; }
 .ideas input[type=text] { width: 100%; padding: 15px 50px 15px 12px; font-size: 16px; border: 0; box-shadow: none; }
 .ideas button { width: 27px; height: 27px; background: url(asset-path('submitCircle.jpg')) left top; background-size: 100%; border: 0; cursor: pointer; position: absolute; top: 11px; right: 11px; padding: 0; }
 .ideas .submittable button { background-position: left bottom; }
@@ -168,17 +163,64 @@ body.pages-home, body.pages-show_day { .day { padding-bottom: 0; } }
 /* Our House Page */
 section.house { font-size: 16px; color: $contextGrey; padding-bottom: 1.4em; }
 section.house img { width: 100%; }
-section.house p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-right: 100px; } }
+section.house p { margin: 0px 22px 20px; &:first-child { margin-left: 100px; margin-right: 100px; } }
   @include desktop {
-    section.house img { margin-top: 1.5em; }
+    section.house { line-height: 26px; }
+    section.house img { margin-bottom: 1.5em; }
   }
 
 /* Projects Page */
-body.projects-show .context { text-align: left; padding: 0 2em; line-height: 20px; }
-body.projects-show .link { text-align: center; margin: 1em 0 1.3em; }
-body.projects-show .link { a, a:active, a:visited { color: $linkColor; } }
+$appWidth: 18%;
+$marginWidth: (100% - $appWidth*4)/3;
+body.pages-projects .apps { padding: 0 1em; border: 0; margin-bottom: 0; color: $projectGrey; }
+body.pages-projects .apps:first-of-type { margin-top: 12.5px; }
+body.pages-projects h4 { margin: 0; font-size: 16px; margin-bottom: 1em;}
+body.pages-projects .grid { display: flex; flex-wrap: wrap; }
+body.pages-projects .app  { width: $appWidth; margin: 0 $marginWidth 1em 0; }
+body.pages-projects .app:nth-of-type(4n)  { margin-right: 0; }
+body.pages-projects .app img { width: 100%; }
+body.pages-projects .name { width: 125%; margin-left: -12.5%; line-height: 12px; }
+body.pages-projects .app a { text-decoration: none; color: $projectGrey; font-size: 12px; text-align: center; }
   @include desktop {
-    body.projects-show .context { text-align: center; }
+    .everyphone { background-color: black; width: 531px; height: 685px; margin: 0 auto 5em; border-radius: 29px; padding: 85px 60px; position: relative; }
+    .top-circle { background-color: #383838; border-radius: 50%; width: 9px; height: 9px; position: absolute; top: 27px; left: 0; right: 0; margin: 0 auto; }
+    .bottom-circle { border: 1px solid white; width: 49px; height: 49px; border-radius: 49px; bottom: 31px; position: absolute; left: 0; right: 0; margin: 0 auto; }
+    body.pages-projects h4 { display: none; }
+    body.pages-projects .app a { color: white; }
+  }
+
+/* Project Page */
+body.pages-show_project .context { text-align: left; padding: 0 2em; line-height: 17px; color: $contextGrey; font-size: 16px; line-height: 20px;}
+body.pages-show_project h2 { color: $contextGrey; text-align: center; }
+body.pages-show_project .links { display: flex; justify-content: center; margin: 17px 0px 22px; flex-wrap: wrap;}
+body.pages-show_project .link { text-align: center; margin-left: 6.5px; margin-right: 6.5px; }
+body.pages-show_project .link { a, a:active, a:visited { color: $linkColor; } }
+body.pages-show_project .link img { width: 146px; }
+body.pages-show_project .grid { display: flex; flex-wrap: wrap; }
+body.pages-show_project .update { width: 32%; margin-right: 2%; }
+body.pages-show_project .update:nth-of-type(3n) { margin-right: 0%; }
+body.pages-show_project .update img { width: 100%; }
+.lightbox { position: fixed; left: 0; top: 0; bottom: 0; right: 0; background: rgba(0,0,0,0.92); z-index: 11; display: none; }
+body.lightbox-open { overflow:hidden; }
+body.lightbox-open .lightbox { display: block; }
+.lightbox .top { height: 31px; width: 100%; position: absolute; top: 0; color: white; text-align: center; }
+.lightbox .top span { line-height: 32px; }
+.lightbox .main { height: 100%; width: 100%; margin: 31px 0 0px; padding: 0 0 100px; position: absolute; top: 0; background-color: white; overflow-y: auto; border: 0 !important; }
+.lightbox .main img { width: 100%; }
+.lightbox .bottom { height: 63px; width: 100%; position: absolute; bottom: 0; color: white; text-align: center; background: rgba(0,0,0,0.92); }
+.lightbox .bottom .left { float: left; margin-left: 2em; padding-top: 27px; }
+.lightbox .bottom .left img { height: 22px; margin-top: -11px; }
+.lightbox .bottom .right { float: right; margin-right: 2em; padding-top: 27px; }
+.lightbox .bottom .right img { height: 22px; margin-top: -11px; }
+.lightbox .bottom .close { text-decoration: underline; line-height: 61px; }
+  @include desktop {
+    body.pages-show_project { padding-bottom: 66px; }
+    body.pages-show_project .context { text-align: center; }
+    body.pages-show_project .links { position: fixed; bottom: 0; background-color: black; left: 0; right: 0; margin: 0; z-index: 12; padding: 10px 0; }
+    body.pages-show_project h2 { text-align: left; }
+    body.pages-show_project .close { position: absolute; top: 2em; right: 2em; color: $contextGrey; user-select: none; }
+    body.pages-show_project .close img { height: 19px; }
+    .all-updates { padding-bottom: 100px; }
   }
 
 /* Story Page */
@@ -187,17 +229,29 @@ body.projects-show .link { a, a:active, a:visited { color: $linkColor; } }
   }
 
 /* Progress Updates */
-.projects-show section { border: 0; font-size: 16px; }
 .progressUpdate { border-top: $greyLine; }
 .progressUpdate h2 { text-align: center; color: $quoteText; padding: .1em 0 .12em 0; }
 .progressUpdate img { width: 100%; }
 .progressUpdate img.gif { width: 50%; display: block; margin: 0 auto; }
 .progressUpdate .description { padding: .5em 2em .75em; color: $contextGrey; }
   @include desktop {
-    .projects-show section.context p { display: none; }
     .progressUpdate { border: 0; }
     .progressUpdate h2 { text-align: left; font-size: 18px; padding: .1em 0 .12em 1em; }
     .progressUpdate .description { padding: .5em 1em 1.5em; }
+    .progressUpdate { height: 75%; width: 80%; max-width: 1235px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; overflow: hidden; padding-bottom: 37px; }
+    .progressUpdate > div { display: flex !important; height: 100%; }
+    .progressUpdate > div.mobile-only { display: none !important; }
+    .progressUpdate .image { flex-basis: 66.6666%; background-color: black; color: white; position: relative; text-align: center; overflow: auto; }
+    .progressUpdate .image-container { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; }
+    .progressUpdate img { height: auto; width: auto; max-width: 100%; max-height: 100%; }
+    .progressUpdate .text { flex-basis: 33.3333%; background-color: white; position: relative; padding: 1em 1.5em; }
+    .progressUpdate .scroll { height: 100%; overflow-y: auto; }
+    .progressUpdate .text h2 { padding: 0; }
+    .progressUpdate .slideCount { width: 100%; position: absolute; bottom: 0; left: 0; padding: 22px; text-align: center; background: white; color: $contextGrey; }
+    .progressUpdate .left { position: absolute; bottom: .25em; left: .75em; user-select: none; }
+    .progressUpdate .right { position: absolute; bottom: .25em; right: .75em; user-select: none; }
+    .progressUpdate .left img { height: 47px; }
+    .progressUpdate .right img { height: 47px; }
   }
 
 /* Founders page */
@@ -206,9 +260,6 @@ section.photos .caption { padding: 1em; padding-top: .25em; padding-bottom: 1.6e
 section.photos img { width: 100%; }
 section.photos p { margin: 20px 22px; &:first-child { margin-left: 100px; margin-right: 100px; } }
   @include desktop {
-    .pages-santi .context { text-align: center; margin: 15px auto; max-width: 600px; }
-    .pages-neil .context { text-align: center; margin: 15px auto; max-width: 600px; }
-    section.house img { margin-top: 1.5em; }
     section.photos img { border-radius: 2px; }
     section.photos .caption { padding: 1em; padding-top: .75em; margin-bottom: 1.5em; }
   }
