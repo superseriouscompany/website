@@ -215,7 +215,7 @@ body.lightbox-open .lightbox { display: block; }
 .lightbox .bottom .close { text-decoration: underline; line-height: 61px; }
   @include desktop {
     body.pages-show_project { padding-bottom: 66px; }
-    body.pages-show_project .context { text-align: center; }
+    body.pages-show_project .context { text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; }
     body.pages-show_project .links { position: fixed; bottom: 0; background-color: black; left: 0; right: 0; margin: 0; z-index: 12; padding: 10px 0; }
     body.pages-show_project h2 { text-align: left; }
     body.pages-show_project .close { position: absolute; top: 2em; right: 2em; color: $contextGrey; user-select: none; }
