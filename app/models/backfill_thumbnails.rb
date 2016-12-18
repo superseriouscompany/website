@@ -30,7 +30,8 @@ class BackfillThumbnails
 
     resp = HTTPClient.post("https://90gkxhh9u7.execute-api.us-west-2.amazonaws.com/Production", payload.to_json, headers)
 
-    payload[:thumbnail_url] = JSON.parse(resp.body)["url"]
+    payload = {progress_update: {thumbnail_url: JSON.parse(resp.body)["url"]}}
+    puts payload
     base_url = Rails.env.production? ? 'https://superseriouscompany.com' : 'http://localhost:3000'
 
     HTTPClient.post("#{base_url}/progress_updates/#{t[:id]}", payload.to_json, headers)
