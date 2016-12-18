@@ -102,7 +102,7 @@
             <div class="text">
               <div class="scroll">
                 <h2><%= update.created_at.strftime('%-d %b %Y') %></h2>
-                <blockquote><%= raw update.description %></blockquote>
+                <blockquote class="<%= 'neil' if update.creator == 'neil' %>"><%= raw update.description %></blockquote>
               </div>
               <div class="slideCount">
                 <span class="js-current-slide">1</span>/<%= @progress_updates.count %>
