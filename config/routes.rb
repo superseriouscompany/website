@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   # Website
   get '/projects'                    => 'pages#projects'
   get '/projects/untitled-october', to: redirect('/projects/giggles')
-  get '/projects/this-website', to:     redirect('/story')
   get '/projects/:slug'              => 'pages#show_project'
   get '/dias/:id'                    => 'pages#show_day'
   get '/story'                       => 'pages#story'
