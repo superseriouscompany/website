@@ -1,42 +1,44 @@
 <section class="context">
   <%= raw @project.description %>
 
-  <div class="links-container">
-    <div class="links">
-      <% if @project.url.present? %>
-        <div class="link">
-          <a href="<%= @project.url %>"><%= @project.link %></a>
-        </div>
-      <% end %>
+  <% if false || false || false %>
+    <div class="links-container">
+      <div class="links">
+        <% if @project.url.present? %>
+          <div class="link">
+            <a href="<%= @project.url %>"><%= @project.link %></a>
+          </div>
+        <% end %>
 
-      <% if @project.app_store_url.present? %>
-        <div class="link">
-          <a href="<%= @project.app_store_url %>">
-            <%= image_tag "appStoreIcon.jpg", class: "mobile-only" %>
-            <%= image_tag "desktopAppStoreIcon.png", class: "desktop-only" %>
-          </a>
-        </div>
-      <% end %>
+        <% if @project.app_store_url.present? %>
+          <div class="link">
+            <a href="<%= @project.app_store_url %>">
+              <%= image_tag "appStoreIcon.jpg", class: "mobile-only" %>
+              <%= image_tag "desktopAppStoreIcon.png", class: "desktop-only" %>
+            </a>
+          </div>
+        <% end %>
 
-      <% if @project.play_store_url.present? %>
-        <div class="link">
-          <a href="<%= @project.play_store_url %>">
-            <%= image_tag "playStoreIcon.jpg", class: "mobile-only" %>
-            <%= image_tag "desktopPlayStoreIcon.png", class: "desktop-only" %>
-          </a>
-        </div>
-      <% end %>
+        <% if @project.play_store_url.present? %>
+          <div class="link">
+            <a href="<%= @project.play_store_url %>">
+              <%= image_tag "playStoreIcon.jpg", class: "mobile-only" %>
+              <%= image_tag "desktopPlayStoreIcon.png", class: "desktop-only" %>
+            </a>
+          </div>
+        <% end %>
 
-      <% if @project.mac_app_store_url.present? %>
-        <div class="link">
-          <a href="<%= @project.mac_app_store_url %>">
-            <%= image_tag "appStoreIcon.jpg", class: "mobile-only" %>
-            <%= image_tag "desktopAppStoreIcon.png", class: "desktop-only" %>
-          </a>
-        </div>
-      <% end %>
+        <% if @project.mac_app_store_url.present? %>
+          <div class="link">
+            <a href="<%= @project.mac_app_store_url %>">
+              <%= image_tag "appStoreIcon.jpg", class: "mobile-only" %>
+              <%= image_tag "desktopAppStoreIcon.png", class: "desktop-only" %>
+            </a>
+          </div>
+        <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
 </section>
 
 <% update = @progress_updates.first %>
