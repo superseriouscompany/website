@@ -33,7 +33,7 @@ class PagesController < ApplicationController
 
   def show_project
     @project          = Project.find_by_slug! params[:slug]
-    @progress_updates = @project.progress_updates.order("id desc")
+    @progress_updates = @project.progress_updates.order("created_at desc")
     @page_heading     = @project.name
     @page_title       = @project.name
     @meta_description = "#{@project.name}: a Super Serious Company effort"
