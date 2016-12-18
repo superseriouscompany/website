@@ -1,7 +1,7 @@
 <section class="context">
   <%= raw @project.description %>
 
-  <% if false || false || false %>
+  <% if @project.app_store_url.present? || @project.mac_app_store_url.present? || @project.play_store_url.present? %>
     <div class="links-container">
       <div class="links">
         <% if @project.url.present? %>
