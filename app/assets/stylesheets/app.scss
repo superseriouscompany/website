@@ -80,7 +80,7 @@ header.withHeading .logoLink { display: none; }
 
 /* Footer */
 html, body { height: 100%; }
-.page-wrap { min-height: 100%; margin-bottom: -$footerHeight; padding-top: $headerHeight; }
+.page-wrap { min-height: 100%; margin-bottom: -$footerHeight; padding-top: $headerHeight; overflow: hidden; }
 .page-wrap:after { content: ""; display: block; }
 footer, .page-wrap:after { height: $footerHeight; }
   @include desktop {
