@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post '/dias'                  => 'days#create'
   post '/subscriptions'         => 'subscriptions#create'
   post '/progress_updates'      => 'progress_updates#create'
+  post '/progress_updates/:id'  => 'progress_updates#update' #FU, httpclient
   patch '/progress_updates/:id' => 'progress_updates#update'
   get '/dias/current'           => 'days#current'
 

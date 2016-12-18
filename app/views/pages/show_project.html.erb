@@ -63,13 +63,13 @@
         <% if update.image_url.match(/\.gif/)  %>
           <div class="update gif">
             <a class="js-toggle-lightbox js-load-project-update" data-update-id="<%=i%>">
-              <img src="https://placehold.it/450x450" />
+              <%= image_tag update.thumbnail_url %>
             </a>
           </div>
         <% else %>
           <div class="update">
             <a class="js-toggle-lightbox js-load-project-update" data-update-id="<%=i%>">
-              <img src="https://placehold.it/420x420" />
+              <%= image_tag update.thumbnail_url %>
             </a>
           </div>
         <% end %>
