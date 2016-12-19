@@ -47,5 +47,15 @@
     $('.js-stage').html(template.html());
     $('.js-current-slide').text(id+1);
     currentIndex = id;
+
+    $('.js-prev-project-update, .js-next-project-update').show();
+    // Hide previous button if this is the first update
+    if( id === 0 ) {
+      $('.js-prev-project-update').hide();
+    }
+    // Hide next button if there is no next update
+    if( !$('#update-'+(id+1)).length ) {
+      $('.js-next-project-update').hide();
+    }
   }
 })()
