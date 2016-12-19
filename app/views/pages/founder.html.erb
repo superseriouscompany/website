@@ -1,17 +1,5 @@
 <section class="context">
-  <% if @person == 'santi' %>
-    <p>
-      Santi owns the visual brand of Super Serious Company and draws all the cartoons. He's active as fuck and has a magnetic personality. His outgoing and earnest exterior belies an existential turmoil and an artistic struggle to represent the beauty he perceives around him.
-    </p>
-  <% elsif @person == 'andrew' %>
-    <p>
-      Sauer Power has two main focuses at Super Serious Company: operational efficiency and getting everything on tape for your viewing pleasure. He also leads daily meditation practices at sunrise every morning; Neil has yet to attend.
-    </p>
-  <% else %>
-    <p>
-      Neil Rajat Sarkar is the entire Super Serious Company engineering department.
-    </p>
-  <% end %>
+  <p><%= @description %></p>
 </section>
 
 <section class="photos">
