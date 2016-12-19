@@ -202,6 +202,7 @@ body.pages-show_project .update:nth-of-type(3n) { margin-right: 0%; }
 body.pages-show_project .update img { width: 100%; }
 .lightbox { position: fixed; left: 0; top: 0; bottom: 0; right: 0; background: rgba(0,0,0,0.92); z-index: 11; display: none; }
 body.lightbox-open { overflow:hidden; }
+body.lightbox-open .page-wrap { overflow: hidden; }
 body.lightbox-open .lightbox { display: block; }
 .lightbox .top { height: 31px; width: 100%; position: absolute; top: 0; color: white; text-align: center; }
 .lightbox .top span { line-height: 32px; }
