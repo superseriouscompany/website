@@ -209,9 +209,9 @@ body.lightbox-open .lightbox { opacity: 1; }
 .lightbox .main { height: 100%; width: 100%; margin: 31px 0 0px; padding: 0 0 100px; position: absolute; top: 0; background-color: white; overflow-y: auto; border: 0 !important; }
 .lightbox .main img { width: 100%; }
 .lightbox .bottom { height: 63px; width: 100%; position: absolute; bottom: 0; color: white; text-align: center; background: rgba(0,0,0,0.92); }
-.lightbox .bottom .left { float: left; margin-left: 2em; padding-top: 27px; }
+.lightbox .bottom .left { position: absolute; top: 27px; left: 2em; }
 .lightbox .bottom .left img { height: 22px; margin-top: -11px; }
-.lightbox .bottom .right { float: right; margin-right: 2em; padding-top: 27px; }
+.lightbox .bottom .right { position: absolute; top: 27px; right: 2em; }
 .lightbox .bottom .right img { height: 22px; margin-top: -11px; }
 .lightbox .bottom .close { text-decoration: underline; line-height: 61px; }
   @include desktop {
