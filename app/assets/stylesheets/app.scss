@@ -200,10 +200,10 @@ body.pages-show_project .grid { display: flex; flex-wrap: wrap; padding-bottom: 
 body.pages-show_project .update { width: 32%; margin-right: 2%; }
 body.pages-show_project .update:nth-of-type(3n) { margin-right: 0%; }
 body.pages-show_project .update img { width: 100%; }
-.lightbox { position: fixed; left: 0; top: 0; bottom: 0; right: 0; background: rgba(0,0,0,0.92); z-index: 11; display: none; }
+.lightbox { position: fixed; left: 0; top: 0; bottom: 0; right: 0; background: rgba(0,0,0,0.92); z-index: 11; opacity: 0; transition: opacity .35s; }
 body.lightbox-open { overflow:hidden; }
 body.lightbox-open .page-wrap { overflow: hidden; }
-body.lightbox-open .lightbox { display: block; }
+body.lightbox-open .lightbox { opacity: 1; }
 .lightbox .top { height: 31px; width: 100%; position: absolute; top: 0; color: white; text-align: center; }
 .lightbox .top span { line-height: 32px; }
 .lightbox .main { height: 100%; width: 100%; margin: 31px 0 0px; padding: 0 0 100px; position: absolute; top: 0; background-color: white; overflow-y: auto; border: 0 !important; }

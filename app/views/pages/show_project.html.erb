@@ -117,24 +117,26 @@
   </section>
 <% end %>
 
-<div class="lightbox js-lightbox">
-  <div class="mobile-only">
-    <div class="top">
-      <span class="js-current-slide">1</span>/<%= @progress_updates.count %>
+<script type="text/template" class="js-lightbox-template">
+  <div class="lightbox js-lightbox">
+    <div class="mobile-only">
+      <div class="top">
+        <span class="js-current-slide">1</span>/<%= @progress_updates.count %>
+      </div>
+
+      <div class="main progressUpdate js-stage">
+      </div>
+
+      <div class="bottom">
+        <a class="left js-prev-project-update"><%= image_tag "leftArrow.png" %></a>
+        <a class="close js-toggle-lightbox">close</a>
+        <a class="right js-next-project-update"><%= image_tag "rightArrow.png" %></a>
+      </div>
     </div>
 
-    <div class="main progressUpdate js-stage">
-    </div>
-
-    <div class="bottom">
-      <a class="left js-prev-project-update"><%= image_tag "leftArrow.png" %></a>
-      <a class="close js-toggle-lightbox">close</a>
-      <a class="right js-next-project-update"><%= image_tag "rightArrow.png" %></a>
+    <div class="desktop-only">
+      <a class="close js-toggle-lightbox"><%= image_tag "greyX.png" %></a>
+      <div class="progressUpdate js-stage"></div>
     </div>
   </div>
-
-  <div class="desktop-only">
-    <a class="close js-toggle-lightbox"><%= image_tag "greyX.png" %></a>
-    <div class="progressUpdate js-stage"></div>
-  </div>
-</div>
+</script>

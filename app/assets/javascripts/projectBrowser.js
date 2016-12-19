@@ -3,11 +3,11 @@
 
   $(document).on('click', '.js-lightbox', function(e) {
     if( this != e.target ) { return; }
-    $(document.body).removeClass('lightbox-open');
+    closeLightbox();
   })
 
   $(document).on('keyup', function(e) {
-    if( !$(document.body).hasClass('lightbox-open') ) { return; }
+    if( !lightboxIsOpen() ) { return; }
 
     // left arrow
     if( e.keyCode == 37 ) {
@@ -17,13 +17,35 @@
       loadUpdate(currentIndex+1);
     // escape key
     } else if( e.keyCode == 27 ) {
-      $(document.body).removeClass('lightbox-open');
+      closeLightbox();
     }
   })
 
   $(document).on('click', '.js-toggle-lightbox', function() {
-    $(document.body).toggleClass('lightbox-open');
+    if( lightboxIsOpen() ) {
+      closeLightbox();
+    } else {
+      openLightbox();
+    }
   })
+
+  function lightboxIsOpen() {
+    return $(document.body).hasClass('lightbox-open');
+  }
+
+  function closeLightbox() {
+    $(document.body).removeClass('lightbox-open');
+    setTimeout(function() {
+      $('.js-lightbox').remove();
+    }, 360);
+  }
+
+  function openLightbox() {
+    var $div = $("<div class='js-lightbox'></div>").appendTo(".page-wrap");
+    $div.html($('.js-lightbox-template').html());
+    window.getComputedStyle($div[0]).opacity; // https://timtaubert.de/blog/2012/09/css-transitions-for-dynamically-created-dom-elements/
+    $(document.body).addClass('lightbox-open');
+  }
 
   $(document).on('click', '.js-load-project-update', function() {
     var id = $(this).data('update-id');
