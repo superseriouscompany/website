@@ -196,7 +196,7 @@ body.pages-show_project .links { display: flex; justify-content: center; margin:
 body.pages-show_project .link { text-align: center; margin-left: 6.5px; margin-right: 6.5px; }
 body.pages-show_project .link { a, a:active, a:visited { color: $linkColor; } }
 body.pages-show_project .link img { width: 146px; }
-body.pages-show_project .grid { display: flex; flex-wrap: wrap; }
+body.pages-show_project .grid { display: flex; flex-wrap: wrap; padding-bottom: 25px; }
 body.pages-show_project .update { width: 32%; margin-right: 2%; }
 body.pages-show_project .update:nth-of-type(3n) { margin-right: 0%; }
 body.pages-show_project .update img { width: 100%; }
