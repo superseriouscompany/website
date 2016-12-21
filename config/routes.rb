@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/dias/:id'                    => 'pages#show_day'
   get '/story'                       => 'pages#story'
   get '/support/giggles'             => 'pages#giggles_support'
+  get '/support/animals'             => 'pages#animals_support'
   get '/neil-sarkar'                 => 'pages#neil'
   get '/santi-garza'                 => 'pages#santi'
   get '/andrew-sauer'                => 'pages#andrew'
