@@ -5,20 +5,16 @@
 </section>
 
 <section class="story">
-  <h3 style="padding: .5em">Welp, something's wrong with the Wacom Tablet again, so no cartoons indefinitely...again. <br /><br />In the meantime, Neil is streaming his birthday hackathon.</h3>
-  <iframe class="mobile-only" style="margin: 0 auto; display: block;" width="375" height="211" src="https://www.youtube.com/embed/q1_jBQTAYYU" frameborder="0" allowfullscreen></iframe>
-  <iframe class="desktop-only" style="margin: 0 auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/q1_jBQTAYYU" frameborder="0" allowfullscreen></iframe>
+  <h3 style="padding: .5em">Welp, something's wrong with the Wacom Tablet again, so no cartoons indefinitely...again.</h3>
 
-  <div style="display:none">
-    <% day = @day %>
-    <% cache day do %>
-    <article class="day">
-      <%= render day %>
-    </article>
-    <% end %>
-    <div class="readMore">
-      <a href="/story">Read the full story</a>
-    </div>
+  <% day = @day %>
+  <% cache day do %>
+  <article class="day">
+    <%= render day %>
+  </article>
+  <% end %>
+  <div class="readMore">
+    <a href="/story">Read the full story</a>
   </div>
 </section>
 
