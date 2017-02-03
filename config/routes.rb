@@ -26,5 +26,6 @@ Rails.application.routes.draw do
   get '/feed', to: 'days#feed'
 
   # Catchall
+  get '/:day', to: redirect('/dias/%{day}'), constraints: { day: /\d+/ }
   get '/:action', controller: 'pages'
 end
