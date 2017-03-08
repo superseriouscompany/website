@@ -169,6 +169,9 @@ section.house p { margin: 0px 22px 20px; &:first-child { margin-left: 100px; mar
     section.house img { margin-bottom: 1.5em; }
   }
 
+/* nest cam */
+.nest-cam { width: 100%; }
+
 /* Projects Page */
 $appWidth: 18%;
 $marginWidth: (100% - $appWidth*4)/3;

@@ -4,6 +4,12 @@
   </p>
 </section>
 
+<section class="live-video desktop-only">
+  <div class="office">
+    <iframe type="text/html" class="nest-cam" frameborder="0" width="480" height="394" src="//video.nest.com/embedded/live/ilzcRX0tJ9?autoplay=1" allowfullscreen></iframe>
+  </div>
+</section>
+
 <section class="house">
   <%= image_tag "proPortugal.jpg"%>
   <%= image_tag "backyard.jpg"%>
@@ -31,7 +37,7 @@
   </p>
 
   <p>
-    The current time in Peniche is <%= Time.now.in_time_zone('Lisbon').strftime("%-I:%m%p").downcase%>.
+    The current time in Peniche is around <%= Time.now.in_time_zone('Lisbon').strftime("%-I:%m%p").downcase%>.
     If we're working, you can drop in and say hi at <a href="https://appear.in/superseriouscompany" target="_blank">https://appear.in/superseriouscompany</a>.
   </p>
 </section>
