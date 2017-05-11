@@ -1,0 +1,10 @@
+<form action="/halp" method="POST">
+  <div class="title">
+    <% if @cool %> Dope.<% end %>
+    <%= Idea.count %> Ideas Collected
+  </div>
+
+  <textarea name="idea[idea]"></textarea>
+
+  <input type="submit" />
+</form>

@@ -22,6 +22,9 @@ Rails.application.routes.draw do
   get '/santi-garza'                 => 'pages#santi'
   get '/andrew-sauer'                => 'pages#andrew'
 
+  get '/halp' => 'ideas#new'
+  post '/halp' => 'ideas#create'
+
   # RSS (thanks a lot caldwell)
   get '/feed', to: 'days#feed'
 

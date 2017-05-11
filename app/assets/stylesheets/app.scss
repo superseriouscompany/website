@@ -267,3 +267,11 @@ section.photos p { margin: 20px 22px; &:first-child { margin-left: 100px; margin
     section.photos img { border-radius: 2px; }
     section.photos .caption { padding: 1em; padding-top: .75em; margin-bottom: 1.5em; }
   }
+
+body.ideas-create, body.ideas-new {
+  header { display: none; }
+  footer { display: none; }
+  .page-wrap { padding-top: 0; }
+  form { height: 100vh; display: flex; align-items: center; flex-direction: column; justify-content: space-between; padding-top: 5vh; padding-bottom: 5vh; }
+  textarea { flex: 1; margin: 5vh 0; width: 95%; max-width: 600px; }
+}
