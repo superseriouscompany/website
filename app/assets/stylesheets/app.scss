@@ -272,6 +272,6 @@ body.ideas-create, body.ideas-new {
   header { display: none; }
   footer { display: none; }
   .page-wrap { padding-top: 0; }
-  form { height: 100vh; display: flex; align-items: center; flex-direction: column; justify-content: space-between; padding-top: 5vh; padding-bottom: 5vh; }
+  form { height: 100vh; display: flex; align-items: center; flex-direction: column; justify-content: space-between; padding-top: 5vh; padding-bottom: 12vh; }
   textarea { flex: 1; margin: 5vh 0; width: 95%; max-width: 600px; }
 }
