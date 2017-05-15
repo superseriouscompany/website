@@ -6,6 +6,13 @@ class IdeasController < ApplicationController
     @share_image_url = "https://tribkcpq.files.wordpress.com/2015/02/s042881738-300.jpg"
   end
 
+  def all
+    @meta_description = "One last heist."
+    @share_image_url = "https://tribkcpq.files.wordpress.com/2015/02/s042881738-300.jpg"
+
+    @ideas = Idea.order("RANDOM()")
+  end
+
   def create
     @meta_description = "The last hurrah."
     @share_image_url = "https://tribkcpq.files.wordpress.com/2015/02/s042881738-300.jpg"

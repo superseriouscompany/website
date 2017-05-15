@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get '/santi-garza'                 => 'pages#santi'
   get '/andrew-sauer'                => 'pages#andrew'
 
+  get '/all' => 'ideas#all'
   get '/halp' => 'ideas#new'
   post '/halp' => 'ideas#create'
 
