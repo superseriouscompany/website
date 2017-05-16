@@ -277,5 +277,6 @@ body.ideas-create, body.ideas-new, body.ideas-all {
   .all-ideas { display: flex; align-items: center; flex-direction: column; padding-top: 5vh; }
   .idea { width: 95%; max-width: 600px; padding-top: 1em; margin-top: 1em; border-top: 1px solid hotpink; }
   .idea:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+  .idea .id { text-align: right; }
   pre { width: 90%; margin: 0 auto; }
 }
