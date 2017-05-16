@@ -8,7 +8,7 @@ class IdeasController < ApplicationController
 
   def all
     @meta_description = "One last heist."
-    @share_image_url = "https://tribkcpq.files.wordpress.com/2015/02/s042881738-300.jpg"
+    @share_image_url = "https://images.moviepilot.com/image/upload/c_fill,h_470,q_auto:good,w_620/jy58d7any2bqz99oau4n.jpg"
 
     @ideas = Idea.order("RANDOM()")
   end
