@@ -51,7 +51,7 @@ class PagesController < ApplicationController
   def neil
     @page_title = "Neil Sarkar"
     @person = 'neil'
-    @meta_description = "Neil Rajat Sarkar is the entire Super Serious Company engineering department."
+    @meta_description = "Neil Rajat Sarkar was the entire Super Serious Company engineering department."
     @description = @meta_description
     @share_image_url = "https://superseriouscompany.com#{ActionController::Base.helpers.asset_url("neil-sarkar/neil-ashley-jeremy-rooftop-arts-district.jpg")}"
     render :founder
@@ -60,7 +60,7 @@ class PagesController < ApplicationController
   def santi
     @page_title = "Santi Garza"
     @person = 'santi'
-    @meta_description = "Santi owns the visual brand of Super Serious Company and draws all the cartoons. He's active as fuck and has a magnetic personality. His outgoing and earnest exterior belies an existential turmoil and an artistic struggle to represent the beauty he perceives around him."
+    @meta_description = "Santi owned the visual brand of Super Serious Company and drew all the cartoons. He's active as fuck and has a magnetic personality. His outgoing and earnest exterior belies an existential turmoil and an artistic struggle to represent the beauty he perceives around him."
     @description = @meta_description
     @share_image_url = "https://superseriouscompany.com#{ActionController::Base.helpers.asset_url("super-serious-santi-santiago-garza/santiago-garza-santi-tinder-desk-working-los-angeles-california.jpg")}"
     render :founder
@@ -69,7 +69,7 @@ class PagesController < ApplicationController
   def andrew
     @page_title = "Andrew Sauer"
     @person = 'andrew'
-    @meta_description = "Sauer Power has two main focuses at Super Serious Company: operational efficiency and getting everything on tape for your viewing pleasure. He also leads daily meditation practices at sunrise every morning; Neil has yet to attend."
+    @meta_description = "Sauer Power had two main focuses at Super Serious Company: operational efficiency and getting everything on tape for your viewing pleasure. He also led daily meditation practices at sunrise every morning; Neil never attended."
     @description = @meta_description
     @share_image_url = "https://superseriouscompany.com#{ActionController::Base.helpers.asset_url("andrew-sauer/andrew-sauer-animal-menagerie.jpg")}"
     render :founder
