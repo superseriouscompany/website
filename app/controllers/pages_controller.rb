@@ -61,7 +61,7 @@ class PagesController < ApplicationController
     @page_title = "Santi Garza"
     @person = 'santi'
     @meta_description = "Santi owned the visual brand of Super Serious Company and drew all the cartoons. He's active as fuck and has a magnetic personality. His outgoing and earnest exterior belies an existential turmoil and an artistic struggle to represent the beauty he perceives around him."
-    @description = @meta_description
+    @description = @meta_description + ' (<a href="https://santiago-garza.com/">Santiago Garza</a>)'
     @share_image_url = "https://superseriouscompany.com#{ActionController::Base.helpers.asset_url("super-serious-santi-santiago-garza/santiago-garza-santi-tinder-desk-working-los-angeles-california.jpg")}"
     render :founder
   end
